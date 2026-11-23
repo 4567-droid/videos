@@ -1,0 +1,27 @@
+{
+  "tema": "el corazón late 100 mil veces por día",
+  "titulo": "Tu corazón no se toma vacaciones",
+  "escenas": [
+    {
+      "id": "gancho",
+      "componente": "CorazonLatiendo",
+      "texto": "Hoy tu corazón va a latir unas 100 mil veces, y ni siquiera se lo pediste."
+    },
+    {
+      "id": "reposo-y-carrera",
+      "componente": "CorredorPulso",
+      "texto": "En reposo late unas 70 veces por minuto, pero al salir a correr puede superar las 150."
+    },
+    {
+      "id": "bomba",
+      "componente": "BombaSangre",
+      "texto": "Con cada latido empuja un chorrito de sangre, y en un solo día bombea unos 7 mil litros.",
+      "transicion": "deslizar"
+    },
+    {
+      "id": "toda-una-vida",
+      "componente": "VidaEntera",
+      "texto": "En toda una vida suma casi 3 mil millones de latidos, sin tomarse ni un solo día libre."
+    }
+  ]
+}

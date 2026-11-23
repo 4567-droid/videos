@@ -1,0 +1,33 @@
+{
+  "name": "reels-datos-curiosos",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reels verticales de datos curiosos en español, 100% programados con Remotion + Three.js",
+  "type": "module",
+  "scripts": {
+    "preview": "remotion studio",
+    "render": "remotion render Reel out/reel.mp4",
+    "voz": "node scripts/voz.mjs",
+    "fotogramas": "node scripts/fotogramas.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@fontsource/inter": "5.2.6",
+    "@react-three/fiber": "9.3.0",
+    "@remotion/cli": "4.0.546",
+    "@remotion/fonts": "4.0.546",
+    "@remotion/three": "4.0.546",
+    "@remotion/transitions": "4.0.546",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.546",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@remotion/bundler": "4.0.546",
+    "@remotion/renderer": "4.0.546",
+    "@types/react": "19.1.8",
+    "@types/three": "0.180.0",
+    "typescript": "5.8.3"
+  }
+}

@@ -49,7 +49,7 @@ Sin voz, el tiempo de cada palabra se **estima según su largo** (y pausas en co
 
 ## Voz con ElevenLabs (opcional)
 
-1. Copiá `.env.example` a `.env` y completá `ELEVENLABS_API_KEY` y `ELEVENLABS_VOICE_ID`.
+1. Copiá `.env.example` a `.env` y completá `ELEVENLABS_API_KEY` y `VOICE_ID` (`npm run voz -- --voces` lista las voces de tu cuenta, primero las que hablan español). `.env` está en `.gitignore`: la clave nunca se sube.
 2. `npm run voz`: genera `public/voz/<id>.mp3` por escena y guarda el tiempo exacto de cada palabra en `data/voz.json` (endpoint *with-timestamps*).
 3. `npm run render`: usa el audio y esos tiempos en lugar de la estimación.
 

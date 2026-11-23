@@ -11,10 +11,11 @@
  *   npm run voz                    genera solo las escenas nuevas o con texto cambiado
  *   npm run voz -- --forzar        regenera todas
  *   npm run voz -- --escena gancho regenera una sola escena
+ *   npm run voz -- --voces         lista las voces de tu cuenta (primero las que hablan español)
  *
- * Variables (en .env o en el entorno):
+ * Variables (en .env o en el entorno; .env nunca se sube al repo):
  *   ELEVENLABS_API_KEY   (obligatoria)
- *   ELEVENLABS_VOICE_ID  (obligatoria)
+ *   VOICE_ID             (obligatoria para generar; también se acepta ELEVENLABS_VOICE_ID)
  *   ELEVENLABS_MODEL_ID  (opcional, por defecto eleven_multilingual_v2)
  */
 import {existsSync, readFileSync} from 'node:fs';
@@ -43,11 +44,42 @@ const forzar = args.includes('--forzar');
 const soloEscena = args.includes('--escena') ? args[args.indexOf('--escena') + 1] : null;
 
 const API_KEY = process.env.ELEVENLABS_API_KEY;
-const VOICE_ID = process.env.ELEVENLABS_VOICE_ID;
+const VOICE_ID = process.env.VOICE_ID || process.env.ELEVENLABS_VOICE_ID;
 const MODEL_ID = process.env.ELEVENLABS_MODEL_ID || 'eleven_multilingual_v2';
 
-if (!API_KEY || !VOICE_ID) {
-	console.error('Faltan ELEVENLABS_API_KEY y/o ELEVENLABS_VOICE_ID (copiá .env.example a .env y completalo).');
+if (!API_KEY) {
+	console.error('Falta ELEVENLABS_API_KEY (copiá .env.example a .env y completalo).');
+	process.exit(1);
+}
+
+// --- npm run voz -- --voces : listar voces disponibles ---
+if (args.includes('--voces')) {
+	const res = await fetch('https://api.elevenlabs.io/v1/voices', {headers: {'xi-api-key': API_KEY}});
+	if (!res.ok) {
+		console.error(`ElevenLabs respondió ${res.status}: ${(await res.text()).slice(0, 300)}`);
+		process.exit(1);
+	}
+	const {voices} = await res.json();
+	const idiomas = (v) => (v.verified_languages ?? []).map((l) => [l.language, l.accent, l.locale].filter(Boolean).join('/'));
+	const hablaEspanol = (v) =>
+		(v.verified_languages ?? []).some((l) => l.language === 'es') ||
+		/spanish|español|espanol|argentin|latin|mexic|castilian|colombian|chilean|rioplat/i.test(
+			[v.name, v.description, ...Object.values(v.labels ?? {})].join(' '),
+		);
+	const ordenadas = [...voices].sort((a, b) => Number(hablaEspanol(b)) - Number(hablaEspanol(a)));
+	for (const v of ordenadas) {
+		const l = v.labels ?? {};
+		console.log(
+			`${hablaEspanol(v) ? 'ES' : '  '}  ${v.name.padEnd(26)} ${v.voice_id}  ${[l.gender, l.age, l.accent, l.description, l.use_case].filter(Boolean).join(', ')}` +
+				(idiomas(v).length ? `  [${idiomas(v).join(' ')}]` : ''),
+		);
+	}
+	console.log(`\n${voices.length} voces. Copiá el ID elegido en .env como VOICE_ID=...`);
+	process.exit(0);
+}
+
+if (!VOICE_ID) {
+	console.error('Falta VOICE_ID en .env (listá las voces con: npm run voz -- --voces).');
 	process.exit(1);
 }
 

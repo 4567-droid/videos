@@ -1,3 +1,389 @@
 {
-  "escenas": {}
+  "escenas": {
+    "gancho": {
+      "texto": "Hoy tu corazón va a latir unas 100 mil veces, y ni siquiera se lo pediste.",
+      "audio": "voz/gancho.mp3",
+      "duracion": 4.992,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "palabras": [
+        {
+          "texto": "Hoy",
+          "inicio": 0,
+          "fin": 0.174
+        },
+        {
+          "texto": "tu",
+          "inicio": 0.221,
+          "fin": 0.29
+        },
+        {
+          "texto": "corazón",
+          "inicio": 0.337,
+          "fin": 0.813
+        },
+        {
+          "texto": "va",
+          "inicio": 0.894,
+          "fin": 1.033
+        },
+        {
+          "texto": "a",
+          "inicio": 1.08,
+          "fin": 1.103
+        },
+        {
+          "texto": "latir",
+          "inicio": 1.161,
+          "fin": 1.463
+        },
+        {
+          "texto": "unas",
+          "inicio": 1.521,
+          "fin": 1.707
+        },
+        {
+          "texto": "100",
+          "inicio": 1.753,
+          "fin": 1.927
+        },
+        {
+          "texto": "mil",
+          "inicio": 1.997,
+          "fin": 2.171
+        },
+        {
+          "texto": "veces,",
+          "inicio": 2.229,
+          "fin": 2.601
+        },
+        {
+          "texto": "y",
+          "inicio": 2.972,
+          "fin": 3.042
+        },
+        {
+          "texto": "ni",
+          "inicio": 3.111,
+          "fin": 3.193
+        },
+        {
+          "texto": "siquiera",
+          "inicio": 3.239,
+          "fin": 3.599
+        },
+        {
+          "texto": "se",
+          "inicio": 3.634,
+          "fin": 3.692
+        },
+        {
+          "texto": "lo",
+          "inicio": 3.727,
+          "fin": 3.785
+        },
+        {
+          "texto": "pediste.",
+          "inicio": 3.82,
+          "fin": 4.272
+        }
+      ],
+      "normalizado": true
+    },
+    "reposo-y-carrera": {
+      "texto": "En reposo late unas 70 veces por minuto, pero al salir a correr puede superar las 150.",
+      "audio": "voz/reposo-y-carrera.mp3",
+      "duracion": 7.369,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "palabras": [
+        {
+          "texto": "En",
+          "inicio": 0,
+          "fin": 0.221
+        },
+        {
+          "texto": "reposo",
+          "inicio": 0.337,
+          "fin": 0.766
+        },
+        {
+          "texto": "late",
+          "inicio": 0.824,
+          "fin": 1.057
+        },
+        {
+          "texto": "unas",
+          "inicio": 1.138,
+          "fin": 1.358
+        },
+        {
+          "texto": "70",
+          "inicio": 1.428,
+          "fin": 1.846
+        },
+        {
+          "texto": "veces",
+          "inicio": 1.939,
+          "fin": 2.183
+        },
+        {
+          "texto": "por",
+          "inicio": 2.241,
+          "fin": 2.357
+        },
+        {
+          "texto": "minuto,",
+          "inicio": 2.403,
+          "fin": 2.821
+        },
+        {
+          "texto": "pero",
+          "inicio": 3.297,
+          "fin": 3.495
+        },
+        {
+          "texto": "al",
+          "inicio": 3.518,
+          "fin": 3.587
+        },
+        {
+          "texto": "salir",
+          "inicio": 3.646,
+          "fin": 3.913
+        },
+        {
+          "texto": "a",
+          "inicio": 3.947,
+          "fin": 3.971
+        },
+        {
+          "texto": "correr",
+          "inicio": 4.017,
+          "fin": 4.377
+        },
+        {
+          "texto": "puede",
+          "inicio": 4.551,
+          "fin": 4.841
+        },
+        {
+          "texto": "superar",
+          "inicio": 4.888,
+          "fin": 5.259
+        },
+        {
+          "texto": "las",
+          "inicio": 5.317,
+          "fin": 5.433
+        },
+        {
+          "texto": "150.",
+          "inicio": 5.48,
+          "fin": 6.235
+        }
+      ],
+      "normalizado": true
+    },
+    "bomba": {
+      "texto": "Con cada latido empuja un chorrito de sangre, y en un solo día bombea unos 7 mil litros.",
+      "audio": "voz/bomba.mp3",
+      "duracion": 6.977,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "palabras": [
+        {
+          "texto": "Con",
+          "inicio": 0,
+          "fin": 0.232
+        },
+        {
+          "texto": "cada",
+          "inicio": 0.325,
+          "fin": 0.557
+        },
+        {
+          "texto": "latido",
+          "inicio": 0.604,
+          "fin": 0.975
+        },
+        {
+          "texto": "empuja",
+          "inicio": 1.022,
+          "fin": 1.428
+        },
+        {
+          "texto": "un",
+          "inicio": 1.498,
+          "fin": 1.591
+        },
+        {
+          "texto": "chorrito",
+          "inicio": 1.66,
+          "fin": 2.136
+        },
+        {
+          "texto": "de",
+          "inicio": 2.183,
+          "fin": 2.252
+        },
+        {
+          "texto": "sangre,",
+          "inicio": 2.299,
+          "fin": 2.705
+        },
+        {
+          "texto": "y",
+          "inicio": 3.1,
+          "fin": 3.158
+        },
+        {
+          "texto": "en",
+          "inicio": 3.216,
+          "fin": 3.262
+        },
+        {
+          "texto": "un",
+          "inicio": 3.332,
+          "fin": 3.379
+        },
+        {
+          "texto": "solo",
+          "inicio": 3.425,
+          "fin": 3.646
+        },
+        {
+          "texto": "día",
+          "inicio": 3.704,
+          "fin": 4.017
+        },
+        {
+          "texto": "bombea",
+          "inicio": 4.226,
+          "fin": 4.725
+        },
+        {
+          "texto": "unos",
+          "inicio": 4.795,
+          "fin": 5.062
+        },
+        {
+          "texto": "7",
+          "inicio": 5.271,
+          "fin": 5.515
+        },
+        {
+          "texto": "mil",
+          "inicio": 5.631,
+          "fin": 5.782
+        },
+        {
+          "texto": "litros.",
+          "inicio": 5.851,
+          "fin": 6.293
+        }
+      ],
+      "normalizado": true
+    },
+    "toda-una-vida": {
+      "texto": "En toda una vida suma casi 3 mil millones de latidos, sin tomarse ni un solo día libre.",
+      "audio": "voz/toda-una-vida.mp3",
+      "duracion": 6.298,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "palabras": [
+        {
+          "texto": "En",
+          "inicio": 0,
+          "fin": 0.197
+        },
+        {
+          "texto": "toda",
+          "inicio": 0.279,
+          "fin": 0.534
+        },
+        {
+          "texto": "una",
+          "inicio": 0.615,
+          "fin": 0.778
+        },
+        {
+          "texto": "vida",
+          "inicio": 0.824,
+          "fin": 1.138
+        },
+        {
+          "texto": "suma",
+          "inicio": 1.254,
+          "fin": 1.602
+        },
+        {
+          "texto": "casi",
+          "inicio": 1.649,
+          "fin": 1.904
+        },
+        {
+          "texto": "3",
+          "inicio": 2.02,
+          "fin": 2.194
+        },
+        {
+          "texto": "mil",
+          "inicio": 2.31,
+          "fin": 2.473
+        },
+        {
+          "texto": "millones",
+          "inicio": 2.543,
+          "fin": 2.937
+        },
+        {
+          "texto": "de",
+          "inicio": 2.984,
+          "fin": 3.03
+        },
+        {
+          "texto": "latidos,",
+          "inicio": 3.077,
+          "fin": 3.553
+        },
+        {
+          "texto": "sin",
+          "inicio": 3.75,
+          "fin": 3.971
+        },
+        {
+          "texto": "tomarse",
+          "inicio": 4.04,
+          "fin": 4.54
+        },
+        {
+          "texto": "ni",
+          "inicio": 4.656,
+          "fin": 4.783
+        },
+        {
+          "texto": "un",
+          "inicio": 4.865,
+          "fin": 4.934
+        },
+        {
+          "texto": "solo",
+          "inicio": 5.027,
+          "fin": 5.317
+        },
+        {
+          "texto": "día",
+          "inicio": 5.364,
+          "fin": 5.515
+        },
+        {
+          "texto": "libre.",
+          "inicio": 5.561,
+          "fin": 5.898
+        }
+      ],
+      "normalizado": true
+    }
+  }
 }

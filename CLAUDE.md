@@ -21,3 +21,8 @@ Cuando el usuario da un tema, hacé el video completo siguiendo estas convencion
 - Fotogramas sueltos: `npm run fotogramas -- out/fotogramas 0 90 300 ...` y mirarlos (texto legible, nada tapado, sin objetos cortados).
 - `npm run render` → `out/reel.mp4`.
 - En la nube (sin GPU ni descarga de Chrome): `REMOTION_GL=swangle REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell`.
+
+## Voz (ElevenLabs)
+- La clave va **solo** en `.env` (`ELEVENLABS_API_KEY`, `VOICE_ID`); `.env` está en `.gitignore`. Nunca escribirla en código, README ni commits (el repo es público). Antes de commitear: `git status` y verificar que `.env` no esté incluido.
+- `npm run voz -- --voces` lista voces; `npm run voz` genera solo lo que cambió (`-- --forzar` rehace todo).
+- En la nube, Node necesita el proxy: `NODE_USE_ENV_PROXY=1 npm run voz`. El entorno "videos" permite `api.elevenlabs.io`.

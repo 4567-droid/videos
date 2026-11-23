@@ -33,6 +33,8 @@ export type VozEscena = {
 	audio: string;
 	/** Duración del audio en segundos */
 	duracion: number;
+	/** true si el script ya normalizó el volumen del mp3 */
+	normalizado?: boolean;
 	palabras: PalabraVoz[];
 };
 

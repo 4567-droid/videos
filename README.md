@@ -2,7 +2,7 @@
 
 Reels verticales (1080×1920, 30 fps) en español, **100 % programados** con Remotion + Three.js (`@remotion/three`): escenas 3D low-poly, subtítulos animados y voz opcional con ElevenLabs. No usa imágenes de IA ni APIs de imágenes.
 
-Ejemplo terminado: [`ejemplos/corazon-100-mil-latidos.mp4`](ejemplos/corazon-100-mil-latidos.mp4) (tema: "el corazón late 100 mil veces por día", 4 escenas, ~28 s).
+Ejemplo terminado: [`ejemplos/corazon-100-mil-latidos.mp4`](ejemplos/corazon-100-mil-latidos.mp4) (tema: "el corazón late 100 mil veces por día", 4 escenas, ~26 s, voz en off de ElevenLabs).
 
 ## Uso
 
@@ -50,8 +50,8 @@ Sin voz, el tiempo de cada palabra se **estima según su largo** (y pausas en co
 ## Voz con ElevenLabs (opcional)
 
 1. Copiá `.env.example` a `.env` y completá `ELEVENLABS_API_KEY` y `VOICE_ID` (`npm run voz -- --voces` lista las voces de tu cuenta, primero las que hablan español). `.env` está en `.gitignore`: la clave nunca se sube.
-2. `npm run voz`: genera `public/voz/<id>.mp3` por escena y guarda el tiempo exacto de cada palabra en `data/voz.json` (endpoint *with-timestamps*).
-3. `npm run render`: usa el audio y esos tiempos en lugar de la estimación.
+2. `npm run voz`: genera `public/voz/<id>.mp3` por escena (modelo `eleven_multilingual_v2`, endpoint *with-timestamps*), guarda el tiempo exacto de cada palabra en `data/voz.json` y normaliza el volumen (−16 LUFS) para que todas las escenas suenen parejas.
+3. `npm run render`: usa el audio y esos tiempos en lugar de la estimación. Cada escena dura lo que dura su voz, más 0,3 s antes y 0,7 s después (que incluyen la transición).
 
 Si cambiás un texto, volvé a correr `npm run voz` (solo regenera lo que cambió; `npm run voz -- --forzar` rehace todo). Una escena cuyo texto ya no coincide con su audio vuelve sola a la estimación.
 

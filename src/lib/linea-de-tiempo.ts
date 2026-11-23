@@ -15,6 +15,8 @@ const ENTRADA = 0.3;
 const SALIDA = 0.7;
 const SALIDA_FINAL = 1.6;
 const DURACION_MINIMA = 2.5;
+/** Cuánto audio se deja sonar después de la última palabra (segundos). */
+const COLA_AUDIO = 0.3;
 
 const mismoTexto = (a: string, b: string) =>
 	separarPalabras(a).map(normalizar).join(' ') === separarPalabras(b).map(normalizar).join(' ');
@@ -35,10 +37,8 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 		}
 
 		const palabrasSeg = conVoz ? vozEscena!.palabras : estimarTiempos(escena.texto);
-		const finHabla = Math.max(
-			palabrasSeg.at(-1)?.fin ?? 0,
-			conVoz ? vozEscena!.duracion - 0.15 : 0,
-		);
+		// Con voz, la escena dura lo que dura lo hablado (sin el silencio final del audio).
+		const finHabla = palabrasSeg.at(-1)?.fin ?? 0;
 		const entrada = indice === 0 ? ENTRADA_PRIMERA : ENTRADA;
 		const salida = indice === total - 1 ? SALIDA_FINAL : SALIDA;
 		const duracion = Math.ceil(Math.max(DURACION_MINIMA, entrada + finHabla + salida) * fps);
@@ -62,8 +62,14 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 				inicio: Math.round((entrada + p.inicio) * fps),
 				fin: Math.max(Math.round((entrada + p.inicio) * fps) + 1, Math.round((entrada + p.fin) * fps)),
 			})),
+			// el audio se corta (con fundido) un poco después de la última palabra:
+			// así una respiración final no se pisa con la voz de la escena siguiente
 			audio: conVoz
-				? {src: vozEscena!.audio, desde: Math.round(entrada * fps), duracion: Math.ceil(vozEscena!.duracion * fps) + 3}
+				? {
+						src: vozEscena!.audio,
+						desde: Math.round(entrada * fps),
+						duracion: Math.ceil(Math.min(vozEscena!.duracion, finHabla + COLA_AUDIO) * fps),
+					}
 				: null,
 		});
 	});

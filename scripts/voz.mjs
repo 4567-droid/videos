@@ -18,7 +18,8 @@
  *   VOICE_ID             (obligatoria para generar; también se acepta ELEVENLABS_VOICE_ID)
  *   ELEVENLABS_MODEL_ID  (opcional, por defecto eleven_multilingual_v2)
  */
-import {existsSync, readFileSync} from 'node:fs';
+import {spawnSync} from 'node:child_process';
+import {existsSync, readFileSync, renameSync, rmSync, statSync} from 'node:fs';
 import {mkdir, readFile, rm, writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -60,7 +61,7 @@ if (args.includes('--voces')) {
 		process.exit(1);
 	}
 	const {voices} = await res.json();
-	const idiomas = (v) => (v.verified_languages ?? []).map((l) => [l.language, l.accent, l.locale].filter(Boolean).join('/'));
+	const idiomas = (v) => [...new Set((v.verified_languages ?? []).map((l) => [l.language, l.accent, l.locale].filter(Boolean).join('/')))];
 	const hablaEspanol = (v) =>
 		(v.verified_languages ?? []).some((l) => l.language === 'es') ||
 		/spanish|español|espanol|argentin|latin|mexic|castilian|colombian|chilean|rioplat/i.test(
@@ -84,24 +85,56 @@ if (!VOICE_ID) {
 }
 
 const separarPalabras = (texto) => texto.trim().split(/\s+/).filter(Boolean);
+
+/**
+ * Normaliza el volumen del mp3 (−16 LUFS, pico real ≤ −1,5 dB) con el ffmpeg que trae
+ * Remotion: todas las escenas suenan parejas y a un nivel adecuado para redes.
+ */
+const VOLUMEN_OBJETIVO = 'loudnorm=I=-16:TP=-1.5:LRA=11';
+const normalizarVolumen = (ruta) => {
+	const temporal = ruta.replace(/\.mp3$/, '.tmp.mp3');
+	const r = spawnSync(
+		'npx',
+		['--no-install', 'remotion', 'ffmpeg', '-y', '-v', 'error', '-i', ruta, '-af', VOLUMEN_OBJETIVO, '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', `${KBPS}k`, temporal],
+		{cwd: RAIZ, encoding: 'utf8', shell: process.platform === 'win32'},
+	);
+	if (r.status !== 0 || !existsSync(temporal)) {
+		rmSync(temporal, {force: true});
+		console.warn(`  ⚠ No pude normalizar el volumen de ${path.basename(ruta)}; queda como vino.`);
+		return false;
+	}
+	renameSync(temporal, ruta);
+	return true;
+};
+
+const duracionMp3 = (ruta) => (statSync(ruta).size * 8) / (KBPS * 1000);
 const redondear = (n) => Math.round(n * 1000) / 1000;
 
-/** Agrupa la alineación por caracteres de ElevenLabs en palabras (separadas por espacios). */
+/**
+ * Agrupa la alineación por caracteres de ElevenLabs en palabras (separadas por espacios).
+ * Inicio y fin se toman de la primera y la última LETRA/CIFRA: ElevenLabs le asigna
+ * a los signos finales ("," ".") la pausa que viene después, y eso no es habla.
+ */
 const palabrasDesdeAlineacion = (alineacion) => {
 	const {characters, character_start_times_seconds: inicios, character_end_times_seconds: fines} = alineacion;
+	const esLetra = (ch) => /[\p{L}\p{N}]/u.test(ch);
 	const palabras = [];
 	let actual = null;
+	const cerrar = () => {
+		if (actual) palabras.push({texto: actual.texto, inicio: actual.inicioLetra ?? actual.inicio, fin: actual.finLetra ?? actual.fin});
+		actual = null;
+	};
 	characters.forEach((ch, i) => {
-		if (/\s/.test(ch)) {
-			if (actual) palabras.push(actual);
-			actual = null;
-			return;
-		}
-		if (!actual) actual = {texto: '', inicio: inicios[i], fin: fines[i]};
+		if (/\s/.test(ch)) return cerrar();
+		if (!actual) actual = {texto: '', inicio: inicios[i], fin: fines[i], inicioLetra: null, finLetra: null};
 		actual.texto += ch;
 		actual.fin = fines[i];
+		if (esLetra(ch)) {
+			actual.inicioLetra ??= inicios[i];
+			actual.finLetra = fines[i];
+		}
 	});
-	if (actual) palabras.push(actual);
+	cerrar();
 	return palabras;
 };
 
@@ -147,9 +180,10 @@ const generar = async (escena, anterior, siguiente) => {
 	const alineacion = datos.alignment ?? datos.normalized_alignment;
 	const palabrasAudio = palabrasDesdeAlineacion(alineacion);
 	const finHabla = Math.max(0, ...alineacion.character_end_times_seconds);
-	const duracionArchivo = (audio.length * 8) / (KBPS * 1000);
-	const duracion = Math.max(finHabla, duracionArchivo);
-	return {audio, duracion, palabras: alinearConGuion(escena.texto, palabrasAudio, finHabla)};
+	// Cómo "leyó" ElevenLabs el texto (útil para revisar números: "100 mil" -> "cien mil")
+	const normalizado = datos.normalized_alignment?.characters?.join('').trim();
+	if (normalizado && normalizado !== escena.texto.trim()) console.log(`\n  leído como: "${normalizado}"`);
+	return {audio, finHabla, palabras: alinearConGuion(escena.texto, palabrasAudio, finHabla)};
 };
 
 const video = JSON.parse(await readFile(RUTA_VIDEO, 'utf8'));
@@ -177,22 +211,32 @@ for (const [i, escena] of video.escenas.entries()) {
 		previa.voz === VOICE_ID &&
 		previa.modelo === MODEL_ID &&
 		existsSync(path.join(RAIZ, 'public', archivo));
+	const rutaAudio = path.join(RAIZ, 'public', archivo);
 	if (vigente && !forzar && !soloEscena) {
-		console.log(`= ${escena.id}: sin cambios`);
+		if (!previa.normalizado && normalizarVolumen(rutaAudio)) {
+			previa.normalizado = true;
+			previa.duracion = redondear(Math.max(previa.palabras.at(-1)?.fin ?? 0, duracionMp3(rutaAudio)));
+			console.log(`= ${escena.id}: sin cambios de texto (volumen normalizado)`);
+		} else {
+			console.log(`= ${escena.id}: sin cambios`);
+		}
 		continue;
 	}
 	process.stdout.write(`> ${escena.id}: generando voz... `);
-	const {audio, duracion, palabras} = await generar(escena, video.escenas[i - 1], video.escenas[i + 1]);
-	await writeFile(path.join(RAIZ, 'public', archivo), audio);
+	const {audio, finHabla, palabras} = await generar(escena, video.escenas[i - 1], video.escenas[i + 1]);
+	await writeFile(rutaAudio, audio);
+	const normalizado = normalizarVolumen(rutaAudio);
+	const duracion = Math.max(finHabla, duracionMp3(rutaAudio));
 	voz.escenas[escena.id] = {
 		texto: escena.texto,
 		audio: archivo,
 		duracion: redondear(duracion),
 		voz: VOICE_ID,
 		modelo: MODEL_ID,
+		normalizado,
 		palabras,
 	};
-	console.log(`listo (${duracion.toFixed(2)} s, ${palabras.length} palabras)`);
+	console.log(`listo (${duracion.toFixed(2)} s, ${palabras.length} palabras${normalizado ? ', volumen normalizado' : ''})`);
 	// guardar después de cada escena por si algo falla a mitad de camino
 	await writeFile(RUTA_VOZ, JSON.stringify(voz, null, 2) + '\n');
 }

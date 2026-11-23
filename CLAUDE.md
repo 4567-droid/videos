@@ -6,12 +6,14 @@ Cuando el usuario da un tema, hacé el video completo siguiendo estas convencion
 - Primera escena = **gancho** (dato sorprendente o afirmación directa). Después frases cortas (≈10–18 palabras), **una escena por frase**, 30–45 s en total (~2,8 palabras/seg; `npx remotion compositions` muestra la duración).
 - Español neutro (evitá imperativos con voseo o tuteo marcados), números en cifras ("100 mil", "150") para que se lean en los subtítulos. Chequeá que los datos sean correctos.
 - `id` en kebab-case, `componente` en PascalCase. Si el texto cambia y hay voz generada, avisá que hay que correr `npm run voz`.
+- Si el usuario trae el guion escrito, usalo textual (es lo que dice la voz). Antes de reemplazar `data/video.json`, guardá el anterior en `data/anteriores/`.
 
 ## 2. Escenas → `src/escenas/<Componente>.tsx` + registro en `src/escenas/index.ts`
 - Base: `Escenario3D` (fondo CSS + `ThreeCanvas` + `overlay` HTML) y `Camara` (posición calculada por frame; la cámara siempre se mueve).
 - Sincronizá con el guion usando `useEscena().momento('palabra')` (frame relativo a la escena; acepta varias palabras y `{fin: true}`).
 - Todo determinístico: `useCurrentFrame()` y `random('semilla')` de remotion; nunca `Math.random()`, `Date.now()` ni `useFrame` de R3F.
-- Objetos simples, claros y de colores vivos; estética low-poly (`flatShading`). Personas → `Avatar` (`reposo`, `caminar`, `correr`, `saludar`, `celebrar`, mezclables con `mezcla`).
+- Objetos simples, claros y de colores vivos; estética low-poly (`flatShading`). Personas → `Avatar` (`reposo`, `caminar`, `correr`, `saludar`, `celebrar`, mezclables con `mezcla`). Abeja mascota → `Abeja` (expresiones `enojo`/`sorpresa`, `mirada`, `parpadeo`, `saludo`, `brazosCruzados`). Revisá `src/componentes/` antes de crear algo nuevo: muchos objetos ya existen.
+- Extremidades o líneas entre dos puntos → `Segmento`. Texto o dibujos en texturas → `useTexturaCanvas` (espera la fuente Inter antes de dibujar).
 - Muchas copias → `instancedMesh` + geometrías de bajo detalle (ej. `obtenerGeometriaCorazon('bajo')`).
 - Nada de imágenes, texturas descargadas ni emojis: todo se genera con código (geometrías, `<canvas>`, SVG).
 - Zonas: subtítulos ~250–500 px desde arriba; números/etiquetas ~1340–1600 px (`Contador`); no pongas nada importante en los últimos ~300 px ni pegado al borde derecho (interfaz de Reels/TikTok). Para anclar HTML a un objeto 3D usá `proyectar()`.

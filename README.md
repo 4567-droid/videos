@@ -2,7 +2,9 @@
 
 Reels verticales (1080×1920, 30 fps) en español, **100 % programados** con Remotion + Three.js (`@remotion/three`): escenas 3D low-poly, subtítulos animados y voz opcional con ElevenLabs. No usa imágenes de IA ni APIs de imágenes.
 
-Ejemplo terminado: [`ejemplos/corazon-100-mil-latidos.mp4`](ejemplos/corazon-100-mil-latidos.mp4) (tema: "el corazón late 100 mil veces por día", 4 escenas, ~26 s, voz en off de ElevenLabs).
+Ejemplos terminados (con voz de ElevenLabs):
+- [`ejemplos/abejas-reconocen-caras.mp4`](ejemplos/abejas-reconocen-caras.mp4): "las abejas reconocen caras humanas", 7 escenas, ~39 s.
+- [`ejemplos/corazon-100-mil-latidos.mp4`](ejemplos/corazon-100-mil-latidos.mp4): "el corazón late 100 mil veces por día", 4 escenas, ~26 s (su guion quedó en `data/anteriores/`).
 
 ## Uso
 
@@ -61,7 +63,8 @@ Si cambiás un texto, volvé a correr `npm run voz` (solo regenera lo que cambi�
 data/video.json        guion (una escena por frase)
 data/voz.json          tiempos de la voz (lo escribe npm run voz)
 src/escenas/           una animación 3D por escena + index.ts (registro)
-src/componentes/       Avatar (muñeco low-poly), Corazon3D, Camara, Contador, Subtitulos, transiciones...
+src/componentes/       personajes y objetos reutilizables: Avatar (persona), Abeja, Corazon3D, Cerebro,
+                       CaraFlor, Calendario, FotoCara, Repelente, Camara, Contador, Subtitulos...
 src/lib/               estimación de tiempos, línea de tiempo, agrupado de subtítulos
 scripts/voz.mjs        voz con ElevenLabs
 scripts/fotogramas.mjs renderiza fotogramas sueltos para revisar (npm run fotogramas -- out/f 0 90 300)

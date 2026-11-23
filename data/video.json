@@ -1,27 +1,44 @@
 {
-  "tema": "el corazón late 100 mil veces por día",
-  "titulo": "Tu corazón no se toma vacaciones",
+  "tema": "las abejas reconocen caras humanas",
+  "titulo": "Para una abeja sos un jardín con ojos",
   "escenas": [
     {
-      "id": "gancho",
-      "componente": "CorazonLatiendo",
-      "texto": "Hoy tu corazón va a latir unas 100 mil veces, y ni siquiera se lo pediste."
+      "id": "gancho-abeja",
+      "componente": "AbejaGancho",
+      "texto": "¿Sabías que las abejas pueden reconocer tu cara?"
     },
     {
-      "id": "reposo-y-carrera",
-      "componente": "CorredorPulso",
-      "texto": "En reposo late unas 70 veces por minuto, pero al salir a correr puede superar las 150."
+      "id": "cerebros",
+      "componente": "CerebrosComparados",
+      "texto": "Su cerebro tiene apenas un millón de neuronas. El tuyo, más de ochenta mil millones."
     },
     {
-      "id": "bomba",
-      "componente": "BombaSangre",
-      "texto": "Con cada latido empuja un chorrito de sangre, y en un solo día bombea unos 7 mil litros.",
+      "id": "experimento",
+      "componente": "ExperimentoCaras",
+      "texto": "Pero en un experimento, les mostraron fotos de caras humanas, y les daban azúcar cuando elegían la correcta.",
       "transicion": "deslizar"
     },
     {
-      "id": "toda-una-vida",
-      "componente": "VidaEntera",
-      "texto": "En toda una vida suma casi 3 mil millones de latidos, sin tomarse ni un solo día libre."
+      "id": "memoria",
+      "componente": "MemoriaDias",
+      "texto": "Las abejas aprendieron a distinguirlas, y se acordaron días después."
+    },
+    {
+      "id": "cara-flor",
+      "componente": "CaraEnFlor",
+      "texto": "¿Cómo lo hacen? Tratan tu cara como si fuera una flor: un patrón de formas que se repite.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "jardin-con-ojos",
+      "componente": "JardinConOjos",
+      "texto": "O sea, para ellas sos un jardín con ojos."
+    },
+    {
+      "id": "abeja-enojada",
+      "componente": "AbejaEnojada",
+      "texto": "Así que si una abeja te da vueltas, tranquilo. Solo te reconoció... y sigue enojada por el repelente.",
+      "transicion": "deslizar"
     }
   ]
 }

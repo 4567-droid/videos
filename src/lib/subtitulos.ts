@@ -20,25 +20,46 @@ export type GrupoSubtitulo = {
 const limpiar = (p: string) => p.replace(/[.,;:…]+$/u, '').replace(/^["«(]+|["»)]+$/gu, '');
 const terminaFrase = (p: string) => /[.,;:!?…]["»)]?$/.test(p);
 
-/** Palabras que no deberían quedar colgando al final de un grupo ("de", "la", "un"...). */
+/** Artículos, preposiciones y pronombres: no deberían quedar colgando al final de un grupo. */
 const PALABRAS_FUNCION = new Set([
 	'de', 'del', 'la', 'las', 'el', 'los', 'lo', 'un', 'una', 'unos', 'unas', 'a', 'al', 'en', 'por', 'para',
-	'con', 'sin', 'y', 'e', 'o', 'u', 'que', 'se', 'tu', 'tus', 'su', 'sus', 'mi', 'mis', 'ni', 'le', 'les',
-	'me', 'te', 'nos', 'muy', 'mas', 'cada',
+	'con', 'sin', 'se', 'tu', 'tus', 'su', 'sus', 'mi', 'mis', 'le', 'les', 'me', 'te', 'nos', 'muy', 'mas', 'cada',
 ]);
-const esNumero = (p: string) => /^\d+$/.test(normalizar(p));
+/** Conjunciones: molesta menos que cierren un grupo ("¿Sabías que / las abejas..."). */
+const CONJUNCIONES = new Set(['que', 'y', 'e', 'o', 'u', 'ni', 'pero', 'si', 'como']);
+/** Números escritos en letras ("un millón", "ochenta mil millones"). */
+const NUMEROS_EN_LETRAS = new Set([
+	'un', 'uno', 'una', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce',
+	'trece', 'catorce', 'quince', 'veinte', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta',
+	'noventa', 'cien', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos',
+	'setecientos', 'ochocientos', 'novecientos',
+]);
+const esNumero = (p: string) => /^\d+$/.test(normalizar(p)) || NUMEROS_EN_LETRAS.has(normalizar(p));
 const continuaNumero = (p: string) => /^(mil|millon|millones|billon|billones)$/.test(normalizar(p)) || p.startsWith('%');
+const letras = (p: string) => normalizar(p).length;
+
+/** Un grupo que dura menos que esto (frames) no llega a leerse. */
+const MINIMO_LEGIBLE = 12;
+
+type PalabraAgrupable = {texto: string; inicio?: number; fin?: number};
 
 /** Cuánto "molesta" leer este grupo: más bajo = mejor corte. */
-const costoGrupo = (grupo: {texto: string}[], siguiente?: {texto: string}) => {
-	let costo = grupo.length === 1 ? 3 : grupo.length === 2 ? 1 : 0;
+const costoGrupo = (grupo: PalabraAgrupable[], siguiente?: PalabraAgrupable) => {
+	// una palabra sola está bien si es larga ("EXPERIMENTO"), molesta si es corta ("PERO")
+	let costo = grupo.length === 1 ? (letras(grupo[0].texto) >= 8 ? 1.5 : 3) : grupo.length === 2 ? 1 : 0;
 	// no cruzar comas ni puntos dentro de un grupo
 	for (let i = 0; i < grupo.length - 1; i++) if (terminaFrase(grupo[i].texto)) costo += 6;
-	const ultima = grupo[grupo.length - 1].texto;
-	if (siguiente && !terminaFrase(ultima)) {
-		if (PALABRAS_FUNCION.has(normalizar(ultima))) costo += 3.5;
-		// no separar "100 | mil" ni "3 mil | millones"
-		if ((esNumero(ultima) || normalizar(ultima) === 'mil') && continuaNumero(siguiente.texto)) costo += 6;
+	const ultima = grupo[grupo.length - 1];
+	if (siguiente && !terminaFrase(ultima.texto)) {
+		const n = normalizar(ultima.texto);
+		if (PALABRAS_FUNCION.has(n)) costo += 3.5;
+		else if (CONJUNCIONES.has(n)) costo += 2;
+		// no separar "100 | mil", "ochenta | mil" ni "3 mil | millones"
+		if ((esNumero(ultima.texto) || n === 'mil') && continuaNumero(siguiente.texto)) costo += 8;
+	}
+	// grupos que pasan demasiado rápido
+	if (grupo[0].inicio !== undefined && ultima.fin !== undefined && ultima.fin - grupo[0].inicio < MINIMO_LEGIBLE) {
+		costo += 2.5;
 	}
 	return costo;
 };
@@ -47,7 +68,7 @@ const costoGrupo = (grupo: {texto: string}[], siguiente?: {texto: string}) => {
  * Parte las palabras de una escena en grupos de hasta 3 eligiendo los cortes
  * más naturales (programación dinámica sobre costoGrupo).
  */
-export const agrupar = <T extends {texto: string}>(palabras: T[]): T[][] => {
+export const agrupar = <T extends PalabraAgrupable>(palabras: T[]): T[][] => {
 	const n = palabras.length;
 	const costo = new Array<number>(n + 1).fill(Infinity);
 	const corte = new Array<number>(n + 1).fill(0);

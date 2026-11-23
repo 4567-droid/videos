@@ -1,389 +1,554 @@
 {
   "escenas": {
-    "gancho": {
-      "texto": "Hoy tu corazón va a latir unas 100 mil veces, y ni siquiera se lo pediste.",
-      "audio": "voz/gancho.mp3",
-      "duracion": 4.992,
+    "gancho-abeja": {
+      "texto": "¿Sabías que las abejas pueden reconocer tu cara?",
+      "audio": "voz/gancho-abeja.mp3",
+      "duracion": 3.268,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
+      "normalizado": true,
       "palabras": [
         {
-          "texto": "Hoy",
-          "inicio": 0,
-          "fin": 0.174
+          "texto": "¿Sabías",
+          "inicio": 0.058,
+          "fin": 0.418
+        },
+        {
+          "texto": "que",
+          "inicio": 0.464,
+          "fin": 0.534
+        },
+        {
+          "texto": "las",
+          "inicio": 0.569,
+          "fin": 0.685
+        },
+        {
+          "texto": "abejas",
+          "inicio": 0.755,
+          "fin": 1.057
+        },
+        {
+          "texto": "pueden",
+          "inicio": 1.115,
+          "fin": 1.358
+        },
+        {
+          "texto": "reconocer",
+          "inicio": 1.428,
+          "fin": 1.916
         },
         {
           "texto": "tu",
-          "inicio": 0.221,
-          "fin": 0.29
+          "inicio": 1.974,
+          "fin": 2.055
         },
         {
-          "texto": "corazón",
-          "inicio": 0.337,
-          "fin": 0.813
+          "texto": "cara?",
+          "inicio": 2.113,
+          "fin": 2.426
+        }
+      ]
+    },
+    "cerebros": {
+      "texto": "Su cerebro tiene apenas un millón de neuronas. El tuyo, más de ochenta mil millones.",
+      "audio": "voz/cerebros.mp3",
+      "duracion": 6.481,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Su",
+          "inicio": 0,
+          "fin": 0.209
         },
         {
-          "texto": "va",
-          "inicio": 0.894,
-          "fin": 1.033
+          "texto": "cerebro",
+          "inicio": 0.244,
+          "fin": 0.639
         },
         {
-          "texto": "a",
-          "inicio": 1.08,
-          "fin": 1.103
+          "texto": "tiene",
+          "inicio": 0.685,
+          "fin": 0.906
         },
         {
-          "texto": "latir",
-          "inicio": 1.161,
-          "fin": 1.463
+          "texto": "apenas",
+          "inicio": 0.929,
+          "fin": 1.289
         },
         {
-          "texto": "unas",
-          "inicio": 1.521,
-          "fin": 1.707
+          "texto": "un",
+          "inicio": 1.44,
+          "fin": 1.567
         },
         {
-          "texto": "100",
-          "inicio": 1.753,
-          "fin": 1.927
+          "texto": "millón",
+          "inicio": 1.625,
+          "fin": 1.95
+        },
+        {
+          "texto": "de",
+          "inicio": 1.997,
+          "fin": 2.055
+        },
+        {
+          "texto": "neuronas.",
+          "inicio": 2.101,
+          "fin": 2.67
+        },
+        {
+          "texto": "El",
+          "inicio": 3.262,
+          "fin": 3.425
+        },
+        {
+          "texto": "tuyo,",
+          "inicio": 3.495,
+          "fin": 3.878
+        },
+        {
+          "texto": "más",
+          "inicio": 4.18,
+          "fin": 4.377
+        },
+        {
+          "texto": "de",
+          "inicio": 4.423,
+          "fin": 4.481
+        },
+        {
+          "texto": "ochenta",
+          "inicio": 4.528,
+          "fin": 4.981
         },
         {
           "texto": "mil",
-          "inicio": 1.997,
-          "fin": 2.171
+          "inicio": 5.062,
+          "fin": 5.271
         },
         {
-          "texto": "veces,",
-          "inicio": 2.229,
-          "fin": 2.601
-        },
-        {
-          "texto": "y",
-          "inicio": 2.972,
-          "fin": 3.042
-        },
-        {
-          "texto": "ni",
-          "inicio": 3.111,
-          "fin": 3.193
-        },
-        {
-          "texto": "siquiera",
-          "inicio": 3.239,
-          "fin": 3.599
-        },
-        {
-          "texto": "se",
-          "inicio": 3.634,
-          "fin": 3.692
-        },
-        {
-          "texto": "lo",
-          "inicio": 3.727,
-          "fin": 3.785
-        },
-        {
-          "texto": "pediste.",
-          "inicio": 3.82,
-          "fin": 4.272
+          "texto": "millones.",
+          "inicio": 5.341,
+          "fin": 5.898
         }
-      ],
-      "normalizado": true
+      ]
     },
-    "reposo-y-carrera": {
-      "texto": "En reposo late unas 70 veces por minuto, pero al salir a correr puede superar las 150.",
-      "audio": "voz/reposo-y-carrera.mp3",
-      "duracion": 7.369,
+    "experimento": {
+      "texto": "Pero en un experimento, les mostraron fotos de caras humanas, y les daban azúcar cuando elegían la correcta.",
+      "audio": "voz/experimento.mp3",
+      "duracion": 7.735,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
+      "normalizado": true,
       "palabras": [
         {
-          "texto": "En",
+          "texto": "Pero",
           "inicio": 0,
           "fin": 0.221
         },
         {
-          "texto": "reposo",
-          "inicio": 0.337,
-          "fin": 0.766
-        },
-        {
-          "texto": "late",
-          "inicio": 0.824,
-          "fin": 1.057
-        },
-        {
-          "texto": "unas",
-          "inicio": 1.138,
-          "fin": 1.358
-        },
-        {
-          "texto": "70",
-          "inicio": 1.428,
-          "fin": 1.846
-        },
-        {
-          "texto": "veces",
-          "inicio": 1.939,
-          "fin": 2.183
-        },
-        {
-          "texto": "por",
-          "inicio": 2.241,
-          "fin": 2.357
-        },
-        {
-          "texto": "minuto,",
-          "inicio": 2.403,
-          "fin": 2.821
-        },
-        {
-          "texto": "pero",
-          "inicio": 3.297,
-          "fin": 3.495
-        },
-        {
-          "texto": "al",
-          "inicio": 3.518,
-          "fin": 3.587
-        },
-        {
-          "texto": "salir",
-          "inicio": 3.646,
-          "fin": 3.913
-        },
-        {
-          "texto": "a",
-          "inicio": 3.947,
-          "fin": 3.971
-        },
-        {
-          "texto": "correr",
-          "inicio": 4.017,
-          "fin": 4.377
-        },
-        {
-          "texto": "puede",
-          "inicio": 4.551,
-          "fin": 4.841
-        },
-        {
-          "texto": "superar",
-          "inicio": 4.888,
-          "fin": 5.259
-        },
-        {
-          "texto": "las",
-          "inicio": 5.317,
-          "fin": 5.433
-        },
-        {
-          "texto": "150.",
-          "inicio": 5.48,
-          "fin": 6.235
-        }
-      ],
-      "normalizado": true
-    },
-    "bomba": {
-      "texto": "Con cada latido empuja un chorrito de sangre, y en un solo día bombea unos 7 mil litros.",
-      "audio": "voz/bomba.mp3",
-      "duracion": 6.977,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "palabras": [
-        {
-          "texto": "Con",
-          "inicio": 0,
-          "fin": 0.232
-        },
-        {
-          "texto": "cada",
-          "inicio": 0.325,
-          "fin": 0.557
-        },
-        {
-          "texto": "latido",
-          "inicio": 0.604,
-          "fin": 0.975
-        },
-        {
-          "texto": "empuja",
-          "inicio": 1.022,
-          "fin": 1.428
+          "texto": "en",
+          "inicio": 0.244,
+          "fin": 0.302
         },
         {
           "texto": "un",
-          "inicio": 1.498,
-          "fin": 1.591
+          "inicio": 0.395,
+          "fin": 0.464
         },
         {
-          "texto": "chorrito",
-          "inicio": 1.66,
-          "fin": 2.136
+          "texto": "experimento,",
+          "inicio": 0.511,
+          "fin": 1.277
+        },
+        {
+          "texto": "les",
+          "inicio": 1.614,
+          "fin": 1.776
+        },
+        {
+          "texto": "mostraron",
+          "inicio": 1.846,
+          "fin": 2.299
+        },
+        {
+          "texto": "fotos",
+          "inicio": 2.392,
+          "fin": 2.74
         },
         {
           "texto": "de",
-          "inicio": 2.183,
-          "fin": 2.252
+          "inicio": 2.786,
+          "fin": 2.868
         },
         {
-          "texto": "sangre,",
-          "inicio": 2.299,
-          "fin": 2.705
+          "texto": "caras",
+          "inicio": 2.949,
+          "fin": 3.216
+        },
+        {
+          "texto": "humanas,",
+          "inicio": 3.251,
+          "fin": 3.738
         },
         {
           "texto": "y",
-          "inicio": 3.1,
-          "fin": 3.158
+          "inicio": 4.168,
+          "fin": 4.249
         },
         {
-          "texto": "en",
-          "inicio": 3.216,
-          "fin": 3.262
+          "texto": "les",
+          "inicio": 4.331,
+          "fin": 4.47
         },
         {
-          "texto": "un",
-          "inicio": 3.332,
-          "fin": 3.379
+          "texto": "daban",
+          "inicio": 4.528,
+          "fin": 4.772
         },
         {
-          "texto": "solo",
-          "inicio": 3.425,
-          "fin": 3.646
+          "texto": "azúcar",
+          "inicio": 4.818,
+          "fin": 5.213
         },
         {
-          "texto": "día",
-          "inicio": 3.704,
-          "fin": 4.017
-        },
-        {
-          "texto": "bombea",
-          "inicio": 4.226,
-          "fin": 4.725
-        },
-        {
-          "texto": "unos",
-          "inicio": 4.795,
-          "fin": 5.062
-        },
-        {
-          "texto": "7",
+          "texto": "cuando",
           "inicio": 5.271,
-          "fin": 5.515
+          "fin": 5.573
         },
         {
-          "texto": "mil",
-          "inicio": 5.631,
-          "fin": 5.782
+          "texto": "elegían",
+          "inicio": 5.642,
+          "fin": 6.107
         },
         {
-          "texto": "litros.",
-          "inicio": 5.851,
-          "fin": 6.293
+          "texto": "la",
+          "inicio": 6.165,
+          "fin": 6.235
+        },
+        {
+          "texto": "correcta.",
+          "inicio": 6.281,
+          "fin": 6.815
         }
-      ],
-      "normalizado": true
+      ]
     },
-    "toda-una-vida": {
-      "texto": "En toda una vida suma casi 3 mil millones de latidos, sin tomarse ni un solo día libre.",
-      "audio": "voz/toda-una-vida.mp3",
-      "duracion": 6.298,
+    "memoria": {
+      "texto": "Las abejas aprendieron a distinguirlas, y se acordaron días después.",
+      "audio": "voz/memoria.mp3",
+      "duracion": 4.391,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
+      "normalizado": true,
       "palabras": [
         {
-          "texto": "En",
+          "texto": "Las",
           "inicio": 0,
-          "fin": 0.197
+          "fin": 0.209
         },
         {
-          "texto": "toda",
-          "inicio": 0.279,
-          "fin": 0.534
+          "texto": "abejas",
+          "inicio": 0.29,
+          "fin": 0.569
         },
         {
-          "texto": "una",
-          "inicio": 0.615,
-          "fin": 0.778
+          "texto": "aprendieron",
+          "inicio": 0.627,
+          "fin": 1.115
         },
         {
-          "texto": "vida",
-          "inicio": 0.824,
-          "fin": 1.138
+          "texto": "a",
+          "inicio": 1.161,
+          "fin": 1.184
         },
         {
-          "texto": "suma",
-          "inicio": 1.254,
-          "fin": 1.602
+          "texto": "distinguirlas,",
+          "inicio": 1.231,
+          "fin": 1.962
         },
         {
-          "texto": "casi",
-          "inicio": 1.649,
-          "fin": 1.904
+          "texto": "y",
+          "inicio": 2.287,
+          "fin": 2.368
         },
         {
-          "texto": "3",
-          "inicio": 2.02,
-          "fin": 2.194
+          "texto": "se",
+          "inicio": 2.45,
+          "fin": 2.519
         },
         {
-          "texto": "mil",
-          "inicio": 2.31,
-          "fin": 2.473
-        },
-        {
-          "texto": "millones",
-          "inicio": 2.543,
-          "fin": 2.937
-        },
-        {
-          "texto": "de",
-          "inicio": 2.984,
+          "texto": "acordaron",
+          "inicio": 2.554,
           "fin": 3.03
         },
         {
-          "texto": "latidos,",
-          "inicio": 3.077,
-          "fin": 3.553
+          "texto": "días",
+          "inicio": 3.1,
+          "fin": 3.332
         },
         {
-          "texto": "sin",
-          "inicio": 3.75,
-          "fin": 3.971
+          "texto": "después.",
+          "inicio": 3.379,
+          "fin": 3.82
+        }
+      ]
+    },
+    "cara-flor": {
+      "texto": "¿Cómo lo hacen? Tratan tu cara como si fuera una flor: un patrón de formas que se repite.",
+      "audio": "voz/cara-flor.mp3",
+      "duracion": 6.246,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "¿Cómo",
+          "inicio": 0.209,
+          "fin": 0.418
         },
         {
-          "texto": "tomarse",
-          "inicio": 4.04,
-          "fin": 4.54
+          "texto": "lo",
+          "inicio": 0.453,
+          "fin": 0.522
         },
         {
-          "texto": "ni",
-          "inicio": 4.656,
-          "fin": 4.783
+          "texto": "hacen?",
+          "inicio": 0.557,
+          "fin": 0.836
+        },
+        {
+          "texto": "Tratan",
+          "inicio": 1.591,
+          "fin": 1.95
+        },
+        {
+          "texto": "tu",
+          "inicio": 2.009,
+          "fin": 2.101
+        },
+        {
+          "texto": "cara",
+          "inicio": 2.159,
+          "fin": 2.38
+        },
+        {
+          "texto": "como",
+          "inicio": 2.426,
+          "fin": 2.577
+        },
+        {
+          "texto": "si",
+          "inicio": 2.624,
+          "fin": 2.694
+        },
+        {
+          "texto": "fuera",
+          "inicio": 2.752,
+          "fin": 2.937
+        },
+        {
+          "texto": "una",
+          "inicio": 2.972,
+          "fin": 3.088
+        },
+        {
+          "texto": "flor:",
+          "inicio": 3.146,
+          "fin": 3.425
         },
         {
           "texto": "un",
-          "inicio": 4.865,
-          "fin": 4.934
+          "inicio": 3.866,
+          "fin": 3.959
         },
         {
-          "texto": "solo",
-          "inicio": 5.027,
-          "fin": 5.317
+          "texto": "patrón",
+          "inicio": 4.017,
+          "fin": 4.342
         },
         {
-          "texto": "día",
-          "inicio": 5.364,
-          "fin": 5.515
+          "texto": "de",
+          "inicio": 4.4,
+          "fin": 4.458
         },
         {
-          "texto": "libre.",
-          "inicio": 5.561,
-          "fin": 5.898
+          "texto": "formas",
+          "inicio": 4.539,
+          "fin": 4.888
+        },
+        {
+          "texto": "que",
+          "inicio": 4.934,
+          "fin": 5.004
+        },
+        {
+          "texto": "se",
+          "inicio": 5.05,
+          "fin": 5.12
+        },
+        {
+          "texto": "repite.",
+          "inicio": 5.178,
+          "fin": 5.619
         }
-      ],
-      "normalizado": true
+      ]
+    },
+    "jardin-con-ojos": {
+      "texto": "O sea, para ellas sos un jardín con ojos.",
+      "audio": "voz/jardin-con-ojos.mp3",
+      "duracion": 3.634,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "O",
+          "inicio": 0,
+          "fin": 0.128
+        },
+        {
+          "texto": "sea,",
+          "inicio": 0.197,
+          "fin": 0.499
+        },
+        {
+          "texto": "para",
+          "inicio": 0.952,
+          "fin": 1.184
+        },
+        {
+          "texto": "ellas",
+          "inicio": 1.265,
+          "fin": 1.579
+        },
+        {
+          "texto": "sos",
+          "inicio": 1.788,
+          "fin": 2.043
+        },
+        {
+          "texto": "un",
+          "inicio": 2.136,
+          "fin": 2.194
+        },
+        {
+          "texto": "jardín",
+          "inicio": 2.241,
+          "fin": 2.543
+        },
+        {
+          "texto": "con",
+          "inicio": 2.589,
+          "fin": 2.694
+        },
+        {
+          "texto": "ojos.",
+          "inicio": 2.775,
+          "fin": 3.042
+        }
+      ]
+    },
+    "abeja-enojada": {
+      "texto": "Así que si una abeja te da vueltas, tranquilo. Solo te reconoció... y sigue enojada por el repelente.",
+      "audio": "voz/abeja-enojada.mp3",
+      "duracion": 6.847,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Así",
+          "inicio": 0,
+          "fin": 0.279
+        },
+        {
+          "texto": "que",
+          "inicio": 0.337,
+          "fin": 0.418
+        },
+        {
+          "texto": "si",
+          "inicio": 0.464,
+          "fin": 0.546
+        },
+        {
+          "texto": "una",
+          "inicio": 0.604,
+          "fin": 0.755
+        },
+        {
+          "texto": "abeja",
+          "inicio": 0.789,
+          "fin": 1.161
+        },
+        {
+          "texto": "te",
+          "inicio": 1.219,
+          "fin": 1.3
+        },
+        {
+          "texto": "da",
+          "inicio": 1.347,
+          "fin": 1.428
+        },
+        {
+          "texto": "vueltas,",
+          "inicio": 1.474,
+          "fin": 1.904
+        },
+        {
+          "texto": "tranquilo.",
+          "inicio": 2.055,
+          "fin": 2.635
+        },
+        {
+          "texto": "Solo",
+          "inicio": 3.077,
+          "fin": 3.39
+        },
+        {
+          "texto": "te",
+          "inicio": 3.448,
+          "fin": 3.518
+        },
+        {
+          "texto": "reconoció...",
+          "inicio": 3.576,
+          "fin": 4.133
+        },
+        {
+          "texto": "y",
+          "inicio": 4.632,
+          "fin": 4.714
+        },
+        {
+          "texto": "sigue",
+          "inicio": 4.807,
+          "fin": 5.05
+        },
+        {
+          "texto": "enojada",
+          "inicio": 5.108,
+          "fin": 5.538
+        },
+        {
+          "texto": "por",
+          "inicio": 5.584,
+          "fin": 5.724
+        },
+        {
+          "texto": "el",
+          "inicio": 5.77,
+          "fin": 5.817
+        },
+        {
+          "texto": "repelente.",
+          "inicio": 5.886,
+          "fin": 6.455
+        }
+      ]
     }
   }
 }

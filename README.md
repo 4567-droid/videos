@@ -3,6 +3,7 @@
 Reels verticales (1080×1920, 30 fps) en español, **100 % programados** con Remotion + Three.js (`@remotion/three`): escenas 3D low-poly, subtítulos animados y voz opcional con ElevenLabs. No usa imágenes de IA ni APIs de imágenes.
 
 Ejemplos terminados (con voz de ElevenLabs):
+- [`ejemplos/dopamina-drogas.mp4`](ejemplos/dopamina-drogas.mp4): "por qué cuesta tanto dejar una droga" (dopamina), estilo pizarra, 15 escenas, ~113 s.
 - [`ejemplos/dejar-un-amor.mp4`](ejemplos/dejar-un-amor.mp4): "por qué cuesta tanto dejar un amor", 10 escenas, ~61 s.
 - [`ejemplos/paralisis-del-sueno.mp4`](ejemplos/paralisis-del-sueno.mp4): "la parálisis del sueño", 9 escenas, ~42 s.
 - [`ejemplos/relatividad-einstein.mp4`](ejemplos/relatividad-einstein.mp4): "la teoría de la relatividad de Einstein", 9 escenas, ~61 s.
@@ -48,7 +49,8 @@ Después podés pedir ajustes puntuales: "cambiá el gancho", "la escena 3 más 
 
 - `id`: único; también nombra el audio de la escena.
 - `componente`: la escena de `src/escenas/index.ts` que la ilustra.
-- `transicion` (opcional): `zoom` (por defecto), `deslizar` o `fundido`.
+- `transicion` (opcional): `zoom` (por defecto), `deslizar`, `fundido` o `borrar` (pizarra).
+- `"estilo": "pizarra"` (opcional, para todo el video): fondo blanco con dibujos a marcador que se trazan solos, subtítulos abajo y transición de borrado.
 
 Sin voz, el tiempo de cada palabra se **estima según su largo** (y pausas en comas y puntos). Subtítulos y animaciones se sincronizan con esos tiempos.
 

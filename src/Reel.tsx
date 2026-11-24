@@ -27,9 +27,10 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 		[video, voz, soloEscena, fps],
 	);
 	const grupos = useMemo(() => calcularGrupos(linea), [linea]);
+	const pizarra = video.estilo === 'pizarra';
 
 	return (
-		<AbsoluteFill style={{backgroundColor: '#0b0614'}}>
+		<AbsoluteFill style={{backgroundColor: pizarra ? '#FBFBF7' : '#0b0614'}}>
 			<TransitionSeries>
 				{linea.escenas.map((escena, i) => {
 					const Componente = ESCENAS[escena.componente] ?? EscenaGenerica;
@@ -48,14 +49,16 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 				})}
 			</TransitionSeries>
 
-			{/* oscurece apenas la parte de arriba para que los subtítulos se lean siempre */}
-			<AbsoluteFill
+			{/* oscurece apenas la parte de arriba para que los subtítulos se lean siempre (no en la pizarra: van abajo) */}
+			{pizarra ? null : (
+				<AbsoluteFill
 				style={{
 					background:
 						'linear-gradient(180deg, rgba(0,0,0,0.38) 0%, rgba(0,0,0,0.16) 22%, rgba(0,0,0,0) 36%)',
-				}}
-			/>
-			<Subtitulos grupos={grupos} />
+					}}
+				/>
+			)}
+			<Subtitulos grupos={grupos} posicion={pizarra ? 'abajo' : 'arriba'} />
 
 			{linea.escenas.map((escena) =>
 				escena.audio ? (

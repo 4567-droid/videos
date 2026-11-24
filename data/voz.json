@@ -1,119 +1,134 @@
 {
   "escenas": {
     "ensenanza": {
-      "texto": "Y quedate con esto: extrañar no significa que tengas que volver. Es tu cerebro acostumbrado. Dale tiempo y cuidate.",
+      "texto": "Y quedate con esto: una recaída no borra tu progreso. Es información de qué señal te ganó. Volvé a empezar sin castigarte.",
       "audio": "voz/ensenanza.mp3",
-      "duracion": 9.041,
+      "duracion": 9.72,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
+      "velocidad": 1.08,
       "ajustes": "0.62/0.12",
       "normalizado": true,
       "palabras": [
         {
           "texto": "Y",
           "inicio": 0,
-          "fin": 0.093
+          "fin": 0.081
         },
         {
           "texto": "quedate",
-          "inicio": 0.186,
-          "fin": 0.557
+          "inicio": 0.163,
+          "fin": 0.488
         },
         {
           "texto": "con",
-          "inicio": 0.604,
-          "fin": 0.731
+          "inicio": 0.522,
+          "fin": 0.65
         },
         {
           "texto": "esto:",
-          "inicio": 0.789,
-          "fin": 1.103
+          "inicio": 0.708,
+          "fin": 1.01
         },
         {
-          "texto": "extrañar",
-          "inicio": 1.649,
-          "fin": 2.252
+          "texto": "una",
+          "inicio": 1.579,
+          "fin": 1.753
+        },
+        {
+          "texto": "recaída",
+          "inicio": 1.823,
+          "fin": 2.392
         },
         {
           "texto": "no",
-          "inicio": 2.38,
-          "fin": 2.554
+          "inicio": 2.612,
+          "fin": 2.786
         },
         {
-          "texto": "significa",
-          "inicio": 2.601,
-          "fin": 3.135
-        },
-        {
-          "texto": "que",
-          "inicio": 3.193,
-          "fin": 3.274
-        },
-        {
-          "texto": "tengas",
-          "inicio": 3.344,
-          "fin": 3.657
-        },
-        {
-          "texto": "que",
-          "inicio": 3.704,
-          "fin": 3.773
-        },
-        {
-          "texto": "volver.",
-          "inicio": 3.82,
-          "fin": 4.191
-        },
-        {
-          "texto": "Es",
-          "inicio": 4.714,
-          "fin": 4.888
+          "texto": "borra",
+          "inicio": 2.856,
+          "fin": 3.158
         },
         {
           "texto": "tu",
-          "inicio": 4.934,
-          "fin": 5.039
+          "inicio": 3.204,
+          "fin": 3.286
         },
         {
-          "texto": "cerebro",
-          "inicio": 5.085,
-          "fin": 5.48
+          "texto": "progreso.",
+          "inicio": 3.332,
+          "fin": 3.831
         },
         {
-          "texto": "acostumbrado.",
-          "inicio": 5.515,
-          "fin": 6.188
+          "texto": "Es",
+          "inicio": 4.4,
+          "fin": 4.551
         },
         {
-          "texto": "Dale",
-          "inicio": 6.676,
-          "fin": 6.931
+          "texto": "información",
+          "inicio": 4.621,
+          "fin": 5.283
         },
         {
-          "texto": "tiempo",
-          "inicio": 6.978,
-          "fin": 7.43
+          "texto": "de",
+          "inicio": 5.422,
+          "fin": 5.561
         },
         {
-          "texto": "y",
+          "texto": "qué",
+          "inicio": 5.666,
+          "fin": 5.805
+        },
+        {
+          "texto": "señal",
+          "inicio": 5.875,
+          "fin": 6.177
+        },
+        {
+          "texto": "te",
+          "inicio": 6.235,
+          "fin": 6.304
+        },
+        {
+          "texto": "ganó.",
+          "inicio": 6.351,
+          "fin": 6.653
+        },
+        {
+          "texto": "Volvé",
+          "inicio": 7.221,
+          "fin": 7.628
+        },
+        {
+          "texto": "a",
           "inicio": 7.663,
-          "fin": 7.779
+          "fin": 7.686
         },
         {
-          "texto": "cuidate.",
-          "inicio": 7.86,
-          "fin": 8.406
+          "texto": "empezar",
+          "inicio": 7.732,
+          "fin": 8.15
+        },
+        {
+          "texto": "sin",
+          "inicio": 8.197,
+          "fin": 8.313
+        },
+        {
+          "texto": "castigarte.",
+          "inicio": 8.359,
+          "fin": 9.009
         }
       ]
     },
     "seguime": {
       "texto": "Seguime para más datos que no sabías.",
       "audio": "voz/seguime.mp3",
-      "duracion": 2.249,
+      "duracion": 2.145,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
+      "velocidad": 1.08,
       "ajustes": "0.62/0.12",
       "normalizado": true,
       "palabras": [
@@ -124,18 +139,18 @@
         },
         {
           "texto": "para",
-          "inicio": 0.464,
-          "fin": 0.627
+          "inicio": 0.476,
+          "fin": 0.639
         },
         {
           "texto": "más",
-          "inicio": 0.673,
-          "fin": 0.813
+          "inicio": 0.685,
+          "fin": 0.836
         },
         {
           "texto": "datos",
-          "inicio": 0.859,
-          "fin": 1.126
+          "inicio": 0.882,
+          "fin": 1.138
         },
         {
           "texto": "que",
@@ -144,493 +159,1243 @@
         },
         {
           "texto": "no",
-          "inicio": 1.3,
-          "fin": 1.37
+          "inicio": 1.277,
+          "fin": 1.347
         },
         {
           "texto": "sabías.",
-          "inicio": 1.416,
-          "fin": 1.881
+          "inicio": 1.382,
+          "fin": 1.765
         }
       ]
     },
-    "gancho-ventana": {
-      "texto": "¿Por qué cuesta tanto dejar a alguien que ya no está?",
-      "audio": "voz/gancho-ventana.mp3",
-      "duracion": 3.32,
+    "gancho-pregunta": {
+      "texto": "¿Por qué cuesta tanto dejar una droga, aunque quieras?",
+      "audio": "voz/gancho-pregunta.mp3",
+      "duracion": 3.608,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
+      "velocidad": 1.08,
       "ajustes": "0.62/0.12",
       "normalizado": true,
       "palabras": [
         {
           "texto": "¿Por",
           "inicio": 0.07,
-          "fin": 0.197
+          "fin": 0.186
         },
         {
           "texto": "qué",
-          "inicio": 0.267,
-          "fin": 0.36
+          "inicio": 0.244,
+          "fin": 0.348
         },
         {
           "texto": "cuesta",
           "inicio": 0.395,
-          "fin": 0.673
-        },
-        {
-          "texto": "tanto",
-          "inicio": 0.731,
-          "fin": 1.01
-        },
-        {
-          "texto": "dejar",
-          "inicio": 1.045,
-          "fin": 1.3
-        },
-        {
-          "texto": "a",
-          "inicio": 1.358,
-          "fin": 1.382
-        },
-        {
-          "texto": "alguien",
-          "inicio": 1.44,
-          "fin": 1.707
-        },
-        {
-          "texto": "que",
-          "inicio": 1.765,
-          "fin": 1.834
-        },
-        {
-          "texto": "ya",
-          "inicio": 1.916,
-          "fin": 1.997
-        },
-        {
-          "texto": "no",
-          "inicio": 2.043,
-          "fin": 2.113
-        },
-        {
-          "texto": "está?",
-          "inicio": 2.136,
-          "fin": 2.415
-        }
-      ]
-    },
-    "estudio-resonancia": {
-      "texto": "Un estudio con resonancia magnética miró el cerebro de personas que acababan de ser rechazadas por su pareja.",
-      "audio": "voz/estudio-resonancia.mp3",
-      "duracion": 7.134,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
-      "ajustes": "0.62/0.12",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Un",
-          "inicio": 0,
-          "fin": 0.163
-        },
-        {
-          "texto": "estudio",
-          "inicio": 0.209,
-          "fin": 0.592
-        },
-        {
-          "texto": "con",
-          "inicio": 0.627,
-          "fin": 0.743
-        },
-        {
-          "texto": "resonancia",
-          "inicio": 0.813,
-          "fin": 1.335
-        },
-        {
-          "texto": "magnética",
-          "inicio": 1.382,
-          "fin": 1.997
-        },
-        {
-          "texto": "miró",
-          "inicio": 2.264,
-          "fin": 2.589
-        },
-        {
-          "texto": "el",
-          "inicio": 2.647,
-          "fin": 2.717
-        },
-        {
-          "texto": "cerebro",
-          "inicio": 2.786,
-          "fin": 3.181
-        },
-        {
-          "texto": "de",
-          "inicio": 3.228,
-          "fin": 3.297
-        },
-        {
-          "texto": "personas",
-          "inicio": 3.344,
-          "fin": 3.808
-        },
-        {
-          "texto": "que",
-          "inicio": 3.889,
-          "fin": 4.017
-        },
-        {
-          "texto": "acababan",
-          "inicio": 4.098,
-          "fin": 4.644
-        },
-        {
-          "texto": "de",
-          "inicio": 4.702,
-          "fin": 4.772
-        },
-        {
-          "texto": "ser",
-          "inicio": 4.818,
-          "fin": 4.981
-        },
-        {
-          "texto": "rechazadas",
-          "inicio": 5.05,
-          "fin": 5.619
-        },
-        {
-          "texto": "por",
-          "inicio": 5.677,
-          "fin": 5.782
-        },
-        {
-          "texto": "su",
-          "inicio": 5.817,
-          "fin": 5.898
-        },
-        {
-          "texto": "pareja.",
-          "inicio": 5.944,
-          "fin": 6.339
-        }
-      ]
-    },
-    "fotos-ex": {
-      "texto": "Les mostraron fotos de su ex, y se activaron áreas del cerebro ligadas a la recompensa y a los antojos.",
-      "audio": "voz/fotos-ex.mp3",
-      "duracion": 6.951,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
-      "ajustes": "0.62/0.12",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Les",
-          "inicio": 0,
-          "fin": 0.197
-        },
-        {
-          "texto": "mostraron",
-          "inicio": 0.255,
           "fin": 0.697
         },
         {
-          "texto": "fotos",
-          "inicio": 0.778,
-          "fin": 1.091
+          "texto": "tanto",
+          "inicio": 0.766,
+          "fin": 1.057
         },
         {
-          "texto": "de",
-          "inicio": 1.138,
-          "fin": 1.196
-        },
-        {
-          "texto": "su",
-          "inicio": 1.242,
-          "fin": 1.335
-        },
-        {
-          "texto": "ex,",
-          "inicio": 1.405,
-          "fin": 1.591
-        },
-        {
-          "texto": "y",
-          "inicio": 1.881,
-          "fin": 1.962
-        },
-        {
-          "texto": "se",
-          "inicio": 2.043,
-          "fin": 2.125
-        },
-        {
-          "texto": "activaron",
-          "inicio": 2.171,
-          "fin": 2.659
-        },
-        {
-          "texto": "áreas",
-          "inicio": 2.775,
-          "fin": 3.111
-        },
-        {
-          "texto": "del",
-          "inicio": 3.158,
-          "fin": 3.286
-        },
-        {
-          "texto": "cerebro",
-          "inicio": 3.332,
-          "fin": 3.727
-        },
-        {
-          "texto": "ligadas",
-          "inicio": 3.785,
-          "fin": 4.191
-        },
-        {
-          "texto": "a",
-          "inicio": 4.249,
-          "fin": 4.272
-        },
-        {
-          "texto": "la",
-          "inicio": 4.307,
-          "fin": 4.365
-        },
-        {
-          "texto": "recompensa",
-          "inicio": 4.423,
-          "fin": 5.097
-        },
-        {
-          "texto": "y",
-          "inicio": 5.271,
-          "fin": 5.387
-        },
-        {
-          "texto": "a",
-          "inicio": 5.445,
-          "fin": 5.468
-        },
-        {
-          "texto": "los",
-          "inicio": 5.503,
-          "fin": 5.619
-        },
-        {
-          "texto": "antojos.",
-          "inicio": 5.677,
-          "fin": 6.2
-        }
-      ]
-    },
-    "antojo": {
-      "texto": "Los investigadores notaron similitudes con lo que pasa con el antojo de una droga.",
-      "audio": "voz/antojo.mp3",
-      "duracion": 4.522,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
-      "ajustes": "0.62/0.12",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Los",
-          "inicio": 0,
-          "fin": 0.186
-        },
-        {
-          "texto": "investigadores",
-          "inicio": 0.255,
-          "fin": 0.906
-        },
-        {
-          "texto": "notaron",
-          "inicio": 0.964,
-          "fin": 1.3
-        },
-        {
-          "texto": "similitudes",
-          "inicio": 1.347,
-          "fin": 1.962
-        },
-        {
-          "texto": "con",
-          "inicio": 2.009,
-          "fin": 2.113
-        },
-        {
-          "texto": "lo",
-          "inicio": 2.159,
-          "fin": 2.229
-        },
-        {
-          "texto": "que",
-          "inicio": 2.276,
-          "fin": 2.357
-        },
-        {
-          "texto": "pasa",
-          "inicio": 2.415,
-          "fin": 2.659
-        },
-        {
-          "texto": "con",
-          "inicio": 2.705,
-          "fin": 2.821
-        },
-        {
-          "texto": "el",
-          "inicio": 2.868,
-          "fin": 2.926
-        },
-        {
-          "texto": "antojo",
-          "inicio": 2.972,
-          "fin": 3.344
-        },
-        {
-          "texto": "de",
-          "inicio": 3.39,
-          "fin": 3.448
-        },
-        {
-          "texto": "una",
-          "inicio": 3.506,
-          "fin": 3.646
-        },
-        {
-          "texto": "droga.",
-          "inicio": 3.68,
-          "fin": 4.017
-        }
-      ]
-    },
-    "no-es-debilidad": {
-      "texto": "O sea: no es debilidad ni falta de voluntad. Tu cerebro sigue pidiendo algo a lo que se acostumbró.",
-      "audio": "voz/no-es-debilidad.mp3",
-      "duracion": 7.813,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
-      "ajustes": "0.62/0.12",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "O",
-          "inicio": 0,
-          "fin": 0.081
-        },
-        {
-          "texto": "sea:",
-          "inicio": 0.151,
-          "fin": 0.441
-        },
-        {
-          "texto": "no",
-          "inicio": 1.091,
-          "fin": 1.219
-        },
-        {
-          "texto": "es",
-          "inicio": 1.265,
+          "texto": "dejar",
+          "inicio": 1.115,
           "fin": 1.347
         },
         {
-          "texto": "debilidad",
-          "inicio": 1.405,
-          "fin": 1.997
+          "texto": "una",
+          "inicio": 1.393,
+          "fin": 1.533
         },
         {
-          "texto": "ni",
-          "inicio": 2.264,
-          "fin": 2.415
+          "texto": "droga,",
+          "inicio": 1.567,
+          "fin": 1.916
         },
         {
-          "texto": "falta",
-          "inicio": 2.496,
-          "fin": 2.821
+          "texto": "aunque",
+          "inicio": 2.055,
+          "fin": 2.299
         },
         {
-          "texto": "de",
-          "inicio": 2.856,
-          "fin": 2.914
-        },
-        {
-          "texto": "voluntad.",
-          "inicio": 2.949,
-          "fin": 3.448
-        },
-        {
-          "texto": "Tu",
-          "inicio": 4.238,
-          "fin": 4.389
-        },
-        {
-          "texto": "cerebro",
-          "inicio": 4.423,
-          "fin": 4.795
-        },
-        {
-          "texto": "sigue",
-          "inicio": 4.853,
-          "fin": 5.074
-        },
-        {
-          "texto": "pidiendo",
-          "inicio": 5.12,
-          "fin": 5.55
-        },
-        {
-          "texto": "algo",
-          "inicio": 5.619,
-          "fin": 5.851
-        },
-        {
-          "texto": "a",
-          "inicio": 5.898,
-          "fin": 5.933
-        },
-        {
-          "texto": "lo",
-          "inicio": 5.968,
-          "fin": 6.06
-        },
-        {
-          "texto": "que",
-          "inicio": 6.107,
-          "fin": 6.188
-        },
-        {
-          "texto": "se",
-          "inicio": 6.258,
-          "fin": 6.339
-        },
-        {
-          "texto": "acostumbró.",
-          "inicio": 6.374,
-          "fin": 7.001
+          "texto": "quieras?",
+          "inicio": 2.345,
+          "fin": 2.717
         }
       ]
     },
-    "buena-noticia": {
-      "texto": "Y hay una buena noticia: cuantos más días pasaban, menos se activaba la zona del apego.",
-      "audio": "voz/buena-noticia.mp3",
-      "duracion": 6.481,
+    "dopamina-querer": {
+      "texto": "Casi todo empieza con la dopamina: la molécula del querer. No tanto del placer, sino de las ganas de repetir algo.",
+      "audio": "voz/dopamina-querer.mp3",
+      "duracion": 8.884,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Casi",
+          "inicio": 0,
+          "fin": 0.302
+        },
+        {
+          "texto": "todo",
+          "inicio": 0.372,
+          "fin": 0.58
+        },
+        {
+          "texto": "empieza",
+          "inicio": 0.627,
+          "fin": 1.033
+        },
+        {
+          "texto": "con",
+          "inicio": 1.08,
+          "fin": 1.207
+        },
+        {
+          "texto": "la",
+          "inicio": 1.277,
+          "fin": 1.358
+        },
+        {
+          "texto": "dopamina:",
+          "inicio": 1.416,
+          "fin": 1.997
+        },
+        {
+          "texto": "la",
+          "inicio": 2.496,
+          "fin": 2.612
+        },
+        {
+          "texto": "molécula",
+          "inicio": 2.67,
+          "fin": 3.158
+        },
+        {
+          "texto": "del",
+          "inicio": 3.204,
+          "fin": 3.32
+        },
+        {
+          "texto": "querer.",
+          "inicio": 3.379,
+          "fin": 3.704
+        },
+        {
+          "texto": "No",
+          "inicio": 4.621,
+          "fin": 4.76
+        },
+        {
+          "texto": "tanto",
+          "inicio": 4.818,
+          "fin": 5.074
+        },
+        {
+          "texto": "del",
+          "inicio": 5.12,
+          "fin": 5.236
+        },
+        {
+          "texto": "placer,",
+          "inicio": 5.283,
+          "fin": 5.689
+        },
+        {
+          "texto": "sino",
+          "inicio": 6.188,
+          "fin": 6.432
+        },
+        {
+          "texto": "de",
+          "inicio": 6.478,
+          "fin": 6.536
+        },
+        {
+          "texto": "las",
+          "inicio": 6.583,
+          "fin": 6.699
+        },
+        {
+          "texto": "ganas",
+          "inicio": 6.769,
+          "fin": 7.024
+        },
+        {
+          "texto": "de",
+          "inicio": 7.07,
+          "fin": 7.129
+        },
+        {
+          "texto": "repetir",
+          "inicio": 7.198,
+          "fin": 7.581
+        },
+        {
+          "texto": "algo.",
+          "inicio": 7.639,
+          "fin": 7.918
+        }
+      ]
+    },
+    "caminos-distintos": {
+      "texto": "Las drogas llegan por caminos distintos: unas bloquean que la dopamina se recicle, otras fuerzan su liberación, otras activan las neuronas que la fabrican.",
+      "audio": "voz/caminos-distintos.mp3",
+      "duracion": 11.131,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Las",
+          "inicio": 0,
+          "fin": 0.244
+        },
+        {
+          "texto": "drogas",
+          "inicio": 0.302,
+          "fin": 0.697
+        },
+        {
+          "texto": "llegan",
+          "inicio": 0.836,
+          "fin": 1.219
+        },
+        {
+          "texto": "por",
+          "inicio": 1.277,
+          "fin": 1.416
+        },
+        {
+          "texto": "caminos",
+          "inicio": 1.474,
+          "fin": 1.834
+        },
+        {
+          "texto": "distintos:",
+          "inicio": 1.881,
+          "fin": 2.438
+        },
+        {
+          "texto": "unas",
+          "inicio": 2.984,
+          "fin": 3.216
+        },
+        {
+          "texto": "bloquean",
+          "inicio": 3.262,
+          "fin": 3.704
+        },
+        {
+          "texto": "que",
+          "inicio": 3.773,
+          "fin": 3.878
+        },
+        {
+          "texto": "la",
+          "inicio": 3.936,
+          "fin": 4.005
+        },
+        {
+          "texto": "dopamina",
+          "inicio": 4.063,
+          "fin": 4.505
+        },
+        {
+          "texto": "se",
+          "inicio": 4.551,
+          "fin": 4.632
+        },
+        {
+          "texto": "recicle,",
+          "inicio": 4.702,
+          "fin": 5.213
+        },
+        {
+          "texto": "otras",
+          "inicio": 5.677,
+          "fin": 6.072
+        },
+        {
+          "texto": "fuerzan",
+          "inicio": 6.235,
+          "fin": 6.629
+        },
+        {
+          "texto": "su",
+          "inicio": 6.687,
+          "fin": 6.78
+        },
+        {
+          "texto": "liberación,",
+          "inicio": 6.838,
+          "fin": 7.407
+        },
+        {
+          "texto": "otras",
+          "inicio": 7.872,
+          "fin": 8.313
+        },
+        {
+          "texto": "activan",
+          "inicio": 8.475,
+          "fin": 8.916
+        },
+        {
+          "texto": "las",
+          "inicio": 8.963,
+          "fin": 9.091
+        },
+        {
+          "texto": "neuronas",
+          "inicio": 9.16,
+          "fin": 9.601
+        },
+        {
+          "texto": "que",
+          "inicio": 9.648,
+          "fin": 9.718
+        },
+        {
+          "texto": "la",
+          "inicio": 9.752,
+          "fin": 9.81
+        },
+        {
+          "texto": "fabrican.",
+          "inicio": 9.868,
+          "fin": 10.356
+        }
+      ]
+    },
+    "mismo-lugar": {
+      "texto": "Pero casi todas terminan en el mismo lugar: el circuito de recompensa, con una subida que suele ser mucho mayor que la de una comida o un abrazo.",
+      "audio": "voz/mismo-lugar.mp3",
+      "duracion": 9.459,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Pero",
+          "inicio": 0,
+          "fin": 0.244
+        },
+        {
+          "texto": "casi",
+          "inicio": 0.29,
+          "fin": 0.511
+        },
+        {
+          "texto": "todas",
+          "inicio": 0.58,
+          "fin": 0.848
+        },
+        {
+          "texto": "terminan",
+          "inicio": 0.917,
+          "fin": 1.358
+        },
+        {
+          "texto": "en",
+          "inicio": 1.416,
+          "fin": 1.474
+        },
+        {
+          "texto": "el",
+          "inicio": 1.544,
+          "fin": 1.614
+        },
+        {
+          "texto": "mismo",
+          "inicio": 1.683,
+          "fin": 1.974
+        },
+        {
+          "texto": "lugar:",
+          "inicio": 2.009,
+          "fin": 2.31
+        },
+        {
+          "texto": "el",
+          "inicio": 2.856,
+          "fin": 2.995
+        },
+        {
+          "texto": "circuito",
+          "inicio": 3.065,
+          "fin": 3.553
+        },
+        {
+          "texto": "de",
+          "inicio": 3.611,
+          "fin": 3.669
+        },
+        {
+          "texto": "recompensa,",
+          "inicio": 3.727,
+          "fin": 4.412
+        },
+        {
+          "texto": "con",
+          "inicio": 4.772,
+          "fin": 4.934
+        },
+        {
+          "texto": "una",
+          "inicio": 5.004,
+          "fin": 5.12
+        },
+        {
+          "texto": "subida",
+          "inicio": 5.178,
+          "fin": 5.538
+        },
+        {
+          "texto": "que",
+          "inicio": 5.584,
+          "fin": 5.666
+        },
+        {
+          "texto": "suele",
+          "inicio": 5.712,
+          "fin": 5.944
+        },
+        {
+          "texto": "ser",
+          "inicio": 5.991,
+          "fin": 6.142
+        },
+        {
+          "texto": "mucho",
+          "inicio": 6.211,
+          "fin": 6.513
+        },
+        {
+          "texto": "mayor",
+          "inicio": 6.56,
+          "fin": 6.85
+        },
+        {
+          "texto": "que",
+          "inicio": 6.908,
+          "fin": 6.989
+        },
+        {
+          "texto": "la",
+          "inicio": 7.036,
+          "fin": 7.105
+        },
+        {
+          "texto": "de",
+          "inicio": 7.175,
+          "fin": 7.245
+        },
+        {
+          "texto": "una",
+          "inicio": 7.326,
+          "fin": 7.465
+        },
+        {
+          "texto": "comida",
+          "inicio": 7.512,
+          "fin": 7.93
+        },
+        {
+          "texto": "o",
+          "inicio": 8.034,
+          "fin": 8.139
+        },
+        {
+          "texto": "un",
+          "inicio": 8.173,
+          "fin": 8.243
+        },
+        {
+          "texto": "abrazo.",
+          "inicio": 8.301,
+          "fin": 8.731
+        }
+      ]
+    },
+    "tolerancia": {
+      "texto": "Con el uso repetido, el cerebro se adapta: baja su sensibilidad y lo cotidiano puede empezar a sentirse apagado. Suele hacer falta más para sentir lo mismo.",
+      "audio": "voz/tolerancia.mp3",
+      "duracion": 10.844,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Con",
+          "inicio": 0,
+          "fin": 0.209
+        },
+        {
+          "texto": "el",
+          "inicio": 0.267,
+          "fin": 0.325
+        },
+        {
+          "texto": "uso",
+          "inicio": 0.383,
+          "fin": 0.522
+        },
+        {
+          "texto": "repetido,",
+          "inicio": 0.58,
+          "fin": 1.115
+        },
+        {
+          "texto": "el",
+          "inicio": 1.3,
+          "fin": 1.416
+        },
+        {
+          "texto": "cerebro",
+          "inicio": 1.474,
+          "fin": 1.834
+        },
+        {
+          "texto": "se",
+          "inicio": 1.881,
+          "fin": 1.95
+        },
+        {
+          "texto": "adapta:",
+          "inicio": 1.985,
+          "fin": 2.415
+        },
+        {
+          "texto": "baja",
+          "inicio": 3.204,
+          "fin": 3.448
+        },
+        {
+          "texto": "su",
+          "inicio": 3.495,
+          "fin": 3.587
+        },
+        {
+          "texto": "sensibilidad",
+          "inicio": 3.634,
+          "fin": 4.377
+        },
+        {
+          "texto": "y",
+          "inicio": 4.54,
+          "fin": 4.609
+        },
+        {
+          "texto": "lo",
+          "inicio": 4.679,
+          "fin": 4.76
+        },
+        {
+          "texto": "cotidiano",
+          "inicio": 4.807,
+          "fin": 5.317
+        },
+        {
+          "texto": "puede",
+          "inicio": 5.364,
+          "fin": 5.608
+        },
+        {
+          "texto": "empezar",
+          "inicio": 5.654,
+          "fin": 6.072
+        },
+        {
+          "texto": "a",
+          "inicio": 6.118,
+          "fin": 6.142
+        },
+        {
+          "texto": "sentirse",
+          "inicio": 6.188,
+          "fin": 6.711
+        },
+        {
+          "texto": "apagado.",
+          "inicio": 6.757,
+          "fin": 7.245
+        },
+        {
+          "texto": "Suele",
+          "inicio": 8.034,
+          "fin": 8.278
+        },
+        {
+          "texto": "hacer",
+          "inicio": 8.301,
+          "fin": 8.51
+        },
+        {
+          "texto": "falta",
+          "inicio": 8.568,
+          "fin": 8.847
+        },
+        {
+          "texto": "más",
+          "inicio": 8.916,
+          "fin": 9.079
+        },
+        {
+          "texto": "para",
+          "inicio": 9.137,
+          "fin": 9.288
+        },
+        {
+          "texto": "sentir",
+          "inicio": 9.323,
+          "fin": 9.648
+        },
+        {
+          "texto": "lo",
+          "inicio": 9.683,
+          "fin": 9.752
+        },
+        {
+          "texto": "mismo.",
+          "inicio": 9.799,
+          "fin": 10.182
+        }
+      ]
+    },
+    "senales": {
+      "texto": "Además, aprende las señales: un lugar, una hora, una persona. Y las ganas pueden aparecer solas, antes de consumir.",
+      "audio": "voz/senales.mp3",
+      "duracion": 9.355,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Además,",
+          "inicio": 0,
+          "fin": 0.488
+        },
+        {
+          "texto": "aprende",
+          "inicio": 0.755,
+          "fin": 1.161
+        },
+        {
+          "texto": "las",
+          "inicio": 1.207,
+          "fin": 1.312
+        },
+        {
+          "texto": "señales:",
+          "inicio": 1.335,
+          "fin": 1.846
+        },
+        {
+          "texto": "un",
+          "inicio": 2.287,
+          "fin": 2.392
+        },
+        {
+          "texto": "lugar,",
+          "inicio": 2.438,
+          "fin": 2.775
+        },
+        {
+          "texto": "una",
+          "inicio": 3.239,
+          "fin": 3.413
+        },
+        {
+          "texto": "hora,",
+          "inicio": 3.46,
+          "fin": 3.738
+        },
+        {
+          "texto": "una",
+          "inicio": 4.214,
+          "fin": 4.389
+        },
+        {
+          "texto": "persona.",
+          "inicio": 4.435,
+          "fin": 4.876
+        },
+        {
+          "texto": "Y",
+          "inicio": 5.457,
+          "fin": 5.526
+        },
+        {
+          "texto": "las",
+          "inicio": 5.608,
+          "fin": 5.724
+        },
+        {
+          "texto": "ganas",
+          "inicio": 5.782,
+          "fin": 6.107
+        },
+        {
+          "texto": "pueden",
+          "inicio": 6.246,
+          "fin": 6.536
+        },
+        {
+          "texto": "aparecer",
+          "inicio": 6.583,
+          "fin": 6.989
+        },
+        {
+          "texto": "solas,",
+          "inicio": 7.059,
+          "fin": 7.454
+        },
+        {
+          "texto": "antes",
+          "inicio": 7.721,
+          "fin": 8.057
+        },
+        {
+          "texto": "de",
+          "inicio": 8.092,
+          "fin": 8.139
+        },
+        {
+          "texto": "consumir.",
+          "inicio": 8.185,
+          "fin": 8.673
+        }
+      ]
+    },
+    "abstinencia": {
+      "texto": "Cuando se deja, el cerebro tarda en reequilibrarse. Pueden aparecer ansiedad, malestar y ganas intensas. No se trata solo de voluntad: es un sistema que se acostumbró.",
+      "audio": "voz/abstinencia.mp3",
+      "duracion": 12.228,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Cuando",
+          "inicio": 0,
+          "fin": 0.313
+        },
+        {
+          "texto": "se",
+          "inicio": 0.372,
+          "fin": 0.464
+        },
+        {
+          "texto": "deja,",
+          "inicio": 0.522,
+          "fin": 0.824
+        },
+        {
+          "texto": "el",
+          "inicio": 0.998,
+          "fin": 1.126
+        },
+        {
+          "texto": "cerebro",
+          "inicio": 1.196,
+          "fin": 1.602
+        },
+        {
+          "texto": "tarda",
+          "inicio": 1.672,
+          "fin": 2.02
+        },
+        {
+          "texto": "en",
+          "inicio": 2.067,
+          "fin": 2.136
+        },
+        {
+          "texto": "reequilibrarse.",
+          "inicio": 2.241,
+          "fin": 3.123
+        },
+        {
+          "texto": "Pueden",
+          "inicio": 3.704,
+          "fin": 4.005
+        },
+        {
+          "texto": "aparecer",
+          "inicio": 4.052,
+          "fin": 4.47
+        },
+        {
+          "texto": "ansiedad,",
+          "inicio": 4.516,
+          "fin": 5.027
+        },
+        {
+          "texto": "malestar",
+          "inicio": 5.329,
+          "fin": 5.898
+        },
+        {
+          "texto": "y",
+          "inicio": 6.118,
+          "fin": 6.223
+        },
+        {
+          "texto": "ganas",
+          "inicio": 6.327,
+          "fin": 6.606
+        },
+        {
+          "texto": "intensas.",
+          "inicio": 6.676,
+          "fin": 7.256
+        },
+        {
+          "texto": "No",
+          "inicio": 7.976,
+          "fin": 8.104
+        },
+        {
+          "texto": "se",
+          "inicio": 8.139,
+          "fin": 8.22
+        },
+        {
+          "texto": "trata",
+          "inicio": 8.266,
+          "fin": 8.533
+        },
+        {
+          "texto": "solo",
+          "inicio": 8.603,
+          "fin": 8.858
+        },
+        {
+          "texto": "de",
+          "inicio": 8.905,
+          "fin": 8.963
+        },
+        {
+          "texto": "voluntad:",
+          "inicio": 8.998,
+          "fin": 9.474
+        },
+        {
+          "texto": "es",
+          "inicio": 9.973,
+          "fin": 10.089
+        },
+        {
+          "texto": "un",
+          "inicio": 10.17,
+          "fin": 10.24
+        },
+        {
+          "texto": "sistema",
+          "inicio": 10.298,
+          "fin": 10.716
+        },
+        {
+          "texto": "que",
+          "inicio": 10.762,
+          "fin": 10.844
+        },
+        {
+          "texto": "se",
+          "inicio": 10.89,
+          "fin": 10.96
+        },
+        {
+          "texto": "acostumbró.",
+          "inicio": 10.983,
+          "fin": 11.575
+        }
+      ]
+    },
+    "se-calma": {
+      "texto": "Pero con los meses, ese circuito suele ir calmándose y las señales van perdiendo fuerza.",
+      "audio": "voz/se-calma.mp3",
+      "duracion": 6.194,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Pero",
+          "inicio": 0,
+          "fin": 0.221
+        },
+        {
+          "texto": "con",
+          "inicio": 0.267,
+          "fin": 0.383
+        },
+        {
+          "texto": "los",
+          "inicio": 0.441,
+          "fin": 0.58
+        },
+        {
+          "texto": "meses,",
+          "inicio": 0.65,
+          "fin": 1.01
+        },
+        {
+          "texto": "ese",
+          "inicio": 1.312,
+          "fin": 1.556
+        },
+        {
+          "texto": "circuito",
+          "inicio": 1.591,
+          "fin": 2.055
+        },
+        {
+          "texto": "suele",
+          "inicio": 2.101,
+          "fin": 2.345
+        },
+        {
+          "texto": "ir",
+          "inicio": 2.392,
+          "fin": 2.485
+        },
+        {
+          "texto": "calmándose",
+          "inicio": 2.531,
+          "fin": 3.181
+        },
+        {
+          "texto": "y",
+          "inicio": 3.379,
+          "fin": 3.46
+        },
+        {
+          "texto": "las",
+          "inicio": 3.529,
+          "fin": 3.657
+        },
+        {
+          "texto": "señales",
+          "inicio": 3.692,
+          "fin": 4.156
+        },
+        {
+          "texto": "van",
+          "inicio": 4.238,
+          "fin": 4.412
+        },
+        {
+          "texto": "perdiendo",
+          "inicio": 4.47,
+          "fin": 4.911
+        },
+        {
+          "texto": "fuerza.",
+          "inicio": 4.969,
+          "fin": 5.375
+        }
+      ]
+    },
+    "recuperacion": {
+      "texto": "Estudios con imágenes cerebrales sugieren que, tras muchos meses sin consumir, parte de este sistema puede recuperarse.",
+      "audio": "voz/recuperacion.mp3",
+      "duracion": 7.787,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Estudios",
+          "inicio": 0,
+          "fin": 0.522
+        },
+        {
+          "texto": "con",
+          "inicio": 0.569,
+          "fin": 0.685
+        },
+        {
+          "texto": "imágenes",
+          "inicio": 0.743,
+          "fin": 1.161
+        },
+        {
+          "texto": "cerebrales",
+          "inicio": 1.196,
+          "fin": 1.707
+        },
+        {
+          "texto": "sugieren",
+          "inicio": 1.73,
+          "fin": 2.148
+        },
+        {
+          "texto": "que,",
+          "inicio": 2.218,
+          "fin": 2.438
+        },
+        {
+          "texto": "tras",
+          "inicio": 2.67,
+          "fin": 2.902
+        },
+        {
+          "texto": "muchos",
+          "inicio": 2.984,
+          "fin": 3.344
+        },
+        {
+          "texto": "meses",
+          "inicio": 3.402,
+          "fin": 3.657
+        },
+        {
+          "texto": "sin",
+          "inicio": 3.68,
+          "fin": 3.82
+        },
+        {
+          "texto": "consumir,",
+          "inicio": 3.866,
+          "fin": 4.331
+        },
+        {
+          "texto": "parte",
+          "inicio": 4.737,
+          "fin": 5.062
+        },
+        {
+          "texto": "de",
+          "inicio": 5.12,
+          "fin": 5.201
+        },
+        {
+          "texto": "este",
+          "inicio": 5.259,
+          "fin": 5.457
+        },
+        {
+          "texto": "sistema",
+          "inicio": 5.503,
+          "fin": 5.909
+        },
+        {
+          "texto": "puede",
+          "inicio": 5.979,
+          "fin": 6.281
+        },
+        {
+          "texto": "recuperarse.",
+          "inicio": 6.351,
+          "fin": 7.024
+        }
+      ]
+    },
+    "volver-a-consumir": {
+      "texto": "Por eso, aguantar en ese período suele ser más fácil que después de volver a consumir. Un solo consumo puede encender de nuevo el circuito, y las ganas pueden volver con más fuerza.",
+      "audio": "voz/volver-a-consumir.mp3",
+      "duracion": 11.444,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
+      "ajustes": "0.62/0.12",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Por",
+          "inicio": 0,
+          "fin": 0.209
+        },
+        {
+          "texto": "eso,",
+          "inicio": 0.255,
+          "fin": 0.522
+        },
+        {
+          "texto": "aguantar",
+          "inicio": 0.824,
+          "fin": 1.358
+        },
+        {
+          "texto": "en",
+          "inicio": 1.405,
+          "fin": 1.451
+        },
+        {
+          "texto": "ese",
+          "inicio": 1.509,
+          "fin": 1.672
+        },
+        {
+          "texto": "período",
+          "inicio": 1.73,
+          "fin": 2.229
+        },
+        {
+          "texto": "suele",
+          "inicio": 2.392,
+          "fin": 2.659
+        },
+        {
+          "texto": "ser",
+          "inicio": 2.705,
+          "fin": 2.844
+        },
+        {
+          "texto": "más",
+          "inicio": 2.914,
+          "fin": 3.088
+        },
+        {
+          "texto": "fácil",
+          "inicio": 3.158,
+          "fin": 3.471
+        },
+        {
+          "texto": "que",
+          "inicio": 3.529,
+          "fin": 3.599
+        },
+        {
+          "texto": "después",
+          "inicio": 3.657,
+          "fin": 4.005
+        },
+        {
+          "texto": "de",
+          "inicio": 4.04,
+          "fin": 4.098
+        },
+        {
+          "texto": "volver",
+          "inicio": 4.133,
+          "fin": 4.4
+        },
+        {
+          "texto": "a",
+          "inicio": 4.435,
+          "fin": 4.458
+        },
+        {
+          "texto": "consumir.",
+          "inicio": 4.493,
+          "fin": 4.992
+        },
+        {
+          "texto": "Un",
+          "inicio": 5.689,
+          "fin": 5.84
+        },
+        {
+          "texto": "solo",
+          "inicio": 5.886,
+          "fin": 6.072
+        },
+        {
+          "texto": "consumo",
+          "inicio": 6.118,
+          "fin": 6.56
+        },
+        {
+          "texto": "puede",
+          "inicio": 6.606,
+          "fin": 6.827
+        },
+        {
+          "texto": "encender",
+          "inicio": 6.85,
+          "fin": 7.326
+        },
+        {
+          "texto": "de",
+          "inicio": 7.384,
+          "fin": 7.454
+        },
+        {
+          "texto": "nuevo",
+          "inicio": 7.5,
+          "fin": 7.744
+        },
+        {
+          "texto": "el",
+          "inicio": 7.767,
+          "fin": 7.814
+        },
+        {
+          "texto": "circuito,",
+          "inicio": 7.86,
+          "fin": 8.429
+        },
+        {
+          "texto": "y",
+          "inicio": 8.696,
+          "fin": 8.766
+        },
+        {
+          "texto": "las",
+          "inicio": 8.835,
+          "fin": 8.951
+        },
+        {
+          "texto": "ganas",
+          "inicio": 9.009,
+          "fin": 9.253
+        },
+        {
+          "texto": "pueden",
+          "inicio": 9.311,
+          "fin": 9.567
+        },
+        {
+          "texto": "volver",
+          "inicio": 9.613,
+          "fin": 9.927
+        },
+        {
+          "texto": "con",
+          "inicio": 9.985,
+          "fin": 10.101
+        },
+        {
+          "texto": "más",
+          "inicio": 10.159,
+          "fin": 10.31
+        },
+        {
+          "texto": "fuerza.",
+          "inicio": 10.368,
+          "fin": 10.774
+        }
+      ]
+    },
+    "culpa": {
+      "texto": "Y encima puede aparecer la culpa: “ya fallé, qué más da”. Esa idea suele empujar a seguir.",
+      "audio": "voz/culpa.mp3",
+      "duracion": 7.03,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.08,
       "ajustes": "0.62/0.12",
       "normalizado": true,
       "palabras": [
@@ -640,303 +1405,288 @@
           "fin": 0.116
         },
         {
-          "texto": "hay",
-          "inicio": 0.174,
-          "fin": 0.29
+          "texto": "encima",
+          "inicio": 0.186,
+          "fin": 0.627
         },
         {
-          "texto": "una",
-          "inicio": 0.337,
-          "fin": 0.464
+          "texto": "puede",
+          "inicio": 0.766,
+          "fin": 1.033
         },
         {
-          "texto": "buena",
-          "inicio": 0.511,
-          "fin": 0.731
-        },
-        {
-          "texto": "noticia:",
-          "inicio": 0.778,
-          "fin": 1.3
-        },
-        {
-          "texto": "cuantos",
-          "inicio": 1.846,
-          "fin": 2.252
-        },
-        {
-          "texto": "más",
-          "inicio": 2.345,
-          "fin": 2.543
-        },
-        {
-          "texto": "días",
-          "inicio": 2.589,
-          "fin": 2.786
-        },
-        {
-          "texto": "pasaban,",
-          "inicio": 2.844,
-          "fin": 3.355
-        },
-        {
-          "texto": "menos",
-          "inicio": 3.68,
-          "fin": 4.017
-        },
-        {
-          "texto": "se",
-          "inicio": 4.04,
-          "fin": 4.098
-        },
-        {
-          "texto": "activaba",
-          "inicio": 4.133,
-          "fin": 4.609
+          "texto": "aparecer",
+          "inicio": 1.068,
+          "fin": 1.451
         },
         {
           "texto": "la",
-          "inicio": 4.656,
-          "fin": 4.737
+          "inicio": 1.509,
+          "fin": 1.579
         },
         {
-          "texto": "zona",
-          "inicio": 4.818,
-          "fin": 5.097
+          "texto": "culpa:",
+          "inicio": 1.614,
+          "fin": 2.009
         },
         {
-          "texto": "del",
-          "inicio": 5.143,
-          "fin": 5.248
+          "texto": "“ya",
+          "inicio": 2.612,
+          "fin": 2.74
         },
         {
-          "texto": "apego.",
-          "inicio": 5.294,
-          "fin": 5.677
+          "texto": "fallé,",
+          "inicio": 2.798,
+          "fin": 3.123
+        },
+        {
+          "texto": "qué",
+          "inicio": 3.251,
+          "fin": 3.367
+        },
+        {
+          "texto": "más",
+          "inicio": 3.413,
+          "fin": 3.541
+        },
+        {
+          "texto": "da”.",
+          "inicio": 3.587,
+          "fin": 3.785
+        },
+        {
+          "texto": "Esa",
+          "inicio": 4.644,
+          "fin": 4.876
+        },
+        {
+          "texto": "idea",
+          "inicio": 4.911,
+          "fin": 5.19
+        },
+        {
+          "texto": "suele",
+          "inicio": 5.259,
+          "fin": 5.55
+        },
+        {
+          "texto": "empujar",
+          "inicio": 5.573,
+          "fin": 5.968
+        },
+        {
+          "texto": "a",
+          "inicio": 6.014,
+          "fin": 6.037
+        },
+        {
+          "texto": "seguir.",
+          "inicio": 6.084,
+          "fin": 6.42
         }
       ]
     },
-    "aprende-a-soltar": {
-      "texto": "Es un estudio chico, de quince personas, pero muestra algo importante: el cerebro aprende a soltar. Solo necesita tiempo.",
-      "audio": "voz/aprende-a-soltar.mp3",
-      "duracion": 9.119,
+    "llaves": {
+      "texto": "Tu cerebro no se acuerda dónde dejó las llaves, pero se acuerda perfecto de ese lugar.",
+      "audio": "voz/llaves.mp3",
+      "duracion": 5.358,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
+      "velocidad": 1.08,
       "ajustes": "0.62/0.12",
       "normalizado": true,
       "palabras": [
         {
-          "texto": "Es",
+          "texto": "Tu",
           "inicio": 0,
-          "fin": 0.174
+          "fin": 0.163
         },
         {
-          "texto": "un",
-          "inicio": 0.255,
-          "fin": 0.313
+          "texto": "cerebro",
+          "inicio": 0.209,
+          "fin": 0.592
         },
         {
-          "texto": "estudio",
-          "inicio": 0.36,
-          "fin": 0.731
+          "texto": "no",
+          "inicio": 0.662,
+          "fin": 0.755
         },
         {
-          "texto": "chico,",
-          "inicio": 0.778,
-          "fin": 1.138
+          "texto": "se",
+          "inicio": 0.813,
+          "fin": 0.871
         },
         {
-          "texto": "de",
-          "inicio": 1.405,
-          "fin": 1.498
+          "texto": "acuerda",
+          "inicio": 0.906,
+          "fin": 1.289
         },
         {
-          "texto": "quince",
-          "inicio": 1.579,
-          "fin": 1.869
+          "texto": "dónde",
+          "inicio": 1.358,
+          "fin": 1.649
         },
         {
-          "texto": "personas,",
-          "inicio": 1.916,
+          "texto": "dejó",
+          "inicio": 1.695,
+          "fin": 1.892
+        },
+        {
+          "texto": "las",
+          "inicio": 1.927,
+          "fin": 2.055
+        },
+        {
+          "texto": "llaves,",
+          "inicio": 2.078,
           "fin": 2.438
         },
         {
           "texto": "pero",
-          "inicio": 2.844,
-          "fin": 3.077
+          "inicio": 2.682,
+          "fin": 2.891
         },
         {
-          "texto": "muestra",
-          "inicio": 3.123,
-          "fin": 3.529
+          "texto": "se",
+          "inicio": 2.949,
+          "fin": 3.03
         },
         {
-          "texto": "algo",
-          "inicio": 3.564,
-          "fin": 3.738
+          "texto": "acuerda",
+          "inicio": 3.053,
+          "fin": 3.448
         },
         {
-          "texto": "importante:",
-          "inicio": 3.773,
-          "fin": 4.4
+          "texto": "perfecto",
+          "inicio": 3.495,
+          "fin": 4.005
         },
         {
-          "texto": "el",
-          "inicio": 5.016,
-          "fin": 5.155
+          "texto": "de",
+          "inicio": 4.063,
+          "fin": 4.133
         },
         {
-          "texto": "cerebro",
-          "inicio": 5.224,
-          "fin": 5.666
+          "texto": "ese",
+          "inicio": 4.191,
+          "fin": 4.354
         },
         {
-          "texto": "aprende",
-          "inicio": 5.724,
-          "fin": 6.118
-        },
-        {
-          "texto": "a",
-          "inicio": 6.142,
-          "fin": 6.165
-        },
-        {
-          "texto": "soltar.",
-          "inicio": 6.2,
-          "fin": 6.653
-        },
-        {
-          "texto": "Solo",
-          "inicio": 7.349,
-          "fin": 7.686
-        },
-        {
-          "texto": "necesita",
-          "inicio": 7.732,
-          "fin": 8.22
-        },
-        {
-          "texto": "tiempo.",
-          "inicio": 8.266,
-          "fin": 8.661
+          "texto": "lugar.",
+          "inicio": 4.389,
+          "fin": 4.679
         }
       ]
     },
-    "tres-de-la-manana": {
-      "texto": "Eso sí: a las tres de la mañana, tu cerebro va a seguir sugiriéndote que le escribas. No le hagas caso.",
-      "audio": "voz/tres-de-la-manana.mp3",
-      "duracion": 7.082,
+    "ayuda-141": {
+      "texto": "Si vos o alguien cercano lo necesita, en Argentina la línea 141 es gratuita, anónima y atiende todo el día.",
+      "audio": "voz/ayuda-141.mp3",
+      "duracion": 8.336,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.03,
+      "velocidad": 1.08,
       "ajustes": "0.62/0.12",
       "normalizado": true,
       "palabras": [
         {
-          "texto": "Eso",
+          "texto": "Si",
           "inicio": 0,
-          "fin": 0.29
+          "fin": 0.186
         },
         {
-          "texto": "sí:",
-          "inicio": 0.337,
-          "fin": 0.534
+          "texto": "vos",
+          "inicio": 0.232,
+          "fin": 0.418
         },
         {
-          "texto": "a",
-          "inicio": 0.998,
-          "fin": 1.045
+          "texto": "o",
+          "inicio": 0.534,
+          "fin": 0.604
         },
         {
-          "texto": "las",
-          "inicio": 1.115,
-          "fin": 1.231
+          "texto": "alguien",
+          "inicio": 0.639,
+          "fin": 0.906
         },
         {
-          "texto": "tres",
-          "inicio": 1.289,
-          "fin": 1.463
+          "texto": "cercano",
+          "inicio": 0.94,
+          "fin": 1.335
         },
         {
-          "texto": "de",
-          "inicio": 1.509,
-          "fin": 1.556
+          "texto": "lo",
+          "inicio": 1.382,
+          "fin": 1.44
+        },
+        {
+          "texto": "necesita,",
+          "inicio": 1.486,
+          "fin": 2.078
+        },
+        {
+          "texto": "en",
+          "inicio": 2.415,
+          "fin": 2.519
+        },
+        {
+          "texto": "Argentina",
+          "inicio": 2.566,
+          "fin": 3.181
         },
         {
           "texto": "la",
-          "inicio": 1.602,
-          "fin": 1.649
+          "inicio": 3.344,
+          "fin": 3.46
         },
         {
-          "texto": "mañana,",
-          "inicio": 1.695,
-          "fin": 2.09
+          "texto": "línea",
+          "inicio": 3.518,
+          "fin": 3.773
         },
         {
-          "texto": "tu",
-          "inicio": 2.299,
-          "fin": 2.45
+          "texto": "141",
+          "inicio": 3.855,
+          "fin": 4.563
         },
         {
-          "texto": "cerebro",
-          "inicio": 2.496,
-          "fin": 2.926
+          "texto": "es",
+          "inicio": 4.667,
+          "fin": 4.748
         },
         {
-          "texto": "va",
-          "inicio": 2.972,
-          "fin": 3.1
+          "texto": "gratuita,",
+          "inicio": 4.795,
+          "fin": 5.387
         },
         {
-          "texto": "a",
-          "inicio": 3.146,
-          "fin": 3.17
+          "texto": "anónima",
+          "inicio": 5.654,
+          "fin": 6.2
         },
         {
-          "texto": "seguir",
-          "inicio": 3.228,
-          "fin": 3.541
+          "texto": "y",
+          "inicio": 6.362,
+          "fin": 6.444
         },
         {
-          "texto": "sugiriéndote",
-          "inicio": 3.599,
-          "fin": 4.272
+          "texto": "atiende",
+          "inicio": 6.525,
+          "fin": 6.943
         },
         {
-          "texto": "que",
-          "inicio": 4.319,
-          "fin": 4.4
+          "texto": "todo",
+          "inicio": 7.024,
+          "fin": 7.314
         },
         {
-          "texto": "le",
-          "inicio": 4.447,
-          "fin": 4.505
+          "texto": "el",
+          "inicio": 7.361,
+          "fin": 7.419
         },
         {
-          "texto": "escribas.",
-          "inicio": 4.54,
-          "fin": 5.074
-        },
-        {
-          "texto": "No",
-          "inicio": 5.677,
-          "fin": 5.805
-        },
-        {
-          "texto": "le",
-          "inicio": 5.851,
-          "fin": 5.921
-        },
-        {
-          "texto": "hagas",
-          "inicio": 5.956,
-          "fin": 6.188
-        },
-        {
-          "texto": "caso.",
-          "inicio": 6.235,
-          "fin": 6.571
+          "texto": "día.",
+          "inicio": 7.465,
+          "fin": 7.755
         }
       ]
     }

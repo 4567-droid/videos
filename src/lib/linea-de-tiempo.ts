@@ -57,7 +57,7 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 			componente: escena.componente,
 			texto: escena.texto,
 			props: escena.props ?? {},
-			transicion: escena.transicion ?? 'zoom',
+			transicion: escena.transicion ?? (video.estilo === 'pizarra' ? 'borrar' : 'zoom'),
 			inicio,
 			duracion,
 			conVoz,

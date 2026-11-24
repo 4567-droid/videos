@@ -31,7 +31,7 @@ export const ESTILO_SUBTITULOS = {
  * Subtítulos de 3 palabras por vez, palabra por palabra.
  * La palabra que se está diciendo va en amarillo.
  */
-export const Subtitulos: React.FC<{grupos: GrupoSubtitulo[]}> = ({grupos}) => {
+export const Subtitulos: React.FC<{grupos: GrupoSubtitulo[]; posicion?: 'arriba' | 'abajo'}> = ({grupos, posicion = 'arriba'}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const grupo = grupos.find((g) => frame >= g.inicio && frame < g.fin);
@@ -43,7 +43,14 @@ export const Subtitulos: React.FC<{grupos: GrupoSubtitulo[]}> = ({grupos}) => {
 	});
 
 	return (
-		<AbsoluteFill style={{alignItems: 'center', paddingTop: ESTILO_SUBTITULOS.top, pointerEvents: 'none'}}>
+		<AbsoluteFill
+			style={
+				posicion === 'abajo'
+					? // abajo: el bloque crece hacia arriba y termina antes de los últimos ~300 px
+						{alignItems: 'center', justifyContent: 'flex-end', paddingBottom: 300, pointerEvents: 'none'}
+					: {alignItems: 'center', paddingTop: ESTILO_SUBTITULOS.top, pointerEvents: 'none'}
+			}
+		>
 			<div
 				style={{
 					width: ESTILO_SUBTITULOS.ancho,

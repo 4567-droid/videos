@@ -2,6 +2,8 @@ import {loadFont} from '@remotion/fonts';
 import interLatin900 from '@fontsource/inter/files/inter-latin-900-normal.woff2';
 import interLatinExt900 from '@fontsource/inter/files/inter-latin-ext-900-normal.woff2';
 import interLatin700 from '@fontsource/inter/files/inter-latin-700-normal.woff2';
+import manoLatin from '@fontsource/patrick-hand/files/patrick-hand-latin-400-normal.woff2';
+import manoLatinExt from '@fontsource/patrick-hand/files/patrick-hand-latin-ext-400-normal.woff2';
 
 /** Inter Black (900) local: no depende de internet al renderizar. */
 export const FUENTE = 'Inter';
@@ -11,3 +13,8 @@ const LATIN = 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+
 loadFont({family: FUENTE, url: interLatin900, weight: '900', unicodeRange: LATIN});
 loadFont({family: FUENTE, url: interLatinExt900, weight: '900'});
 loadFont({family: FUENTE, url: interLatin700, weight: '700', unicodeRange: LATIN});
+
+/** Letra manuscrita (estilo pizarra), también local. */
+export const FUENTE_MANO = 'Patrick Hand';
+loadFont({family: FUENTE_MANO, url: manoLatin, weight: '400', unicodeRange: LATIN});
+loadFont({family: FUENTE_MANO, url: manoLatinExt, weight: '400'});

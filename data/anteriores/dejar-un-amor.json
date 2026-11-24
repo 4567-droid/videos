@@ -1,0 +1,74 @@
+{
+  "tema": "por qué cuesta tanto dejar un amor, según un estudio de neurociencia",
+  "titulo": "Tu cerebro también extraña",
+  "voz": {
+    "velocidad": 1.03,
+    "estabilidad": 0.62,
+    "estilo": 0.12,
+    "ritmo": 1.04
+  },
+  "escenas": [
+    {
+      "id": "gancho-ventana",
+      "componente": "VentanaNoche",
+      "texto": "¿Por qué cuesta tanto dejar a alguien que ya no está?"
+    },
+    {
+      "id": "estudio-resonancia",
+      "componente": "CerebroEscaner",
+      "texto": "Un estudio con resonancia magnética miró el cerebro de personas que acababan de ser rechazadas por su pareja.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "fotos-ex",
+      "componente": "FotoRecompensa",
+      "texto": "Les mostraron fotos de su ex, y se activaron áreas del cerebro ligadas a la recompensa y a los antojos.",
+      "transicion": "zoom"
+    },
+    {
+      "id": "antojo",
+      "componente": "FrascoVacio",
+      "texto": "Los investigadores notaron similitudes con lo que pasa con el antojo de una droga.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "no-es-debilidad",
+      "componente": "PedidosHabituales",
+      "texto": "O sea: no es debilidad ni falta de voluntad. Tu cerebro sigue pidiendo algo a lo que se acostumbró.",
+      "transicion": "deslizar"
+    },
+    {
+      "id": "buena-noticia",
+      "componente": "CalendarioApego",
+      "texto": "Y hay una buena noticia: cuantos más días pasaban, menos se activaba la zona del apego.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "aprende-a-soltar",
+      "componente": "GloboSoltar",
+      "texto": "Es un estudio chico, de quince personas, pero muestra algo importante: el cerebro aprende a soltar. Solo necesita tiempo.",
+      "transicion": "zoom"
+    },
+    {
+      "id": "tres-de-la-manana",
+      "componente": "EscribileNo",
+      "texto": "Eso sí: a las tres de la mañana, tu cerebro va a seguir sugiriéndote que le escribas. No le hagas caso.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "ensenanza",
+      "componente": "AmanecerCalma",
+      "texto": "Y quedate con esto: extrañar no significa que tengas que volver. Es tu cerebro acostumbrado. Dale tiempo y cuidate.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "seguime",
+      "componente": "CierreSeguime",
+      "texto": "Seguime para más datos que no sabías.",
+      "transicion": "fundido",
+      "props": {
+        "fondo": "radial-gradient(circle at 50% 40%, #FFF4DA 0%, #FFD1A6 30%, #F4A3B4 58%, #6E5AA8 100%)"
+      }
+    }
+  ]
+}

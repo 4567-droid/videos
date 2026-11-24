@@ -5,6 +5,21 @@ import {BombaSangre} from './BombaSangre';
 import {CaraEnFlor} from './CaraEnFlor';
 import {CerebrosComparados} from './CerebrosComparados';
 import {CierreSeguime} from './CierreSeguime';
+import {BalanzaAbstinencia} from './BalanzaAbstinencia';
+import {Chispazo} from './Chispazo';
+import {CulpaTachada} from './CulpaTachada';
+import {DopaminaGanas} from './DopaminaGanas';
+import {DosCerebros} from './DosCerebros';
+import {GraficoSubida} from './GraficoSubida';
+import {LlavesPerdidas} from './LlavesPerdidas';
+import {Linea141} from './Linea141';
+import {LuzApagada} from './LuzApagada';
+import {OlaCalendario} from './OlaCalendario';
+import {PizarraSeguime} from './PizarraSeguime';
+import {PreguntaPalito} from './PreguntaPalito';
+import {SenalesCircuito} from './SenalesCircuito';
+import {TresCaminos} from './TresCaminos';
+import {TropiezoCamino} from './TropiezoCamino';
 import {AmanecerCalma} from './AmanecerCalma';
 import {CalendarioApego} from './CalendarioApego';
 import {CerebroEscaner} from './CerebroEscaner';
@@ -85,6 +100,22 @@ export const ESCENAS: Record<string, React.FC<any>> = {
 	GloboSoltar,
 	EscribileNo,
 	AmanecerCalma,
+	// reel (pizarra): la dopamina y por qué cuesta dejar una droga
+	PreguntaPalito,
+	DopaminaGanas,
+	TresCaminos,
+	GraficoSubida,
+	LuzApagada,
+	SenalesCircuito,
+	BalanzaAbstinencia,
+	OlaCalendario,
+	DosCerebros,
+	Chispazo,
+	CulpaTachada,
+	LlavesPerdidas,
+	TropiezoCamino,
+	Linea141,
+	PizarraSeguime,
 	// cierre fijo de todos los reels ("Seguime para más datos que no sabías.")
 	CierreSeguime,
 };

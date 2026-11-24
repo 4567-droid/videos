@@ -9,7 +9,7 @@ export type EscenaJSON = {
 	/** Props opcionales que recibe el componente de la escena. */
 	props?: Record<string, unknown>;
 	/** Transición de ENTRADA a esta escena: "zoom" (por defecto), "deslizar" o "fundido". */
-	transicion?: 'zoom' | 'deslizar' | 'fundido';
+	transicion?: 'zoom' | 'deslizar' | 'fundido' | 'borrar';
 };
 
 export type VideoJSON = {
@@ -20,7 +20,9 @@ export type VideoJSON = {
 	 *  - velocidad: velocidad con la que ElevenLabs genera la voz (0,7–1,2; requiere `npm run voz`)
 	 *  - ritmo: acelera o frena el audio ya generado al reproducirlo (mismo tono, sin regenerar)
 	 */
-	voz?: {velocidad?: number; ritmo?: number};
+	voz?: {velocidad?: number; ritmo?: number; estabilidad?: number; estilo?: number};
+	/** "pizarra": fondo blanco con dibujos a marcador, subtítulos abajo y transición de borrado */
+	estilo?: 'pizarra';
 	escenas: EscenaJSON[];
 };
 
@@ -64,7 +66,7 @@ export type EscenaCalculada = {
 	componente: string;
 	texto: string;
 	props: Record<string, unknown>;
-	transicion: 'zoom' | 'deslizar' | 'fundido';
+	transicion: 'zoom' | 'deslizar' | 'fundido' | 'borrar';
 	/** frame global donde empieza la escena (incluye la transición de entrada) */
 	inicio: number;
 	/** duración total en frames */

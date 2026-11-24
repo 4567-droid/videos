@@ -195,6 +195,7 @@ export const Cama: React.FC<{colorMarco?: string; almohada?: boolean}> = ({color
 	</group>
 );
 
+const mezclarV = (a: V3, b: V3, k: number): V3 => [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k, a[2] + (b[2] - a[2]) * k];
 const campana = (u: number) => (Math.abs(u) >= 1 ? 0 : (1 - u * u) ** 0.7);
 const paso = (a: number, b: number, x: number) => {
 	const k = limitar((x - a) / (b - a));
@@ -295,6 +296,8 @@ type PropsDurmiente = {
 	manta?: number | null;
 	/** brazos abrazando una almohada sobre el pecho */
 	abrazaAlmohada?: boolean;
+	/** 0..1: se tapa la cara con una almohada (la sostiene con las dos manos) */
+	taparse?: number;
 	colorPijama?: string;
 	position?: V3;
 	rotation?: V3;
@@ -318,6 +321,7 @@ export const Durmiente: React.FC<PropsDurmiente> = ({
 	antifaz = false,
 	manta = null,
 	abrazaAlmohada = false,
+	taparse = 0,
 	colorPijama = '#FF7AA2',
 	position,
 	rotation,
@@ -390,16 +394,19 @@ export const Durmiente: React.FC<PropsDurmiente> = ({
 			{/* brazos */}
 			{[-1, 1].map((lado) => {
 				const hombro: V3 = [lado * 0.3, 0.24, -0.55];
-				const codo: V3 = abrazaAlmohada
+				const codoBase: V3 = abrazaAlmohada
 					? [lado * 0.42, 0.34, -0.27]
 					: [lado * 0.37 + vib(lado), yBrazo(lado * 0.37, -0.24, 0.15), -0.24];
-				const mano: V3 = abrazaAlmohada
+				const manoBase: V3 = abrazaAlmohada
 					? [lado * 0.13, 0.5, -0.38]
 					: [lado * 0.39 + vib(lado * 2), yBrazo(lado * 0.39, 0.08, 0.11) + vib(lado * 3) * 0.5, 0.08];
+				const k = limitar(taparse);
+				const codoFinal: V3 = mezclarV(codoBase, [lado * 0.47, 0.44, -0.5], k);
+				const mano: V3 = mezclarV(manoBase, [lado * 0.3, 0.66, -0.73], k);
 				return (
 					<group key={lado}>
-						<Segmento desde={hombro} hasta={codo} radio={0.075} material={m.pijamaExt} />
-						<Segmento desde={codo} hasta={mano} radio={0.068} material={m.pijamaExt} />
+						<Segmento desde={hombro} hasta={codoFinal} radio={0.075} material={m.pijamaExt} />
+						<Segmento desde={codoFinal} hasta={mano} radio={0.068} material={m.pijamaExt} />
 						<mesh material={m.pielExt} position={mano}>
 							<icosahedronGeometry args={[0.078, 1]} />
 						</mesh>
@@ -421,6 +428,14 @@ export const Durmiente: React.FC<PropsDurmiente> = ({
 				);
 			})}
 
+			{taparse > 0.01 ? (
+				<mesh
+					geometry={cajaRedondeada(0.66, 0.2, 0.48, 0.09)}
+					material={m.almohada}
+					position={mezclarV([0, 1.3, -0.4], [0, 0.63, -0.72], limitar(taparse))}
+					rotation={[0.55, 0, 0.04 * Math.sin(t * 2)]}
+				/>
+			) : null}
 			{abrazaAlmohada ? (
 				<mesh geometry={cajaRedondeada(0.58, 0.2, 0.36, 0.08)} material={m.almohada} position={[0, 0.46, -0.36]} rotation={[0.25, 0, 0.06]} />
 			) : null}

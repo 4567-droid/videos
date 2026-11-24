@@ -1,0 +1,66 @@
+{
+  "tema": "la parálisis del sueño",
+  "titulo": "Despierto, pero sin poder moverte",
+  "voz": {
+    "velocidad": 1.07,
+    "ritmo": 1.06
+  },
+  "escenas": [
+    {
+      "id": "gancho-despertar",
+      "componente": "DespertarRigido",
+      "texto": "¿Alguna vez despertaste y no pudiste moverte?"
+    },
+    {
+      "id": "ocho-por-ciento",
+      "componente": "MultitudIluminada",
+      "texto": "Se llama parálisis del sueño, y le pasa a cerca del ocho por ciento de las personas.",
+      "transicion": "zoom"
+    },
+    {
+      "id": "cerebro-apaga",
+      "componente": "CerebroInterruptor",
+      "texto": "Mientras soñás, tu cerebro paraliza tu cuerpo a propósito, para que no actúes tus sueños.",
+      "transicion": "deslizar"
+    },
+    {
+      "id": "cerebro-despierta",
+      "componente": "CerebroDespierto",
+      "texto": "A veces el cerebro despierta antes que el cuerpo: estás consciente, pero los músculos siguen apagados.",
+      "transicion": "zoom"
+    },
+    {
+      "id": "sombras",
+      "componente": "HabitacionSombras",
+      "texto": "Y como todavía está medio soñando, mucha gente siente o ve cosas que no están ahí.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "no-es-peligroso",
+      "componente": "RelojRespira",
+      "texto": "Dura segundos o un par de minutos, y no es peligroso.",
+      "transicion": "zoom"
+    },
+    {
+      "id": "cinco-minutitos",
+      "componente": "CincoMinutitos",
+      "texto": "Tu cerebro: “Ya desperté”. Tu cuerpo: “Cinco minutitos más”.",
+      "transicion": "deslizar"
+    },
+    {
+      "id": "ensenanza",
+      "componente": "SombraAbrigo",
+      "texto": "Y quedate con esto: lo que no entendés asusta. Cuando sabés cómo funciona, pierde poder.",
+      "transicion": "zoom"
+    },
+    {
+      "id": "seguime",
+      "componente": "CierreSeguime",
+      "texto": "Seguime para más datos que no sabías.",
+      "transicion": "fundido",
+      "props": {
+        "fondo": "radial-gradient(circle at 50% 40%, #5B3FB8 0%, #34208A 32%, #170C4D 64%, #05021A 100%)"
+      }
+    }
+  ]
+}

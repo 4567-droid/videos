@@ -3,6 +3,7 @@
 Reels verticales (1080×1920, 30 fps) en español, **100 % programados** con Remotion + Three.js (`@remotion/three`): escenas 3D low-poly, subtítulos animados y voz opcional con ElevenLabs. No usa imágenes de IA ni APIs de imágenes.
 
 Ejemplos terminados (con voz de ElevenLabs):
+- [`ejemplos/dejar-un-amor.mp4`](ejemplos/dejar-un-amor.mp4): "por qué cuesta tanto dejar un amor", 10 escenas, ~61 s.
 - [`ejemplos/paralisis-del-sueno.mp4`](ejemplos/paralisis-del-sueno.mp4): "la parálisis del sueño", 9 escenas, ~42 s.
 - [`ejemplos/relatividad-einstein.mp4`](ejemplos/relatividad-einstein.mp4): "la teoría de la relatividad de Einstein", 9 escenas, ~61 s.
 - [`ejemplos/abejas-reconocen-caras.mp4`](ejemplos/abejas-reconocen-caras.mp4): "las abejas reconocen caras humanas", 7 escenas, ~39 s.
@@ -57,7 +58,7 @@ Sin voz, el tiempo de cada palabra se **estima según su largo** (y pausas en co
 2. `npm run voz`: genera `public/voz/<id>.mp3` por escena (modelo `eleven_multilingual_v2`, endpoint *with-timestamps*), guarda el tiempo exacto de cada palabra en `data/voz.json` y normaliza el volumen (−16 LUFS) para que todas las escenas suenen parejas.
 3. `npm run render`: usa el audio y esos tiempos en lugar de la estimación. Cada escena dura lo que dura su voz, más 0,3 s antes y 0,7 s después (que incluyen la transición).
 
-Para ajustar la duración total, en `data/video.json`: `"voz": {"ritmo": 1.1}` acelera la voz ya generada al reproducirla (mismo tono, sin regenerar); `"voz": {"velocidad": 1.05}` cambia la velocidad con la que la genera ElevenLabs (requiere `npm run voz`).
+Para ajustar la duración total, en `data/video.json`: `"voz": {"ritmo": 1.1}` acelera la voz ya generada al reproducirla (mismo tono, sin regenerar); `"voz": {"velocidad": 1.05}` cambia la velocidad con la que la genera ElevenLabs (requiere `npm run voz`). Para un tono más calmo: `"estabilidad": 0.62, "estilo": 0.12` (también regenera).
 
 Todos los videos terminan igual: un cierre gracioso, una enseñanza de una frase y la escena `CierreSeguime` ("Seguime para más datos que no sabías.").
 
@@ -70,7 +71,8 @@ data/video.json        guion (una escena por frase)
 data/voz.json          tiempos de la voz (lo escribe npm run voz)
 src/escenas/           una animación 3D por escena + index.ts (registro)
 src/componentes/       personajes y objetos reutilizables: Avatar (persona), Durmiente (persona acostada),
-                       Cama, Habitacion (cuarto de noche), CerebroConCara, Interruptor, Megafono, Einstein, Abeja, Corazon3D,
+                       Cama, Habitacion (cuarto de noche), CerebroConCara, BrazoCerebro, Interruptor, Megafono, Frasco, Carrito,
+                       GloboCorazon, Cartel, Escaner, Portarretrato, Einstein, Abeja, Corazon3D,
                        Cerebro, CaraFlor, Calendario, Reloj3D, RelojDerretido, Planeta, FotoCara,
                        Repelente, Ciencia (pizarrón, cohete, sábana espacio-tiempo, satélite, celular,
                        signo de pregunta, lamparita), Etiqueta, Camara, Contador, Subtitulos...

@@ -5,6 +5,15 @@ import {BombaSangre} from './BombaSangre';
 import {CaraEnFlor} from './CaraEnFlor';
 import {CerebrosComparados} from './CerebrosComparados';
 import {CierreSeguime} from './CierreSeguime';
+import {AmanecerCalma} from './AmanecerCalma';
+import {CalendarioApego} from './CalendarioApego';
+import {CerebroEscaner} from './CerebroEscaner';
+import {EscribileNo} from './EscribileNo';
+import {FotoRecompensa} from './FotoRecompensa';
+import {FrascoVacio} from './FrascoVacio';
+import {GloboSoltar} from './GloboSoltar';
+import {PedidosHabituales} from './PedidosHabituales';
+import {VentanaNoche} from './VentanaNoche';
 import {CerebroDespierto} from './CerebroDespierto';
 import {CerebroInterruptor} from './CerebroInterruptor';
 import {CincoMinutitos} from './CincoMinutitos';
@@ -66,6 +75,16 @@ export const ESCENAS: Record<string, React.FC<any>> = {
 	RelojRespira,
 	CincoMinutitos,
 	SombraAbrigo,
+	// reel: por qué cuesta tanto dejar un amor
+	VentanaNoche,
+	CerebroEscaner,
+	FotoRecompensa,
+	FrascoVacio,
+	PedidosHabituales,
+	CalendarioApego,
+	GloboSoltar,
+	EscribileNo,
+	AmanecerCalma,
 	// cierre fijo de todos los reels ("Seguime para más datos que no sabías.")
 	CierreSeguime,
 };

@@ -215,8 +215,17 @@ type Props = {
 	latido?: number | null;
 	/** cejas (del color del pelo) */
 	cejas?: boolean;
-	/** "feliz" (sonrisa) o "preocupada" (cejas arqueadas y boca hacia abajo) */
-	expresion?: 'feliz' | 'preocupada';
+	/** "feliz" (sonrisa), "preocupada" (cejas arqueadas y boca hacia abajo) o "serena" (sonrisa chiquita, ojos entornados) */
+	expresion?: 'feliz' | 'preocupada' | 'serena';
+	/** 0..1: hombros encogidos (tensión); la cabeza baja un poco */
+	encoger?: number;
+	/** giro extra de la cabeza [x, y, z] (mirar arriba, a un costado...) */
+	giroCabeza?: V3;
+	/** brazos en una posición fija, en coordenadas del torso: codo y mano (izq = x negativa, der = x positiva) */
+	brazos?: {izq?: {codo: V3; mano: V3}; der?: {codo: V3; mano: V3}};
+	/** objeto en la mano (un celular, por ejemplo) y en cuál de las dos */
+	enMano?: React.ReactNode;
+	manoObjeto?: 'izq' | 'der';
 	/** elementos extra dentro de la cabeza (pelo, bigote, anteojos...). Centro de la cabeza: [0, 0.17, 0], radio 0.2 */
 	cabeza?: React.ReactNode;
 	sombra?: boolean;
@@ -235,6 +244,11 @@ export const Avatar: React.FC<Props> = ({
 	latido = null,
 	cejas = false,
 	expresion = 'feliz',
+	encoger = 0,
+	giroCabeza,
+	brazos,
+	enMano,
+	manoObjeto = 'der',
 	cabeza,
 	sombra = true,
 	position,
@@ -243,6 +257,8 @@ export const Avatar: React.FC<Props> = ({
 }) => {
 	const c = {...COLORES_DEFECTO, ...colores};
 	const preocupada = expresion === 'preocupada';
+	const serena = expresion === 'serena';
+	const subeHombros = 0.06 * encoger;
 
 	const m = useMemo(() => {
 		const mat = (props: THREE.MeshStandardMaterialParameters) =>
@@ -292,10 +308,10 @@ export const Avatar: React.FC<Props> = ({
 					<mesh material={m.remera} position={[0, 0.27, 0]} scale={[1, 1 + 0.015 * p.respira, 1 + 0.025 * p.respira]}>
 						<cylinderGeometry args={[0.23, 0.17, 0.5, 8]} />
 					</mesh>
-					<mesh material={m.remera} position={[-0.245, 0.47, 0]}>
+					<mesh material={m.remera} position={[-0.245, 0.47 + subeHombros, 0]}>
 						<icosahedronGeometry args={[0.088, 1]} />
 					</mesh>
-					<mesh material={m.remera} position={[0.245, 0.47, 0]}>
+					<mesh material={m.remera} position={[0.245, 0.47 + subeHombros, 0]}>
 						<icosahedronGeometry args={[0.088, 1]} />
 					</mesh>
 					{/* cuello */}
@@ -304,17 +320,24 @@ export const Avatar: React.FC<Props> = ({
 					</mesh>
 
 					{/* cabeza */}
-					<group position={[0, 0.6, 0]} rotation={p.cabeza}>
+					<group
+						position={[0, 0.6, 0]}
+						rotation={[
+							p.cabeza[0] + 0.14 * encoger + (giroCabeza?.[0] ?? 0),
+							p.cabeza[1] + (giroCabeza?.[1] ?? 0),
+							p.cabeza[2] + (giroCabeza?.[2] ?? 0),
+						]}
+					>
 						<mesh material={m.piel} position={[0, 0.17, 0]}>
 							<icosahedronGeometry args={[0.2, 1]} />
 						</mesh>
 						<mesh material={m.pelo} position={[0, 0.205, -0.02]} rotation={[-0.3, 0, 0]}>
 							<sphereGeometry args={[0.215, 9, 6, 0, TAU, 0, Math.PI * 0.52]} />
 						</mesh>
-						<mesh material={m.ojos} position={[-0.07, 0.185, 0.178]}>
+						<mesh material={m.ojos} position={[-0.07, 0.185, 0.178]} scale={serena ? [1.1, 0.5, 1] : 1}>
 							<sphereGeometry args={[0.027, 8, 6]} />
 						</mesh>
-						<mesh material={m.ojos} position={[0.07, 0.185, 0.178]}>
+						<mesh material={m.ojos} position={[0.07, 0.185, 0.178]} scale={serena ? [1.1, 0.5, 1] : 1}>
 							<sphereGeometry args={[0.027, 8, 6]} />
 						</mesh>
 						<mesh material={m.mejillas} position={[-0.115, 0.125, 0.155]} scale={[1, 0.7, 0.4]}>
@@ -327,7 +350,7 @@ export const Avatar: React.FC<Props> = ({
 							material={m.boca}
 							position={[0, preocupada ? 0.095 : 0.115, 0.186]}
 							rotation={[0.25, 0, Math.PI]}
-							scale={[preocupada ? 0.8 : 1, preocupada ? -0.75 : 1, 1]}
+							scale={serena ? [0.7, 0.55, 1] : [preocupada ? 0.8 : 1, preocupada ? -0.75 : 1, 1]}
 						>
 							<torusGeometry args={[0.042, 0.012, 5, 12, Math.PI]} />
 						</mesh>
@@ -345,8 +368,28 @@ export const Avatar: React.FC<Props> = ({
 						{cabeza}
 					</group>
 
-					<Brazo lado={-1} hombro={p.hombroI} codo={p.codoI} m={m} />
-					<Brazo lado={1} hombro={p.hombroD} codo={p.codoD} m={m} />
+					{([-1, 1] as const).map((lado) => {
+						const fijo = lado < 0 ? brazos?.izq : brazos?.der;
+						const objeto = enMano && (manoObjeto === 'izq') === lado < 0 ? enMano : null;
+						if (fijo) {
+							const hombro: V3 = [lado * 0.27, 0.46 + subeHombros, 0];
+							return (
+								<group key={lado}>
+									<Segmento desde={hombro} hasta={fijo.codo} radio={0.068} material={m.remera} />
+									<Segmento desde={fijo.codo} hasta={fijo.mano} radio={0.056} material={m.piel} />
+									<mesh material={m.piel} position={fijo.mano}>
+										<icosahedronGeometry args={[0.072, 1]} />
+									</mesh>
+									{objeto ? <group position={fijo.mano}>{objeto}</group> : null}
+								</group>
+							);
+						}
+						return (
+							<Brazo key={lado} lado={lado} y={0.46 + subeHombros} hombro={lado < 0 ? p.hombroI : p.hombroD} codo={lado < 0 ? p.codoI : p.codoD} m={m}>
+								{objeto}
+							</Brazo>
+						);
+					})}
 
 					{latido !== null ? (
 						<group position={[0.075, 0.37, 0.225]}>
@@ -368,8 +411,15 @@ const frecuenciaBase = (a: Animacion) => (a === 'correr' ? 1.45 : a === 'caminar
 
 type Materiales = Record<'piel' | 'remera' | 'pantalon' | 'zapatillas', THREE.Material>;
 
-const Brazo: React.FC<{lado: number; hombro: V3; codo: V3; m: Materiales}> = ({lado, hombro, codo, m}) => (
-	<group position={[lado * 0.27, 0.46, 0]} rotation={hombro}>
+const Brazo: React.FC<{lado: number; y?: number; hombro: V3; codo: V3; m: Materiales; children?: React.ReactNode}> = ({
+	lado,
+	y = 0.46,
+	hombro,
+	codo,
+	m,
+	children,
+}) => (
+	<group position={[lado * 0.27, y, 0]} rotation={hombro}>
 		<mesh material={m.remera} position={[0, -0.13, 0]}>
 			<capsuleGeometry args={[0.068, 0.17, 3, 7]} />
 		</mesh>
@@ -380,6 +430,7 @@ const Brazo: React.FC<{lado: number; hombro: V3; codo: V3; m: Materiales}> = ({l
 			<mesh material={m.piel} position={[0, -0.27, 0]}>
 				<icosahedronGeometry args={[0.072, 1]} />
 			</mesh>
+			{children ? <group position={[0, -0.27, 0]}>{children}</group> : null}
 		</group>
 	</group>
 );

@@ -155,15 +155,15 @@ const alinearConGuion = (texto, palabrasAudio, duracion) => {
 	});
 };
 
-const generar = async (escena, anterior, siguiente, velocidad) => {
+const generar = async (escena, anterior, siguiente, velocidad, ajustes) => {
 	const url = `https://api.elevenlabs.io/v1/text-to-speech/${encodeURIComponent(VOICE_ID)}/with-timestamps?output_format=${FORMATO}`;
 	const cuerpo = {
 		text: escena.texto,
 		model_id: MODEL_ID,
 		voice_settings: {
-			stability: 0.45,
+			stability: ajustes.estabilidad,
 			similarity_boost: 0.8,
-			style: 0.3,
+			style: ajustes.estilo,
 			use_speaker_boost: true,
 			...(velocidad !== 1 ? {speed: velocidad} : {}),
 		},
@@ -195,6 +195,12 @@ const generar = async (escena, anterior, siguiente, velocidad) => {
 const video = JSON.parse(await readFile(RUTA_VIDEO, 'utf8'));
 // velocidad de la voz para todo el video (opcional en data/video.json: "voz": {"velocidad": 1.05}; ElevenLabs acepta 0,7–1,2)
 const VELOCIDAD = Math.min(1.2, Math.max(0.7, Number(video.voz?.velocidad ?? 1)));
+// tono de la voz (opcional): "estabilidad" más alta = más calma y pareja; "estilo" más bajo = menos actuada
+const AJUSTES = {
+	estabilidad: Math.min(1, Math.max(0, Number(video.voz?.estabilidad ?? 0.45))),
+	estilo: Math.min(1, Math.max(0, Number(video.voz?.estilo ?? 0.3))),
+};
+const CLAVE_AJUSTES = `${AJUSTES.estabilidad}/${AJUSTES.estilo}`;
 const voz = existsSync(RUTA_VOZ) ? JSON.parse(await readFile(RUTA_VOZ, 'utf8')) : {escenas: {}};
 voz.escenas ??= {};
 await mkdir(CARPETA_AUDIO, {recursive: true});
@@ -219,6 +225,7 @@ for (const [i, escena] of video.escenas.entries()) {
 		previa.voz === VOICE_ID &&
 		previa.modelo === MODEL_ID &&
 		(previa.velocidad ?? 1) === VELOCIDAD &&
+		(previa.ajustes ?? '0.45/0.3') === CLAVE_AJUSTES &&
 		existsSync(path.join(RAIZ, 'public', archivo));
 	const rutaAudio = path.join(RAIZ, 'public', archivo);
 	if (vigente && !forzar && !soloEscena) {
@@ -232,7 +239,7 @@ for (const [i, escena] of video.escenas.entries()) {
 		continue;
 	}
 	process.stdout.write(`> ${escena.id}: generando voz... `);
-	const {audio, finHabla, palabras} = await generar(escena, video.escenas[i - 1], video.escenas[i + 1], VELOCIDAD);
+	const {audio, finHabla, palabras} = await generar(escena, video.escenas[i - 1], video.escenas[i + 1], VELOCIDAD, AJUSTES);
 	await writeFile(rutaAudio, audio);
 	const normalizado = normalizarVolumen(rutaAudio);
 	const duracion = Math.max(finHabla, duracionMp3(rutaAudio));
@@ -243,6 +250,7 @@ for (const [i, escena] of video.escenas.entries()) {
 		voz: VOICE_ID,
 		modelo: MODEL_ID,
 		velocidad: VELOCIDAD,
+		ajustes: CLAVE_AJUSTES,
 		normalizado,
 		palabras,
 	};

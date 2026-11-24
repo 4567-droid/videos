@@ -1,59 +1,66 @@
 {
-  "tema": "la teoría de la relatividad de Einstein",
-  "titulo": "El tiempo no pasa igual para todos",
+  "tema": "la parálisis del sueño",
+  "titulo": "Despierto, pero sin poder moverte",
   "voz": {
     "velocidad": 1.07,
-    "ritmo": 1.1
+    "ritmo": 1.06
   },
   "escenas": [
     {
-      "id": "gancho-tiempo",
-      "componente": "RelojLoco",
-      "texto": "¿Sabías que el tiempo no pasa igual para todos?"
+      "id": "gancho-despertar",
+      "componente": "DespertarRigido",
+      "texto": "¿Alguna vez despertaste y no pudiste moverte?"
     },
     {
-      "id": "einstein-1905",
-      "componente": "EinsteinPizarron",
-      "texto": "En 1905, Albert Einstein propuso que el tiempo y el espacio no son fijos: dependen de qué tan rápido te movés."
+      "id": "ocho-por-ciento",
+      "componente": "MultitudIluminada",
+      "texto": "Se llama parálisis del sueño, y le pasa a cerca del ocho por ciento de las personas.",
+      "transicion": "zoom"
     },
     {
-      "id": "nave-y-relojes",
-      "componente": "NaveRelojes",
-      "texto": "Cuanto más rápido vas, más lento pasa tu reloj, comparado con el de alguien quieto.",
+      "id": "cerebro-apaga",
+      "componente": "CerebroInterruptor",
+      "texto": "Mientras soñás, tu cerebro paraliza tu cuerpo a propósito, para que no actúes tus sueños.",
       "transicion": "deslizar"
     },
     {
-      "id": "gravedad-1915",
-      "componente": "GrillaGravedad",
-      "texto": "Diez años después, en 1915, completó la idea: la gravedad no es una fuerza que tira, es el espacio-tiempo curvado por la masa, como una sábana estirada con una bola pesada."
+      "id": "cerebro-despierta",
+      "componente": "CerebroDespierto",
+      "texto": "A veces el cerebro despierta antes que el cuerpo: estás consciente, pero los músculos siguen apagados.",
+      "transicion": "zoom"
     },
     {
-      "id": "eclipse-1919",
-      "componente": "EclipseLuz",
-      "texto": "En 1919, durante un eclipse, se vio que la luz de las estrellas se desviaba cerca del Sol. Einstein tenía razón.",
+      "id": "sombras",
+      "componente": "HabitacionSombras",
+      "texto": "Y como todavía está medio soñando, mucha gente siente o ve cosas que no están ahí.",
       "transicion": "fundido"
     },
     {
-      "id": "gps",
-      "componente": "SateliteGPS",
-      "texto": "Y esto no es solo teoría: los satélites del GPS corrigen sus relojes todos los días por este efecto. Sin eso, tu mapa fallaría por kilómetros."
+      "id": "no-es-peligroso",
+      "componente": "RelojRespira",
+      "texto": "Dura segundos o un par de minutos, y no es peligroso.",
+      "transicion": "zoom"
     },
     {
-      "id": "llegar-tarde",
-      "componente": "LlegarTarde",
-      "texto": "Así que la próxima vez que llegues tarde, no es tu culpa: es relatividad.",
+      "id": "cinco-minutitos",
+      "componente": "CincoMinutitos",
+      "texto": "Tu cerebro: “Ya desperté”. Tu cuerpo: “Cinco minutitos más”.",
       "transicion": "deslizar"
     },
     {
       "id": "ensenanza",
-      "componente": "PreguntaGigante",
-      "texto": "Y quedate con esto: cuestioná lo que todos dan por hecho. Las grandes ideas empiezan con una pregunta."
+      "componente": "SombraAbrigo",
+      "texto": "Y quedate con esto: lo que no entendés asusta. Cuando sabés cómo funciona, pierde poder.",
+      "transicion": "zoom"
     },
     {
       "id": "seguime",
       "componente": "CierreSeguime",
       "texto": "Seguime para más datos que no sabías.",
-      "transicion": "fundido"
+      "transicion": "fundido",
+      "props": {
+        "fondo": "radial-gradient(circle at 50% 40%, #5B3FB8 0%, #34208A 32%, #170C4D 64%, #05021A 100%)"
+      }
     }
   ]
 }

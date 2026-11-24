@@ -1,771 +1,9 @@
 {
   "escenas": {
-    "gancho-tiempo": {
-      "texto": "¿Sabías que el tiempo no pasa igual para todos?",
-      "audio": "voz/gancho-tiempo.mp3",
-      "duracion": 2.772,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.07,
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "¿Sabías",
-          "inicio": 0.058,
-          "fin": 0.453
-        },
-        {
-          "texto": "que",
-          "inicio": 0.499,
-          "fin": 0.569
-        },
-        {
-          "texto": "el",
-          "inicio": 0.592,
-          "fin": 0.65
-        },
-        {
-          "texto": "tiempo",
-          "inicio": 0.731,
-          "fin": 1.033
-        },
-        {
-          "texto": "no",
-          "inicio": 1.091,
-          "fin": 1.173
-        },
-        {
-          "texto": "pasa",
-          "inicio": 1.219,
-          "fin": 1.428
-        },
-        {
-          "texto": "igual",
-          "inicio": 1.463,
-          "fin": 1.683
-        },
-        {
-          "texto": "para",
-          "inicio": 1.741,
-          "fin": 1.904
-        },
-        {
-          "texto": "todos?",
-          "inicio": 1.95,
-          "fin": 2.276
-        }
-      ]
-    },
-    "einstein-1905": {
-      "texto": "En 1905, Albert Einstein propuso que el tiempo y el espacio no son fijos: dependen de qué tan rápido te movés.",
-      "audio": "voz/einstein-1905.mp3",
-      "duracion": 8.388,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.07,
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "En",
-          "inicio": 0,
-          "fin": 0.151
-        },
-        {
-          "texto": "1905,",
-          "inicio": 0.255,
-          "fin": 1.149
-        },
-        {
-          "texto": "Albert",
-          "inicio": 1.579,
-          "fin": 1.962
-        },
-        {
-          "texto": "Einstein",
-          "inicio": 2.032,
-          "fin": 2.473
-        },
-        {
-          "texto": "propuso",
-          "inicio": 2.577,
-          "fin": 3.053
-        },
-        {
-          "texto": "que",
-          "inicio": 3.1,
-          "fin": 3.181
-        },
-        {
-          "texto": "el",
-          "inicio": 3.216,
-          "fin": 3.286
-        },
-        {
-          "texto": "tiempo",
-          "inicio": 3.367,
-          "fin": 3.669
-        },
-        {
-          "texto": "y",
-          "inicio": 3.715,
-          "fin": 3.738
-        },
-        {
-          "texto": "el",
-          "inicio": 3.773,
-          "fin": 3.831
-        },
-        {
-          "texto": "espacio",
-          "inicio": 3.889,
-          "fin": 4.354
-        },
-        {
-          "texto": "no",
-          "inicio": 4.458,
-          "fin": 4.621
-        },
-        {
-          "texto": "son",
-          "inicio": 4.69,
-          "fin": 4.853
-        },
-        {
-          "texto": "fijos:",
-          "inicio": 4.934,
-          "fin": 5.352
-        },
-        {
-          "texto": "dependen",
-          "inicio": 5.724,
-          "fin": 6.177
-        },
-        {
-          "texto": "de",
-          "inicio": 6.235,
-          "fin": 6.304
-        },
-        {
-          "texto": "qué",
-          "inicio": 6.385,
-          "fin": 6.502
-        },
-        {
-          "texto": "tan",
-          "inicio": 6.56,
-          "fin": 6.687
-        },
-        {
-          "texto": "rápido",
-          "inicio": 6.769,
-          "fin": 7.07
-        },
-        {
-          "texto": "te",
-          "inicio": 7.117,
-          "fin": 7.187
-        },
-        {
-          "texto": "movés.",
-          "inicio": 7.233,
-          "fin": 7.581
-        }
-      ]
-    },
-    "nave-y-relojes": {
-      "texto": "Cuanto más rápido vas, más lento pasa tu reloj, comparado con el de alguien quieto.",
-      "audio": "voz/nave-y-relojes.mp3",
-      "duracion": 5.88,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.07,
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Cuanto",
-          "inicio": 0,
-          "fin": 0.406
-        },
-        {
-          "texto": "más",
-          "inicio": 0.488,
-          "fin": 0.685
-        },
-        {
-          "texto": "rápido",
-          "inicio": 0.766,
-          "fin": 1.091
-        },
-        {
-          "texto": "vas,",
-          "inicio": 1.149,
-          "fin": 1.405
-        },
-        {
-          "texto": "más",
-          "inicio": 1.707,
-          "fin": 1.916
-        },
-        {
-          "texto": "lento",
-          "inicio": 1.997,
-          "fin": 2.264
-        },
-        {
-          "texto": "pasa",
-          "inicio": 2.322,
-          "fin": 2.531
-        },
-        {
-          "texto": "tu",
-          "inicio": 2.577,
-          "fin": 2.659
-        },
-        {
-          "texto": "reloj,",
-          "inicio": 2.705,
-          "fin": 3.065
-        },
-        {
-          "texto": "comparado",
-          "inicio": 3.297,
-          "fin": 3.855
-        },
-        {
-          "texto": "con",
-          "inicio": 3.901,
-          "fin": 4.017
-        },
-        {
-          "texto": "el",
-          "inicio": 4.075,
-          "fin": 4.145
-        },
-        {
-          "texto": "de",
-          "inicio": 4.203,
-          "fin": 4.272
-        },
-        {
-          "texto": "alguien",
-          "inicio": 4.342,
-          "fin": 4.621
-        },
-        {
-          "texto": "quieto.",
-          "inicio": 4.69,
-          "fin": 5.097
-        }
-      ]
-    },
-    "gravedad-1915": {
-      "texto": "Diez años después, en 1915, completó la idea: la gravedad no es una fuerza que tira, es el espacio-tiempo curvado por la masa, como una sábana estirada con una bola pesada.",
-      "audio": "voz/gravedad-1915.mp3",
-      "duracion": 13.299,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.07,
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Diez",
-          "inicio": 0,
-          "fin": 0.267
-        },
-        {
-          "texto": "años",
-          "inicio": 0.29,
-          "fin": 0.522
-        },
-        {
-          "texto": "después,",
-          "inicio": 0.569,
-          "fin": 1.022
-        },
-        {
-          "texto": "en",
-          "inicio": 1.173,
-          "fin": 1.312
-        },
-        {
-          "texto": "1915,",
-          "inicio": 1.451,
-          "fin": 2.426
-        },
-        {
-          "texto": "completó",
-          "inicio": 2.879,
-          "fin": 3.46
-        },
-        {
-          "texto": "la",
-          "inicio": 3.518,
-          "fin": 3.587
-        },
-        {
-          "texto": "idea:",
-          "inicio": 3.622,
-          "fin": 3.947
-        },
-        {
-          "texto": "la",
-          "inicio": 4.737,
-          "fin": 4.83
-        },
-        {
-          "texto": "gravedad",
-          "inicio": 4.888,
-          "fin": 5.399
-        },
-        {
-          "texto": "no",
-          "inicio": 5.561,
-          "fin": 5.759
-        },
-        {
-          "texto": "es",
-          "inicio": 5.828,
-          "fin": 5.886
-        },
-        {
-          "texto": "una",
-          "inicio": 5.991,
-          "fin": 6.118
-        },
-        {
-          "texto": "fuerza",
-          "inicio": 6.177,
-          "fin": 6.478
-        },
-        {
-          "texto": "que",
-          "inicio": 6.536,
-          "fin": 6.606
-        },
-        {
-          "texto": "tira,",
-          "inicio": 6.653,
-          "fin": 6.943
-        },
-        {
-          "texto": "es",
-          "inicio": 7.338,
-          "fin": 7.477
-        },
-        {
-          "texto": "el",
-          "inicio": 7.546,
-          "fin": 7.605
-        },
-        {
-          "texto": "espacio-tiempo",
-          "inicio": 7.663,
-          "fin": 8.464
-        },
-        {
-          "texto": "curvado",
-          "inicio": 8.51,
-          "fin": 8.975
-        },
-        {
-          "texto": "por",
-          "inicio": 9.021,
-          "fin": 9.149
-        },
-        {
-          "texto": "la",
-          "inicio": 9.207,
-          "fin": 9.276
-        },
-        {
-          "texto": "masa,",
-          "inicio": 9.323,
-          "fin": 9.648
-        },
-        {
-          "texto": "como",
-          "inicio": 9.985,
-          "fin": 10.205
-        },
-        {
-          "texto": "una",
-          "inicio": 10.286,
-          "fin": 10.449
-        },
-        {
-          "texto": "sábana",
-          "inicio": 10.519,
-          "fin": 10.879
-        },
-        {
-          "texto": "estirada",
-          "inicio": 10.913,
-          "fin": 11.378
-        },
-        {
-          "texto": "con",
-          "inicio": 11.436,
-          "fin": 11.575
-        },
-        {
-          "texto": "una",
-          "inicio": 11.656,
-          "fin": 11.796
-        },
-        {
-          "texto": "bola",
-          "inicio": 11.842,
-          "fin": 12.051
-        },
-        {
-          "texto": "pesada.",
-          "inicio": 12.098,
-          "fin": 12.527
-        }
-      ]
-    },
-    "eclipse-1919": {
-      "texto": "En 1919, durante un eclipse, se vio que la luz de las estrellas se desviaba cerca del Sol. Einstein tenía razón.",
-      "audio": "voz/eclipse-1919.mp3",
-      "duracion": 9.25,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.07,
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "En",
-          "inicio": 0,
-          "fin": 0.186
-        },
-        {
-          "texto": "1919,",
-          "inicio": 0.267,
-          "fin": 1.37
-        },
-        {
-          "texto": "durante",
-          "inicio": 1.927,
-          "fin": 2.299
-        },
-        {
-          "texto": "un",
-          "inicio": 2.345,
-          "fin": 2.426
-        },
-        {
-          "texto": "eclipse,",
-          "inicio": 2.461,
-          "fin": 2.926
-        },
-        {
-          "texto": "se",
-          "inicio": 3.228,
-          "fin": 3.379
-        },
-        {
-          "texto": "vio",
-          "inicio": 3.425,
-          "fin": 3.576
-        },
-        {
-          "texto": "que",
-          "inicio": 3.622,
-          "fin": 3.692
-        },
-        {
-          "texto": "la",
-          "inicio": 3.738,
-          "fin": 3.808
-        },
-        {
-          "texto": "luz",
-          "inicio": 3.866,
-          "fin": 4.04
-        },
-        {
-          "texto": "de",
-          "inicio": 4.087,
-          "fin": 4.145
-        },
-        {
-          "texto": "las",
-          "inicio": 4.18,
-          "fin": 4.296
-        },
-        {
-          "texto": "estrellas",
-          "inicio": 4.354,
-          "fin": 4.841
-        },
-        {
-          "texto": "se",
-          "inicio": 5.004,
-          "fin": 5.155
-        },
-        {
-          "texto": "desviaba",
-          "inicio": 5.224,
-          "fin": 5.724
-        },
-        {
-          "texto": "cerca",
-          "inicio": 5.759,
-          "fin": 6.049
-        },
-        {
-          "texto": "del",
-          "inicio": 6.084,
-          "fin": 6.177
-        },
-        {
-          "texto": "Sol.",
-          "inicio": 6.235,
-          "fin": 6.455
-        },
-        {
-          "texto": "Einstein",
-          "inicio": 7.163,
-          "fin": 7.79
-        },
-        {
-          "texto": "tenía",
-          "inicio": 7.872,
-          "fin": 8.185
-        },
-        {
-          "texto": "razón.",
-          "inicio": 8.243,
-          "fin": 8.615
-        }
-      ]
-    },
-    "gps": {
-      "texto": "Y esto no es solo teoría: los satélites del GPS corrigen sus relojes todos los días por este efecto. Sin eso, tu mapa fallaría por kilómetros.",
-      "audio": "voz/gps.mp3",
-      "duracion": 11.261,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.07,
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Y",
-          "inicio": 0,
-          "fin": 0.093
-        },
-        {
-          "texto": "esto",
-          "inicio": 0.174,
-          "fin": 0.464
-        },
-        {
-          "texto": "no",
-          "inicio": 0.662,
-          "fin": 0.836
-        },
-        {
-          "texto": "es",
-          "inicio": 0.917,
-          "fin": 1.01
-        },
-        {
-          "texto": "solo",
-          "inicio": 1.033,
-          "fin": 1.3
-        },
-        {
-          "texto": "teoría:",
-          "inicio": 1.358,
-          "fin": 1.834
-        },
-        {
-          "texto": "los",
-          "inicio": 2.415,
-          "fin": 2.589
-        },
-        {
-          "texto": "satélites",
-          "inicio": 2.612,
-          "fin": 3.204
-        },
-        {
-          "texto": "del",
-          "inicio": 3.251,
-          "fin": 3.39
-        },
-        {
-          "texto": "GPS",
-          "inicio": 3.471,
-          "fin": 3.901
-        },
-        {
-          "texto": "corrigen",
-          "inicio": 4.203,
-          "fin": 4.772
-        },
-        {
-          "texto": "sus",
-          "inicio": 4.83,
-          "fin": 5.004
-        },
-        {
-          "texto": "relojes",
-          "inicio": 5.085,
-          "fin": 5.492
-        },
-        {
-          "texto": "todos",
-          "inicio": 5.608,
-          "fin": 5.979
-        },
-        {
-          "texto": "los",
-          "inicio": 6.049,
-          "fin": 6.177
-        },
-        {
-          "texto": "días",
-          "inicio": 6.235,
-          "fin": 6.455
-        },
-        {
-          "texto": "por",
-          "inicio": 6.513,
-          "fin": 6.641
-        },
-        {
-          "texto": "este",
-          "inicio": 6.699,
-          "fin": 6.873
-        },
-        {
-          "texto": "efecto.",
-          "inicio": 6.908,
-          "fin": 7.361
-        },
-        {
-          "texto": "Sin",
-          "inicio": 8.127,
-          "fin": 8.336
-        },
-        {
-          "texto": "eso,",
-          "inicio": 8.406,
-          "fin": 8.673
-        },
-        {
-          "texto": "tu",
-          "inicio": 8.824,
-          "fin": 8.94
-        },
-        {
-          "texto": "mapa",
-          "inicio": 9.009,
-          "fin": 9.253
-        },
-        {
-          "texto": "fallaría",
-          "inicio": 9.3,
-          "fin": 9.741
-        },
-        {
-          "texto": "por",
-          "inicio": 9.799,
-          "fin": 9.95
-        },
-        {
-          "texto": "kilómetros.",
-          "inicio": 10.008,
-          "fin": 10.658
-        }
-      ]
-    },
-    "llegar-tarde": {
-      "texto": "Así que la próxima vez que llegues tarde, no es tu culpa: es relatividad.",
-      "audio": "voz/llegar-tarde.mp3",
-      "duracion": 5.358,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.07,
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Así",
-          "inicio": 0,
-          "fin": 0.267
-        },
-        {
-          "texto": "que",
-          "inicio": 0.325,
-          "fin": 0.522
-        },
-        {
-          "texto": "la",
-          "inicio": 0.685,
-          "fin": 0.813
-        },
-        {
-          "texto": "próxima",
-          "inicio": 0.859,
-          "fin": 1.242
-        },
-        {
-          "texto": "vez",
-          "inicio": 1.265,
-          "fin": 1.393
-        },
-        {
-          "texto": "que",
-          "inicio": 1.451,
-          "fin": 1.533
-        },
-        {
-          "texto": "llegues",
-          "inicio": 1.556,
-          "fin": 1.823
-        },
-        {
-          "texto": "tarde,",
-          "inicio": 1.892,
-          "fin": 2.229
-        },
-        {
-          "texto": "no",
-          "inicio": 2.426,
-          "fin": 2.531
-        },
-        {
-          "texto": "es",
-          "inicio": 2.577,
-          "fin": 2.635
-        },
-        {
-          "texto": "tu",
-          "inicio": 2.682,
-          "fin": 2.74
-        },
-        {
-          "texto": "culpa:",
-          "inicio": 2.786,
-          "fin": 3.135
-        },
-        {
-          "texto": "es",
-          "inicio": 3.471,
-          "fin": 3.715
-        },
-        {
-          "texto": "relatividad.",
-          "inicio": 4.017,
-          "fin": 4.795
-        }
-      ]
-    },
     "ensenanza": {
-      "texto": "Y quedate con esto: cuestioná lo que todos dan por hecho. Las grandes ideas empiezan con una pregunta.",
+      "texto": "Y quedate con esto: lo que no entendés asusta. Cuando sabés cómo funciona, pierde poder.",
       "audio": "voz/ensenanza.mp3",
-      "duracion": 7.866,
+      "duracion": 6.429,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
       "velocidad": 1.07,
@@ -774,92 +12,77 @@
         {
           "texto": "Y",
           "inicio": 0,
-          "fin": 0.151
+          "fin": 0.128
         },
         {
           "texto": "quedate",
-          "inicio": 0.232,
-          "fin": 0.65
+          "inicio": 0.209,
+          "fin": 0.557
         },
         {
           "texto": "con",
-          "inicio": 0.697,
-          "fin": 0.836
+          "inicio": 0.604,
+          "fin": 0.72
         },
         {
           "texto": "esto:",
-          "inicio": 0.894,
-          "fin": 1.207
-        },
-        {
-          "texto": "cuestioná",
-          "inicio": 1.741,
-          "fin": 2.276
+          "inicio": 0.778,
+          "fin": 1.091
         },
         {
           "texto": "lo",
-          "inicio": 2.334,
-          "fin": 2.415
+          "inicio": 1.556,
+          "fin": 1.672
         },
         {
           "texto": "que",
-          "inicio": 2.461,
-          "fin": 2.554
+          "inicio": 1.718,
+          "fin": 1.788
         },
         {
-          "texto": "todos",
-          "inicio": 2.635,
-          "fin": 2.995
+          "texto": "no",
+          "inicio": 1.846,
+          "fin": 1.916
         },
         {
-          "texto": "dan",
-          "inicio": 3.053,
-          "fin": 3.181
+          "texto": "entendés",
+          "inicio": 1.95,
+          "fin": 2.426
         },
         {
-          "texto": "por",
-          "inicio": 3.239,
-          "fin": 3.379
+          "texto": "asusta.",
+          "inicio": 2.485,
+          "fin": 2.949
         },
         {
-          "texto": "hecho.",
-          "inicio": 3.402,
-          "fin": 3.68
+          "texto": "Cuando",
+          "inicio": 3.39,
+          "fin": 3.692
         },
         {
-          "texto": "Las",
-          "inicio": 4.296,
-          "fin": 4.458
+          "texto": "sabés",
+          "inicio": 3.75,
+          "fin": 4.029
         },
         {
-          "texto": "grandes",
-          "inicio": 4.516,
-          "fin": 4.853
+          "texto": "cómo",
+          "inicio": 4.098,
+          "fin": 4.296
         },
         {
-          "texto": "ideas",
-          "inicio": 4.911,
-          "fin": 5.248
+          "texto": "funciona,",
+          "inicio": 4.331,
+          "fin": 4.83
         },
         {
-          "texto": "empiezan",
-          "inicio": 5.387,
-          "fin": 5.921
+          "texto": "pierde",
+          "inicio": 5.108,
+          "fin": 5.457
         },
         {
-          "texto": "con",
-          "inicio": 6.002,
-          "fin": 6.153
-        },
-        {
-          "texto": "una",
-          "inicio": 6.258,
-          "fin": 6.397
-        },
-        {
-          "texto": "pregunta.",
-          "inicio": 6.432,
-          "fin": 6.978
+          "texto": "poder.",
+          "inicio": 5.503,
+          "fin": 5.863
         }
       ]
     },
@@ -906,6 +129,538 @@
           "texto": "sabías.",
           "inicio": 1.405,
           "fin": 1.823
+        }
+      ]
+    },
+    "gancho-despertar": {
+      "texto": "¿Alguna vez despertaste y no pudiste moverte?",
+      "audio": "voz/gancho-despertar.mp3",
+      "duracion": 2.798,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.07,
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "¿Alguna",
+          "inicio": 0.058,
+          "fin": 0.383
+        },
+        {
+          "texto": "vez",
+          "inicio": 0.418,
+          "fin": 0.546
+        },
+        {
+          "texto": "despertaste",
+          "inicio": 0.604,
+          "fin": 1.254
+        },
+        {
+          "texto": "y",
+          "inicio": 1.289,
+          "fin": 1.324
+        },
+        {
+          "texto": "no",
+          "inicio": 1.382,
+          "fin": 1.451
+        },
+        {
+          "texto": "pudiste",
+          "inicio": 1.498,
+          "fin": 1.846
+        },
+        {
+          "texto": "moverte?",
+          "inicio": 1.881,
+          "fin": 2.322
+        }
+      ]
+    },
+    "ocho-por-ciento": {
+      "texto": "Se llama parálisis del sueño, y le pasa a cerca del ocho por ciento de las personas.",
+      "audio": "voz/ocho-por-ciento.mp3",
+      "duracion": 4.94,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.07,
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Se",
+          "inicio": 0,
+          "fin": 0.197
+        },
+        {
+          "texto": "llama",
+          "inicio": 0.221,
+          "fin": 0.511
+        },
+        {
+          "texto": "parálisis",
+          "inicio": 0.569,
+          "fin": 1.115
+        },
+        {
+          "texto": "del",
+          "inicio": 1.149,
+          "fin": 1.277
+        },
+        {
+          "texto": "sueño,",
+          "inicio": 1.335,
+          "fin": 1.718
+        },
+        {
+          "texto": "y",
+          "inicio": 1.846,
+          "fin": 1.927
+        },
+        {
+          "texto": "le",
+          "inicio": 1.997,
+          "fin": 2.078
+        },
+        {
+          "texto": "pasa",
+          "inicio": 2.136,
+          "fin": 2.368
+        },
+        {
+          "texto": "a",
+          "inicio": 2.403,
+          "fin": 2.438
+        },
+        {
+          "texto": "cerca",
+          "inicio": 2.473,
+          "fin": 2.786
+        },
+        {
+          "texto": "del",
+          "inicio": 2.821,
+          "fin": 2.949
+        },
+        {
+          "texto": "ocho",
+          "inicio": 3.019,
+          "fin": 3.181
+        },
+        {
+          "texto": "por",
+          "inicio": 3.216,
+          "fin": 3.332
+        },
+        {
+          "texto": "ciento",
+          "inicio": 3.379,
+          "fin": 3.622
+        },
+        {
+          "texto": "de",
+          "inicio": 3.646,
+          "fin": 3.704
+        },
+        {
+          "texto": "las",
+          "inicio": 3.727,
+          "fin": 3.831
+        },
+        {
+          "texto": "personas.",
+          "inicio": 3.889,
+          "fin": 4.4
+        }
+      ]
+    },
+    "cerebro-apaga": {
+      "texto": "Mientras soñás, tu cerebro paraliza tu cuerpo a propósito, para que no actúes tus sueños.",
+      "audio": "voz/cerebro-apaga.mp3",
+      "duracion": 6.246,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.07,
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Mientras",
+          "inicio": 0,
+          "fin": 0.395
+        },
+        {
+          "texto": "soñás,",
+          "inicio": 0.418,
+          "fin": 0.871
+        },
+        {
+          "texto": "tu",
+          "inicio": 1.173,
+          "fin": 1.324
+        },
+        {
+          "texto": "cerebro",
+          "inicio": 1.37,
+          "fin": 1.8
+        },
+        {
+          "texto": "paraliza",
+          "inicio": 1.846,
+          "fin": 2.31
+        },
+        {
+          "texto": "tu",
+          "inicio": 2.368,
+          "fin": 2.461
+        },
+        {
+          "texto": "cuerpo",
+          "inicio": 2.531,
+          "fin": 2.844
+        },
+        {
+          "texto": "a",
+          "inicio": 2.868,
+          "fin": 2.902
+        },
+        {
+          "texto": "propósito,",
+          "inicio": 2.937,
+          "fin": 3.564
+        },
+        {
+          "texto": "para",
+          "inicio": 4.005,
+          "fin": 4.203
+        },
+        {
+          "texto": "que",
+          "inicio": 4.261,
+          "fin": 4.342
+        },
+        {
+          "texto": "no",
+          "inicio": 4.412,
+          "fin": 4.493
+        },
+        {
+          "texto": "actúes",
+          "inicio": 4.54,
+          "fin": 4.899
+        },
+        {
+          "texto": "tus",
+          "inicio": 4.957,
+          "fin": 5.085
+        },
+        {
+          "texto": "sueños.",
+          "inicio": 5.108,
+          "fin": 5.55
+        }
+      ]
+    },
+    "cerebro-despierta": {
+      "texto": "A veces el cerebro despierta antes que el cuerpo: estás consciente, pero los músculos siguen apagados.",
+      "audio": "voz/cerebro-despierta.mp3",
+      "duracion": 6.298,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.07,
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "A",
+          "inicio": 0,
+          "fin": 0.093
+        },
+        {
+          "texto": "veces",
+          "inicio": 0.174,
+          "fin": 0.418
+        },
+        {
+          "texto": "el",
+          "inicio": 0.476,
+          "fin": 0.534
+        },
+        {
+          "texto": "cerebro",
+          "inicio": 0.557,
+          "fin": 0.882
+        },
+        {
+          "texto": "despierta",
+          "inicio": 0.929,
+          "fin": 1.451
+        },
+        {
+          "texto": "antes",
+          "inicio": 1.474,
+          "fin": 1.776
+        },
+        {
+          "texto": "que",
+          "inicio": 1.823,
+          "fin": 1.892
+        },
+        {
+          "texto": "el",
+          "inicio": 1.916,
+          "fin": 1.985
+        },
+        {
+          "texto": "cuerpo:",
+          "inicio": 2.032,
+          "fin": 2.392
+        },
+        {
+          "texto": "estás",
+          "inicio": 2.891,
+          "fin": 3.17
+        },
+        {
+          "texto": "consciente,",
+          "inicio": 3.228,
+          "fin": 3.843
+        },
+        {
+          "texto": "pero",
+          "inicio": 4.145,
+          "fin": 4.342
+        },
+        {
+          "texto": "los",
+          "inicio": 4.389,
+          "fin": 4.516
+        },
+        {
+          "texto": "músculos",
+          "inicio": 4.574,
+          "fin": 4.969
+        },
+        {
+          "texto": "siguen",
+          "inicio": 5.004,
+          "fin": 5.248
+        },
+        {
+          "texto": "apagados.",
+          "inicio": 5.306,
+          "fin": 5.851
+        }
+      ]
+    },
+    "sombras": {
+      "texto": "Y como todavía está medio soñando, mucha gente siente o ve cosas que no están ahí.",
+      "audio": "voz/sombras.mp3",
+      "duracion": 5.541,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.07,
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Y",
+          "inicio": 0,
+          "fin": 0.104
+        },
+        {
+          "texto": "como",
+          "inicio": 0.186,
+          "fin": 0.395
+        },
+        {
+          "texto": "todavía",
+          "inicio": 0.453,
+          "fin": 0.894
+        },
+        {
+          "texto": "está",
+          "inicio": 0.917,
+          "fin": 1.138
+        },
+        {
+          "texto": "medio",
+          "inicio": 1.207,
+          "fin": 1.416
+        },
+        {
+          "texto": "soñando,",
+          "inicio": 1.451,
+          "fin": 1.939
+        },
+        {
+          "texto": "mucha",
+          "inicio": 2.252,
+          "fin": 2.543
+        },
+        {
+          "texto": "gente",
+          "inicio": 2.577,
+          "fin": 2.856
+        },
+        {
+          "texto": "siente",
+          "inicio": 2.926,
+          "fin": 3.344
+        },
+        {
+          "texto": "o",
+          "inicio": 3.402,
+          "fin": 3.437
+        },
+        {
+          "texto": "ve",
+          "inicio": 3.506,
+          "fin": 3.611
+        },
+        {
+          "texto": "cosas",
+          "inicio": 3.692,
+          "fin": 4.029
+        },
+        {
+          "texto": "que",
+          "inicio": 4.087,
+          "fin": 4.168
+        },
+        {
+          "texto": "no",
+          "inicio": 4.272,
+          "fin": 4.377
+        },
+        {
+          "texto": "están",
+          "inicio": 4.423,
+          "fin": 4.656
+        },
+        {
+          "texto": "ahí.",
+          "inicio": 4.714,
+          "fin": 4.876
+        }
+      ]
+    },
+    "no-es-peligroso": {
+      "texto": "Dura segundos o un par de minutos, y no es peligroso.",
+      "audio": "voz/no-es-peligroso.mp3",
+      "duracion": 4.026,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.07,
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Dura",
+          "inicio": 0,
+          "fin": 0.267
+        },
+        {
+          "texto": "segundos",
+          "inicio": 0.325,
+          "fin": 0.824
+        },
+        {
+          "texto": "o",
+          "inicio": 0.964,
+          "fin": 1.08
+        },
+        {
+          "texto": "un",
+          "inicio": 1.126,
+          "fin": 1.219
+        },
+        {
+          "texto": "par",
+          "inicio": 1.3,
+          "fin": 1.474
+        },
+        {
+          "texto": "de",
+          "inicio": 1.521,
+          "fin": 1.567
+        },
+        {
+          "texto": "minutos,",
+          "inicio": 1.614,
+          "fin": 2.09
+        },
+        {
+          "texto": "y",
+          "inicio": 2.461,
+          "fin": 2.543
+        },
+        {
+          "texto": "no",
+          "inicio": 2.624,
+          "fin": 2.705
+        },
+        {
+          "texto": "es",
+          "inicio": 2.752,
+          "fin": 2.81
+        },
+        {
+          "texto": "peligroso.",
+          "inicio": 2.868,
+          "fin": 3.425
+        }
+      ]
+    },
+    "cinco-minutitos": {
+      "texto": "Tu cerebro: “Ya desperté”. Tu cuerpo: “Cinco minutitos más”.",
+      "audio": "voz/cinco-minutitos.mp3",
+      "duracion": 5.279,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.07,
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Tu",
+          "inicio": 0,
+          "fin": 0.174
+        },
+        {
+          "texto": "cerebro:",
+          "inicio": 0.221,
+          "fin": 0.662
+        },
+        {
+          "texto": "“Ya",
+          "inicio": 0.987,
+          "fin": 1.149
+        },
+        {
+          "texto": "desperté”.",
+          "inicio": 1.207,
+          "fin": 1.741
+        },
+        {
+          "texto": "Tu",
+          "inicio": 2.38,
+          "fin": 2.508
+        },
+        {
+          "texto": "cuerpo:",
+          "inicio": 2.554,
+          "fin": 2.972
+        },
+        {
+          "texto": "“Cinco",
+          "inicio": 3.437,
+          "fin": 3.831
+        },
+        {
+          "texto": "minutitos",
+          "inicio": 3.878,
+          "fin": 4.389
+        },
+        {
+          "texto": "más”.",
+          "inicio": 4.458,
+          "fin": 4.714
         }
       ]
     }

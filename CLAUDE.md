@@ -14,9 +14,10 @@ src/componentes/         piezas reutilizables (ver abajo)
 src/lib/                 línea de tiempo, estimación de tiempos, subtítulos, latido, fuente
 scripts/voz.mjs          voz con ElevenLabs (with-timestamps) + normalización de volumen
 scripts/fotogramas.mjs   renderiza fotogramas sueltos para revisar
+scripts/proyectar.mjs    píxel donde cae cada punto 3D para una cámara (encuadrar sin renderizar)
 ejemplos/                mp4 terminados
 ```
-Componentes: `Escenario3D`, `Camara` (+ `temblor`, `proyectar`), `Subtitulos`, `Contador`, `Etiqueta`, `Tilde`, `Avatar` (persona; poses reposo/caminar/correr/saludar/celebrar/señalar/escribir, `expresion`, `cejas`, `cabeza`), `Einstein`, `Abeja`, `Corazon3D`, `Cerebro`, `CaraFlor`/`FlorChica`, `Calendario` (`encabezado`), `FotoCara`, `GotaAzucar`, `Reloj3D`, `RelojDerretido`, `Planeta`/`Estrellas`, `Repelente`, `Ciencia.tsx` (Pizarron, Nave, SabanaEspacioTiempo, Satelite, Celular, SignoPregunta, Lamparita), `Segmento`, `useTexturaCanvas`, `Efectos` (Destellos, Resplandor, OndasLatido, Cielo, SombraSuave). Revisalos antes de crear algo nuevo.
+Componentes: `Escenario3D`, `Camara` (+ `temblor`, `proyectar`), `Subtitulos`, `Contador`, `Etiqueta`, `Tilde`, `Avatar` (persona; poses reposo/caminar/correr/saludar/celebrar/señalar/escribir, `expresion`, `cejas`, `cabeza`), `Einstein`, `Abeja`, `Corazon3D`, `Cerebro`, `CaraFlor`/`FlorChica`, `Calendario` (`encabezado`), `FotoCara`, `GotaAzucar`, `Reloj3D`, `RelojDerretido`, `Planeta`/`Estrellas`, `Repelente`, `Ciencia.tsx` (Pizarron, Nave, SabanaEspacioTiempo, Satelite, Celular, SignoPregunta, Lamparita), `Segmento`, `useTexturaCanvas`, `Efectos` (Destellos, Resplandor, OndasLatido, Cielo, SombraSuave), `Dormir.tsx` (LucesNoche, Habitacion con ventana y luna, Cama, `Durmiente`: persona acostada con `abiertos`/`mirar`/`cejas`/`boca`, `antifaz`, `manta`, `abrazaAlmohada` y `apagado` para brazos y piernas grises), `Interruptor.tsx` (CerebroConCara, Interruptor ON/OFF, Cable con pulsos, NubeSueno, Megafono), `CuartoCerebro` (cama + cerebro + interruptor). Revisalos antes de crear algo nuevo.
 
 ## Cómo se crea un video nuevo
 1. **Guion** → guardá el `data/video.json` actual en `data/anteriores/` y escribí el nuevo: `{tema, titulo, voz?: {velocidad?, ritmo?}, escenas: [{id (kebab-case), componente (PascalCase), texto, transicion?: zoom|deslizar|fundido}]}`. Si el usuario trae el guion, usalo **textual**. Si no: gancho primero, frases cortas, 30–45 s, datos verificados.
@@ -25,7 +26,7 @@ Componentes: `Escenario3D`, `Camara` (+ `temblor`, `proyectar`), `Subtitulos`, `
 4. **Voz**: `NODE_USE_ENV_PROXY=1 npm run voz` (en tu máquina alcanza `npm run voz`). Genera solo lo que cambió (`-- --forzar` rehace todo; `-- --voces` lista voces). Voz actual: Charlie (`VOICE_ID` en `.env`), modelo `eleven_multilingual_v2`.
 5. **Duración**: cada escena dura su voz + 0,3 s antes + 0,7 s después (incluye la transición de 0,5 s). Para acercarse a una duración pedida usá `"voz": {"ritmo": 1.1}` (acelera la reproducción, mismo tono, sin regenerar) o `"velocidad"` (ElevenLabs, requiere regenerar).
 6. **Escenas**: un componente por escena en `src/escenas/`, registrado en `index.ts`. Si falta, se usa `EscenaGenerica`.
-7. **Verificar**: `npm run typecheck`; `npm run fotogramas -- out/fotogramas 0 90 300 ...` y mirarlos; `npm run render` → `out/reel.mp4`; comprobar sincronía con `ffmpeg silencedetect` y volumen (~−17 LUFS).
+7. **Verificar**: `npm run typecheck`; encuadrar con `node scripts/proyectar.mjs`; `npm run fotogramas -- out/fotogramas 0 90 300 ...` y mirarlos (si el usuario pide pocos: un fotograma chico por escena para chequear números sin mirarlos + 2 o 3 a la vista); `npm run render` → `out/reel.mp4`; comprobar sincronía con `ffmpeg silencedetect` y volumen (~−17 LUFS).
 8. Copiar el mp4 a `ejemplos/<nombre>.mp4`, actualizar `ESTADO.md`, commit y push.
 
 En la nube (sin GPU ni descarga de Chrome): `REMOTION_GL=swangle REMOTION_BROWSER=/opt/pw-browsers/chromium_headless_shell` delante de `npm run render` / `npm run fotogramas`.
@@ -36,6 +37,7 @@ En la nube (sin GPU ni descarga de Chrome): `REMOTION_GL=swangle REMOTION_BROWSE
 - Todo determinístico: `useCurrentFrame()` y `random('semilla')`; nunca `Math.random()`, `Date.now()` ni `useFrame`.
 - Nada de imágenes, texturas descargadas ni emojis: geometrías, `<canvas>` (`useTexturaCanvas`) o SVG.
 - Muchas copias → `instancedMesh` + geometrías de bajo detalle.
+- `useTexturaCanvas` usa hooks de R3F: llamalo en un componente que esté dentro del canvas (hijo de `Escenario3D`), nunca en el cuerpo de la escena.
 - Zonas: subtítulos 250–500 px desde arriba; números/etiquetas 1340–1600 px; nada importante en los últimos ~300 px ni pegado a los bordes. HTML anclado a 3D con `proyectar()`.
 
 ## Estilo visual (común a todas las series)
@@ -47,6 +49,7 @@ Por serie:
 - **Cuerpo humano** (corazón): corazón 3D brillante, Avatar corriendo, contadores con números grandes, fondos rosa/violeta/azul.
 - **Animales** (abejas): `Abeja` mascota expresiva (cejas, boca, brazos), fotos de caras dibujadas, `CaraFlor`, fondos celeste/verde/rosa.
 - **Ciencia / historia** (relatividad): `Einstein` (pelo blanco, bigote), relojes, cohete, grilla espacio-tiempo, eclipse, satélite, fondos espaciales azul/violeta y aula cálida.
+- **Sueño / noche** (parálisis del sueño): cuarto de noche con luna (`Habitacion`), `Durmiente` en la `Cama` (pijama rosa, manta azul con estrellas), cerebro con cara, interruptor ON/OFF, fondos azul/violeta. Usa `luces={false}` + `LucesNoche` y cierra con `CierreSeguime` con `props.fondo` nocturno.
 
 ## Voz y clave de ElevenLabs
 - La clave está **solo** en `.env` (`ELEVENLABS_API_KEY`, `VOICE_ID`). `.env` está en `.gitignore` y **nunca se sube al repo** (es público): no escribirla en código, README, ESTADO ni commits.

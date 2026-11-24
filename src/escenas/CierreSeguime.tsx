@@ -11,7 +11,7 @@ import {useEscena} from '../lib/escena';
 /**
  * Cierre fijo de todos los reels: "Seguime para más datos que no sabías."
  * Lamparita amarilla con un signo de pregunta, brillando, y un botón "Seguir"
- * que una manito toca al final. Props opcionales: `boton` (texto del botón).
+ * que una manito toca al final. Props opcionales: `boton` (texto del botón) y `fondo` (degradé CSS).
  */
 
 const clamp = {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'} as const;
@@ -34,7 +34,10 @@ const Manito: React.FC<{x: number; y: number; presion: number; opacidad: number}
 	</svg>
 );
 
-export const CierreSeguime: React.FC<{boton?: string}> = ({boton = 'Seguir'}) => {
+export const CierreSeguime: React.FC<{boton?: string; fondo?: string}> = ({
+	boton = 'Seguir',
+	fondo = 'radial-gradient(circle at 50% 40%, #FFF3B0 0%, #FFB703 30%, #FB8500 58%, #7A2E0E 100%)',
+}) => {
 	const frame = useCurrentFrame();
 	const {fps, width} = useVideoConfig();
 	const {momento, duracion} = useEscena();
@@ -61,7 +64,7 @@ export const CierreSeguime: React.FC<{boton?: string}> = ({boton = 'Seguir'}) =>
 
 	return (
 		<Escenario3D
-			fondo="radial-gradient(circle at 50% 40%, #FFF3B0 0%, #FFB703 30%, #FB8500 58%, #7A2E0E 100%)"
+			fondo={fondo}
 			colorContraluz="#FFFFFF"
 			overlay={
 				<>

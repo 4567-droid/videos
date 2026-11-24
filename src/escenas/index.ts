@@ -5,6 +5,14 @@ import {BombaSangre} from './BombaSangre';
 import {CaraEnFlor} from './CaraEnFlor';
 import {CerebrosComparados} from './CerebrosComparados';
 import {CierreSeguime} from './CierreSeguime';
+import {CerebroDespierto} from './CerebroDespierto';
+import {CerebroInterruptor} from './CerebroInterruptor';
+import {CincoMinutitos} from './CincoMinutitos';
+import {DespertarRigido} from './DespertarRigido';
+import {HabitacionSombras} from './HabitacionSombras';
+import {MultitudIluminada} from './MultitudIluminada';
+import {RelojRespira} from './RelojRespira';
+import {SombraAbrigo} from './SombraAbrigo';
 import {CorazonLatiendo} from './CorazonLatiendo';
 import {CorredorPulso} from './CorredorPulso';
 import {EclipseLuz} from './EclipseLuz';
@@ -49,6 +57,15 @@ export const ESCENAS: Record<string, React.FC<any>> = {
 	SateliteGPS,
 	LlegarTarde,
 	PreguntaGigante,
+	// reel: la parálisis del sueño
+	DespertarRigido,
+	MultitudIluminada,
+	CerebroInterruptor,
+	CerebroDespierto,
+	HabitacionSombras,
+	RelojRespira,
+	CincoMinutitos,
+	SombraAbrigo,
 	// cierre fijo de todos los reels ("Seguime para más datos que no sabías.")
 	CierreSeguime,
 };

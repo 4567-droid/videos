@@ -1,44 +1,59 @@
 {
-  "tema": "las abejas reconocen caras humanas",
-  "titulo": "Para una abeja sos un jardín con ojos",
+  "tema": "la teoría de la relatividad de Einstein",
+  "titulo": "El tiempo no pasa igual para todos",
+  "voz": {
+    "velocidad": 1.07,
+    "ritmo": 1.1
+  },
   "escenas": [
     {
-      "id": "gancho-abeja",
-      "componente": "AbejaGancho",
-      "texto": "¿Sabías que las abejas pueden reconocer tu cara?"
+      "id": "gancho-tiempo",
+      "componente": "RelojLoco",
+      "texto": "¿Sabías que el tiempo no pasa igual para todos?"
     },
     {
-      "id": "cerebros",
-      "componente": "CerebrosComparados",
-      "texto": "Su cerebro tiene apenas un millón de neuronas. El tuyo, más de ochenta mil millones."
+      "id": "einstein-1905",
+      "componente": "EinsteinPizarron",
+      "texto": "En 1905, Albert Einstein propuso que el tiempo y el espacio no son fijos: dependen de qué tan rápido te movés."
     },
     {
-      "id": "experimento",
-      "componente": "ExperimentoCaras",
-      "texto": "Pero en un experimento, les mostraron fotos de caras humanas, y les daban azúcar cuando elegían la correcta.",
+      "id": "nave-y-relojes",
+      "componente": "NaveRelojes",
+      "texto": "Cuanto más rápido vas, más lento pasa tu reloj, comparado con el de alguien quieto.",
       "transicion": "deslizar"
     },
     {
-      "id": "memoria",
-      "componente": "MemoriaDias",
-      "texto": "Las abejas aprendieron a distinguirlas, y se acordaron días después."
+      "id": "gravedad-1915",
+      "componente": "GrillaGravedad",
+      "texto": "Diez años después, en 1915, completó la idea: la gravedad no es una fuerza que tira, es el espacio-tiempo curvado por la masa, como una sábana estirada con una bola pesada."
     },
     {
-      "id": "cara-flor",
-      "componente": "CaraEnFlor",
-      "texto": "¿Cómo lo hacen? Tratan tu cara como si fuera una flor: un patrón de formas que se repite.",
+      "id": "eclipse-1919",
+      "componente": "EclipseLuz",
+      "texto": "En 1919, durante un eclipse, se vio que la luz de las estrellas se desviaba cerca del Sol. Einstein tenía razón.",
       "transicion": "fundido"
     },
     {
-      "id": "jardin-con-ojos",
-      "componente": "JardinConOjos",
-      "texto": "O sea, para ellas sos un jardín con ojos."
+      "id": "gps",
+      "componente": "SateliteGPS",
+      "texto": "Y esto no es solo teoría: los satélites del GPS corrigen sus relojes todos los días por este efecto. Sin eso, tu mapa fallaría por kilómetros."
     },
     {
-      "id": "abeja-enojada",
-      "componente": "AbejaEnojada",
-      "texto": "Así que si una abeja te da vueltas, tranquilo. Solo te reconoció... y sigue enojada por el repelente.",
+      "id": "llegar-tarde",
+      "componente": "LlegarTarde",
+      "texto": "Así que la próxima vez que llegues tarde, no es tu culpa: es relatividad.",
       "transicion": "deslizar"
+    },
+    {
+      "id": "ensenanza",
+      "componente": "PreguntaGigante",
+      "texto": "Y quedate con esto: cuestioná lo que todos dan por hecho. Las grandes ideas empiezan con una pregunta."
+    },
+    {
+      "id": "seguime",
+      "componente": "CierreSeguime",
+      "texto": "Seguime para más datos que no sabías.",
+      "transicion": "fundido"
     }
   ]
 }

@@ -1,0 +1,44 @@
+{
+  "tema": "las abejas reconocen caras humanas",
+  "titulo": "Para una abeja sos un jardín con ojos",
+  "escenas": [
+    {
+      "id": "gancho-abeja",
+      "componente": "AbejaGancho",
+      "texto": "¿Sabías que las abejas pueden reconocer tu cara?"
+    },
+    {
+      "id": "cerebros",
+      "componente": "CerebrosComparados",
+      "texto": "Su cerebro tiene apenas un millón de neuronas. El tuyo, más de ochenta mil millones."
+    },
+    {
+      "id": "experimento",
+      "componente": "ExperimentoCaras",
+      "texto": "Pero en un experimento, les mostraron fotos de caras humanas, y les daban azúcar cuando elegían la correcta.",
+      "transicion": "deslizar"
+    },
+    {
+      "id": "memoria",
+      "componente": "MemoriaDias",
+      "texto": "Las abejas aprendieron a distinguirlas, y se acordaron días después."
+    },
+    {
+      "id": "cara-flor",
+      "componente": "CaraEnFlor",
+      "texto": "¿Cómo lo hacen? Tratan tu cara como si fuera una flor: un patrón de formas que se repite.",
+      "transicion": "fundido"
+    },
+    {
+      "id": "jardin-con-ojos",
+      "componente": "JardinConOjos",
+      "texto": "O sea, para ellas sos un jardín con ojos."
+    },
+    {
+      "id": "abeja-enojada",
+      "componente": "AbejaEnojada",
+      "texto": "Así que si una abeja te da vueltas, tranquilo. Solo te reconoció... y sigue enojada por el repelente.",
+      "transicion": "deslizar"
+    }
+  ]
+}

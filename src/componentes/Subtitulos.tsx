@@ -51,7 +51,7 @@ export const Subtitulos: React.FC<{grupos: GrupoSubtitulo[]}> = ({grupos}) => {
 					flexWrap: 'wrap',
 					justifyContent: 'center',
 					alignItems: 'baseline',
-					columnGap: 38,
+					columnGap: 48,
 					rowGap: 4,
 				}}
 			>
@@ -70,7 +70,7 @@ export const Subtitulos: React.FC<{grupos: GrupoSubtitulo[]}> = ({grupos}) => {
 						? spring({frame: frame - p.inicio, fps, config: {damping: 9, stiffness: 320, mass: 0.45}})
 						: 0;
 					const visible = revelar ? dicha : true;
-					const escala = interpolate(entrada, [0, 1], [0.6, 1]) * (1 + 0.07 * golpe);
+					const escala = interpolate(entrada, [0, 1], [0.75, 1]) * (1 + 0.06 * golpe);
 					return (
 						<span
 							key={`${grupo.inicio}-${i}`}
@@ -84,8 +84,9 @@ export const Subtitulos: React.FC<{grupos: GrupoSubtitulo[]}> = ({grupos}) => {
 								textTransform: 'uppercase',
 								color: esActiva ? AMARILLO : '#FFFFFF',
 								textShadow: SOMBRA,
-								opacity: visible ? Math.min(1, entrada * 1.6) : 0,
-								transform: `translateY(${(1 - entrada) * 26}px) scale(${escala})`,
+								// entra desde 40 % de opacidad: entre un grupo y el siguiente no queda un "parpadeo"
+								opacity: visible ? Math.min(1, 0.4 + entrada * 1.6) : 0,
+								transform: `translateY(${(1 - entrada) * 18}px) scale(${escala})`,
 								whiteSpace: 'nowrap',
 							}}
 						>

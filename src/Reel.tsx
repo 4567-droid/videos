@@ -68,6 +68,7 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 					>
 						<Audio
 							src={staticFile(escena.audio.src)}
+							playbackRate={escena.audio.velocidad}
 							// fundido corto al final para cortar sin "clic"
 							volume={(f) => Math.min(1, Math.max(0, (escena.audio!.duracion - f) / 5))}
 						/>

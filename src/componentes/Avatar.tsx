@@ -2,6 +2,7 @@ import React, {useEffect, useLayoutEffect, useMemo} from 'react';
 import * as THREE from 'three';
 import {obtenerGeometriaCorazon} from './Corazon3D';
 import {Resplandor, SombraSuave} from './Efectos';
+import {Segmento} from './Segmento';
 import {TAU, type V3} from './utilidades3d';
 
 /**
@@ -10,7 +11,7 @@ import {TAU, type V3} from './utilidades3d';
  * Animaciones: reposo, caminar, correr, saludar, celebrar (se pueden mezclar).
  */
 
-export type Animacion = 'reposo' | 'caminar' | 'correr' | 'saludar' | 'celebrar';
+export type Animacion = 'reposo' | 'caminar' | 'correr' | 'saludar' | 'celebrar' | 'señalar' | 'escribir';
 
 type Pose = {
 	bob: number;
@@ -132,12 +133,40 @@ const celebrar = (t: number): Pose => {
 	};
 };
 
+/** Brazo derecho estirado hacia arriba y a la derecha (señala algo). */
+const señalar = (t: number): Pose => {
+	const base = reposo(t);
+	const vaiven = 0.04 * sin(TAU * 1.6 * t);
+	return {
+		...base,
+		torso: [0.02, 0.12, 0],
+		hombroD: [-2.2 + vaiven, 0, 0.9],
+		codoD: [-0.12, 0, 0],
+		cabeza: [-0.18, 0.28, 0],
+	};
+};
+
+/** Brazo derecho levantado hacia el costado, haciendo circulitos (escribe en un pizarrón). */
+const escribir = (t: number): Pose => {
+	const base = reposo(t);
+	const f = TAU * 1.8 * t;
+	return {
+		...base,
+		torso: [0.02, 0.25, 0],
+		hombroD: [-1.55 + 0.1 * sin(f), 0, 1.15 + 0.1 * cos(f)],
+		codoD: [-0.35, 0, 0],
+		cabeza: [-0.05, 0.45, 0],
+	};
+};
+
 const ANIMACIONES: Record<Animacion, (t: number, frecuencia?: number) => Pose> = {
 	reposo,
 	caminar,
 	correr,
 	saludar,
 	celebrar,
+	señalar,
+	escribir,
 };
 
 const mezclarPoses = (lista: {pose: Pose; peso: number}[]): Pose => {
@@ -184,6 +213,12 @@ type Props = {
 	pantalonCorto?: boolean;
 	/** Si se pasa (0..1), muestra un corazón latiendo en el pecho */
 	latido?: number | null;
+	/** cejas (del color del pelo) */
+	cejas?: boolean;
+	/** "feliz" (sonrisa) o "preocupada" (cejas arqueadas y boca hacia abajo) */
+	expresion?: 'feliz' | 'preocupada';
+	/** elementos extra dentro de la cabeza (pelo, bigote, anteojos...). Centro de la cabeza: [0, 0.17, 0], radio 0.2 */
+	cabeza?: React.ReactNode;
 	sombra?: boolean;
 	position?: V3;
 	rotation?: V3;
@@ -198,12 +233,16 @@ export const Avatar: React.FC<Props> = ({
 	colores,
 	pantalonCorto = false,
 	latido = null,
+	cejas = false,
+	expresion = 'feliz',
+	cabeza,
 	sombra = true,
 	position,
 	rotation,
 	scale = 1,
 }) => {
 	const c = {...COLORES_DEFECTO, ...colores};
+	const preocupada = expresion === 'preocupada';
 
 	const m = useMemo(() => {
 		const mat = (props: THREE.MeshStandardMaterialParameters) =>
@@ -284,9 +323,26 @@ export const Avatar: React.FC<Props> = ({
 						<mesh material={m.mejillas} position={[0.115, 0.125, 0.155]} scale={[1, 0.7, 0.4]}>
 							<sphereGeometry args={[0.032, 8, 6]} />
 						</mesh>
-						<mesh material={m.boca} position={[0, 0.115, 0.186]} rotation={[0.25, 0, Math.PI]}>
+						<mesh
+							material={m.boca}
+							position={[0, preocupada ? 0.095 : 0.115, 0.186]}
+							rotation={[0.25, 0, Math.PI]}
+							scale={[preocupada ? 0.8 : 1, preocupada ? -0.75 : 1, 1]}
+						>
 							<torusGeometry args={[0.042, 0.012, 5, 12, Math.PI]} />
 						</mesh>
+						{cejas
+							? [-1, 1].map((lado) => (
+									<Segmento
+										key={`ceja-${lado}`}
+										desde={[lado * 0.105, preocupada ? 0.222 : 0.235, 0.172]}
+										hasta={[lado * 0.035, preocupada ? 0.262 : 0.243, 0.19]}
+										radio={0.016}
+										material={m.pelo}
+									/>
+								))
+							: null}
+						{cabeza}
 					</group>
 
 					<Brazo lado={-1} hombro={p.hombroI} codo={p.codoI} m={m} />

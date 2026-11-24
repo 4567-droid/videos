@@ -35,6 +35,17 @@ export const texturaResplandor = () =>
 		[1, 'rgba(255,255,255,0)'],
 	]);
 
+/** Anillo brillante (corona de un eclipse): transparente en el centro. */
+export const texturaCorona = () =>
+	texturaRadial('corona', [
+		[0, 'rgba(255,255,255,0)'],
+		[0.4, 'rgba(255,255,255,0)'],
+		[0.46, 'rgba(255,252,230,1)'],
+		[0.58, 'rgba(255,214,140,0.55)'],
+		[0.78, 'rgba(255,170,70,0.15)'],
+		[1, 'rgba(255,150,50,0)'],
+	]);
+
 export const texturaSombra = () =>
 	texturaRadial('sombra', [
 		[0, 'rgba(0,0,0,0.55)'],

@@ -209,8 +209,8 @@ export const dibujarRetrato = (ctx: CanvasRenderingContext2D, variante: 'a' | 'b
 	}
 };
 
-/** Hoja de calendario: "DÍA" arriba en franja roja y el número grande. */
-export const dibujarHojaCalendario = (ctx: CanvasRenderingContext2D, dia: number) => {
+/** Hoja de calendario: encabezado ("DÍA", "AÑO"...) en franja roja y el número grande. */
+export const dibujarHojaCalendario = (ctx: CanvasRenderingContext2D, dia: number, encabezado = 'DÍA') => {
 	const W = ctx.canvas.width;
 	const H = ctx.canvas.height;
 	ctx.fillStyle = '#FFFFFF';
@@ -221,10 +221,13 @@ export const dibujarHojaCalendario = (ctx: CanvasRenderingContext2D, dia: number
 	ctx.textAlign = 'center';
 	ctx.textBaseline = 'middle';
 	ctx.font = `900 ${Math.round(H * 0.15)}px ${FUENTE}`;
-	ctx.fillText('DÍA', W / 2, H * 0.135);
+	ctx.fillText(encabezado, W / 2, H * 0.135);
 	ctx.fillStyle = '#2B2D42';
-	ctx.font = `900 ${Math.round(H * 0.56)}px ${FUENTE}`;
-	ctx.fillText(String(dia), W / 2, H * 0.64);
+	const texto = String(dia);
+	// los números largos (años) se achican para entrar en la hoja
+	const tamano = Math.min(H * 0.56, (W * 0.88) / (texto.length * 0.62));
+	ctx.font = `900 ${Math.round(tamano)}px ${FUENTE}`;
+	ctx.fillText(texto, W / 2, H * 0.63);
 };
 
 /**

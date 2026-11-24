@@ -6,8 +6,8 @@ const ANCHO_HOJA = 1.1;
 const ALTO_HOJA = 1.25;
 const BISAGRA = 0.66; // altura del borde superior de las hojas
 
-const HojaCalendario: React.FC<{dia: number; giro: number; z: number}> = ({dia, giro, z}) => {
-	const textura = useTexturaCanvas(`calendario-${dia}`, 512, 580, (ctx) => dibujarHojaCalendario(ctx, dia), true);
+const HojaCalendario: React.FC<{dia: number; giro: number; z: number; encabezado: string}> = ({dia, giro, z, encabezado}) => {
+	const textura = useTexturaCanvas(`calendario-${encabezado}-${dia}`, 512, 580, (ctx) => dibujarHojaCalendario(ctx, dia, encabezado), true);
 	// la hoja aparece recién con su textura (el render espera a la fuente) y se oculta al terminar de pasar
 	if (!textura || giro <= -Math.PI * 0.98) return null;
 	return (
@@ -28,9 +28,18 @@ const HojaCalendario: React.FC<{dia: number; giro: number; z: number}> = ({dia, 
  * Calendario de pared con hojas que se dan vuelta hacia arriba.
  * `avance` = 0 muestra el primer día; 1,5 = a mitad de pasar del 2.º al 3.º, etc.
  */
-export const Calendario: React.FC<{dias: number[]; avance: number; position?: V3; rotation?: V3; scale?: number}> = ({
+export const Calendario: React.FC<{
+	dias: number[];
+	avance: number;
+	/** texto de la franja roja (por defecto "DÍA") */
+	encabezado?: string;
+	position?: V3;
+	rotation?: V3;
+	scale?: number;
+}> = ({
 	dias,
 	avance,
+	encabezado = 'DÍA',
 	position,
 	rotation,
 	scale = 1,
@@ -51,7 +60,7 @@ export const Calendario: React.FC<{dias: number[]; avance: number; position?: V3
 		{dias.map((dia, i) => {
 			const k = Math.max(0, Math.min(1, avance - i));
 			const suave = k * k * (3 - 2 * k);
-			return <HojaCalendario key={dia} dia={dia} giro={-Math.PI * suave} z={0.01 + (dias.length - i) * 0.006} />;
+			return <HojaCalendario key={dia} dia={dia} encabezado={encabezado} giro={-Math.PI * suave} z={0.01 + (dias.length - i) * 0.006} />;
 		})}
 	</group>
 );

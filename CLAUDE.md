@@ -4,7 +4,9 @@ Cuando el usuario da un tema, hacé el video completo siguiendo estas convencion
 
 ## 1. Guion → `data/video.json`
 - Primera escena = **gancho** (dato sorprendente o afirmación directa). Después frases cortas (≈10–18 palabras), **una escena por frase**, 30–45 s en total (~2,8 palabras/seg; `npx remotion compositions` muestra la duración).
-- Español neutro (evitá imperativos con voseo o tuteo marcados), números en cifras ("100 mil", "150") para que se lean en los subtítulos. Chequeá que los datos sean correctos.
+- Español rioplatense con voseo, como escribe el usuario ("sos", "te movés", "Seguime"); números en cifras ("100 mil", "150", "1905") para que se lean en los subtítulos. Chequeá que los datos sean correctos.
+- **Regla fija del final (todos los videos, en este orden):** 1) un cierre gracioso, 2) una enseñanza de una frase, 3) la escena `CierreSeguime` con "Seguime para más datos que no sabías."
+- Duración pedida (ej. "alrededor de 60 s"): primero generá la voz; si no llega, ajustá `"voz": {"ritmo": 1.1}` en `data/video.json` (acelera la reproducción sin regenerar y sin cambiar el tono). `"velocidad"` cambia cómo la genera ElevenLabs (requiere `npm run voz`).
 - `id` en kebab-case, `componente` en PascalCase. Si el texto cambia y hay voz generada, avisá que hay que correr `npm run voz`.
 - Si el usuario trae el guion escrito, usalo textual (es lo que dice la voz). Antes de reemplazar `data/video.json`, guardá el anterior en `data/anteriores/`.
 

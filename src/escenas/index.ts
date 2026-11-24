@@ -4,11 +4,20 @@ import {AbejaGancho} from './AbejaGancho';
 import {BombaSangre} from './BombaSangre';
 import {CaraEnFlor} from './CaraEnFlor';
 import {CerebrosComparados} from './CerebrosComparados';
+import {CierreSeguime} from './CierreSeguime';
 import {CorazonLatiendo} from './CorazonLatiendo';
 import {CorredorPulso} from './CorredorPulso';
+import {EclipseLuz} from './EclipseLuz';
+import {EinsteinPizarron} from './EinsteinPizarron';
 import {ExperimentoCaras} from './ExperimentoCaras';
+import {GrillaGravedad} from './GrillaGravedad';
 import {JardinConOjos} from './JardinConOjos';
+import {LlegarTarde} from './LlegarTarde';
 import {MemoriaDias} from './MemoriaDias';
+import {NaveRelojes} from './NaveRelojes';
+import {PreguntaGigante} from './PreguntaGigante';
+import {RelojLoco} from './RelojLoco';
+import {SateliteGPS} from './SateliteGPS';
 import {VidaEntera} from './VidaEntera';
 
 /**
@@ -31,4 +40,15 @@ export const ESCENAS: Record<string, React.FC<any>> = {
 	CaraEnFlor,
 	JardinConOjos,
 	AbejaEnojada,
+	// reel: la teoría de la relatividad
+	RelojLoco,
+	EinsteinPizarron,
+	NaveRelojes,
+	GrillaGravedad,
+	EclipseLuz,
+	SateliteGPS,
+	LlegarTarde,
+	PreguntaGigante,
+	// cierre fijo de todos los reels ("Seguime para más datos que no sabías.")
+	CierreSeguime,
 };

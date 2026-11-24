@@ -15,6 +15,12 @@ export type EscenaJSON = {
 export type VideoJSON = {
 	tema: string;
 	titulo: string;
+	/**
+	 * Opcional, para todo el video:
+	 *  - velocidad: velocidad con la que ElevenLabs genera la voz (0,7–1,2; requiere `npm run voz`)
+	 *  - ritmo: acelera o frena el audio ya generado al reproducirlo (mismo tono, sin regenerar)
+	 */
+	voz?: {velocidad?: number; ritmo?: number};
 	escenas: EscenaJSON[];
 };
 
@@ -67,7 +73,7 @@ export type EscenaCalculada = {
 	/** true si los tiempos vienen de ElevenLabs y no de la estimación */
 	conVoz: boolean;
 	/** Audio de ElevenLabs: empieza `desde` frames después del inicio de la escena. */
-	audio: {src: string; desde: number; duracion: number} | null;
+	audio: {src: string; desde: number; duracion: number; velocidad: number} | null;
 };
 
 export type LineaDeTiempo = {

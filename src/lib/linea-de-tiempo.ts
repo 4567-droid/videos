@@ -36,7 +36,11 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 			console.warn(`[voz] El texto de "${escena.id}" cambió: uso tiempos estimados. Corré "npm run voz" de nuevo.`);
 		}
 
-		const palabrasSeg = conVoz ? vozEscena!.palabras : estimarTiempos(escena.texto);
+		// ritmo: reproduce la voz más rápido o más lento (con el mismo tono) sin regenerarla
+		const ritmo = conVoz ? Math.min(2, Math.max(0.5, video.voz?.ritmo ?? 1)) : 1;
+		const palabrasSeg = conVoz
+			? vozEscena!.palabras.map((p) => ({...p, inicio: p.inicio / ritmo, fin: p.fin / ritmo}))
+			: estimarTiempos(escena.texto);
 		// Con voz, la escena dura lo que dura lo hablado (sin el silencio final del audio).
 		const finHabla = palabrasSeg.at(-1)?.fin ?? 0;
 		const entrada = indice === 0 ? ENTRADA_PRIMERA : ENTRADA;
@@ -68,7 +72,8 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 				? {
 						src: vozEscena!.audio,
 						desde: Math.round(entrada * fps),
-						duracion: Math.ceil(Math.min(vozEscena!.duracion, finHabla + COLA_AUDIO) * fps),
+						duracion: Math.ceil(Math.min(vozEscena!.duracion / ritmo, finHabla + COLA_AUDIO) * fps),
+						velocidad: ritmo,
 					}
 				: null,
 		});

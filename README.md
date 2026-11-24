@@ -4,6 +4,7 @@ Reels verticales (1080×1920, 30 fps) en español, **100 % programados** con Rem
 
 Ejemplos terminados (con voz de ElevenLabs):
 - [`ejemplos/dopamina-drogas.mp4`](ejemplos/dopamina-drogas.mp4): "por qué cuesta tanto dejar una droga" (dopamina), estilo pizarra, 15 escenas, ~113 s.
+- [`ejemplos/cortisol-melatonina.mp4`](ejemplos/cortisol-melatonina.mp4): cortisol y melatonina, estilo pizarra con humor (sol y luna como personajes), 13 escenas, ~109 s.
 - [`ejemplos/dejar-un-amor.mp4`](ejemplos/dejar-un-amor.mp4): "por qué cuesta tanto dejar un amor", 10 escenas, ~61 s.
 - [`ejemplos/paralisis-del-sueno.mp4`](ejemplos/paralisis-del-sueno.mp4): "la parálisis del sueño", 9 escenas, ~42 s.
 - [`ejemplos/relatividad-einstein.mp4`](ejemplos/relatividad-einstein.mp4): "la teoría de la relatividad de Einstein", 9 escenas, ~61 s.
@@ -49,7 +50,8 @@ Después podés pedir ajustes puntuales: "cambiá el gancho", "la escena 3 más 
 
 - `id`: único; también nombra el audio de la escena.
 - `componente`: la escena de `src/escenas/index.ts` que la ilustra.
-- `transicion` (opcional): `zoom` (por defecto), `deslizar`, `fundido` o `borrar` (pizarra).
+- `transicion` (opcional): `zoom` (por defecto), `deslizar`, `fundido` o `borrar` (pizarra). En la pizarra también `borrar-saludo`, `borrar-cansado` y `borrar-giro`: el borrador tiene carita y hace un gesto (saluda, se cansa a mitad de camino, hace una pirueta); duran un poco más.
+- `pausas` (opcional): `[{"antes": "menos útil", "segundos": 0.15}]` agrega silencio a la voz antes de esa palabra o frase (pausa cómica), sin regenerarla; los subtítulos y la animación se corren solos.
 - `"estilo": "pizarra"` (opcional, para todo el video): fondo blanco con dibujos a marcador que se trazan solos, subtítulos abajo y transición de borrado.
 
 Sin voz, el tiempo de cada palabra se **estima según su largo** (y pausas en comas y puntos). Subtítulos y animaciones se sincronizan con esos tiempos.
@@ -60,7 +62,7 @@ Sin voz, el tiempo de cada palabra se **estima según su largo** (y pausas en co
 2. `npm run voz`: genera `public/voz/<id>.mp3` por escena (modelo `eleven_multilingual_v2`, endpoint *with-timestamps*), guarda el tiempo exacto de cada palabra en `data/voz.json` y normaliza el volumen (−16 LUFS) para que todas las escenas suenen parejas.
 3. `npm run render`: usa el audio y esos tiempos en lugar de la estimación. Cada escena dura lo que dura su voz, más 0,3 s antes y 0,7 s después (que incluyen la transición).
 
-Para ajustar la duración total, en `data/video.json`: `"voz": {"ritmo": 1.1}` acelera la voz ya generada al reproducirla (mismo tono, sin regenerar); `"voz": {"velocidad": 1.05}` cambia la velocidad con la que la genera ElevenLabs (requiere `npm run voz`). Para un tono más calmo: `"estabilidad": 0.62, "estilo": 0.12` (también regenera).
+Para ajustar la duración total, en `data/video.json`: `"voz": {"ritmo": 1.1}` acelera la voz ya generada al reproducirla (mismo tono, sin regenerar); `"voz": {"velocidad": 1.05}` cambia la velocidad con la que la genera ElevenLabs (requiere `npm run voz`). Para un tono más calmo: `"estabilidad": 0.62, "estilo": 0.12` (también regenera); para uno más expresivo, con humor: `"estabilidad": 0.42, "estilo": 0.38`.
 
 Todos los videos terminan igual: un cierre gracioso, una enseñanza de una frase y la escena `CierreSeguime` ("Seguime para más datos que no sabías.").
 

@@ -1,28 +1,26 @@
 {
-  "tema": "cómo actúa la dopamina con las drogas, por qué cuesta dejarlas y por qué aguantar en la abstinencia suele ser más fácil que después de volver a consumir",
-  "titulo": "Por qué cuesta tanto dejar una droga",
+  "tema": "cortisol y melatonina, las dos hormonas que regulan el estrés y el sueño",
+  "titulo": "Cortisol y melatonina: el equipo que maneja tu reloj",
   "estilo": "pizarra",
   "voz": {
-    "velocidad": 1.08,
-    "estabilidad": 0.62,
-    "estilo": 0.12,
-    "ritmo": 1.08
+    "velocidad": 1.1,
+    "estabilidad": 0.42,
+    "estilo": 0.38,
+    "ritmo": 1.17
   },
   "escenas": [
-    {"id": "gancho-pregunta", "componente": "PreguntaPalito", "texto": "¿Por qué cuesta tanto dejar una droga, aunque quieras?"},
-    {"id": "dopamina-querer", "componente": "DopaminaGanas", "texto": "Casi todo empieza con la dopamina: la molécula del querer. No tanto del placer, sino de las ganas de repetir algo."},
-    {"id": "caminos-distintos", "componente": "TresCaminos", "texto": "Las drogas llegan por caminos distintos: unas bloquean que la dopamina se recicle, otras fuerzan su liberación, otras activan las neuronas que la fabrican."},
-    {"id": "mismo-lugar", "componente": "GraficoSubida", "texto": "Pero casi todas terminan en el mismo lugar: el circuito de recompensa, con una subida que suele ser mucho mayor que la de una comida o un abrazo."},
-    {"id": "tolerancia", "componente": "LuzApagada", "texto": "Con el uso repetido, el cerebro se adapta: baja su sensibilidad y lo cotidiano puede empezar a sentirse apagado. Suele hacer falta más para sentir lo mismo."},
-    {"id": "senales", "componente": "SenalesCircuito", "texto": "Además, aprende las señales: un lugar, una hora, una persona. Y las ganas pueden aparecer solas, antes de consumir."},
-    {"id": "abstinencia", "componente": "BalanzaAbstinencia", "texto": "Cuando se deja, el cerebro tarda en reequilibrarse. Pueden aparecer ansiedad, malestar y ganas intensas. No se trata solo de voluntad: es un sistema que se acostumbró."},
-    {"id": "se-calma", "componente": "OlaCalendario", "texto": "Pero con los meses, ese circuito suele ir calmándose y las señales van perdiendo fuerza."},
-    {"id": "recuperacion", "componente": "DosCerebros", "texto": "Estudios con imágenes cerebrales sugieren que, tras muchos meses sin consumir, parte de este sistema puede recuperarse."},
-    {"id": "volver-a-consumir", "componente": "Chispazo", "texto": "Por eso, aguantar en ese período suele ser más fácil que después de volver a consumir. Un solo consumo puede encender de nuevo el circuito, y las ganas pueden volver con más fuerza."},
-    {"id": "culpa", "componente": "CulpaTachada", "texto": "Y encima puede aparecer la culpa: “ya fallé, qué más da”. Esa idea suele empujar a seguir."},
-    {"id": "llaves", "componente": "LlavesPerdidas", "texto": "Tu cerebro no se acuerda dónde dejó las llaves, pero se acuerda perfecto de ese lugar."},
-    {"id": "ensenanza", "componente": "TropiezoCamino", "texto": "Y quedate con esto: una recaída no borra tu progreso. Es información de qué señal te ganó. Volvé a empezar sin castigarte."},
-    {"id": "ayuda-141", "componente": "Linea141", "texto": "Si vos o alguien cercano lo necesita, en Argentina la línea 141 es gratuita, anónima y atiende todo el día."},
-    {"id": "seguime", "componente": "PizarraSeguime", "texto": "Seguime para más datos que no sabías."}
+    {"id": "gancho-maraton", "componente": "MaratonCama", "texto": "¿Por qué hay días en que dormís ocho horas y te levantás como si hubieras corrido una maratón... en sueños?", "pausas": [{"antes": "en sueños", "segundos": 0.12}]},
+    {"id": "dos-hormonas", "componente": "SolLunaEspaldas", "texto": "Parte de la culpa puede ser de dos hormonas que trabajan en equipo. Un equipo con muy mala comunicación: el cortisol y la melatonina."},
+    {"id": "cortisol-despertador", "componente": "SuprarrenalesDespertador", "transicion": "borrar-saludo", "texto": "El cortisol lo producen las glándulas suprarrenales. Es la famosa hormona del estrés, pero también funciona como tu despertador natural. Sí, el que no tiene botón de posponer."},
+    {"id": "curva-cortisol", "componente": "MontanaRusaCortisol", "texto": "Su nivel sube a la mañana, suele llegar a su pico a los treinta o cuarenta minutos de despertar, y baja de a poco durante el día."},
+    {"id": "peligro-energia", "componente": "PerroMailJefe", "texto": "Ante un peligro, te da energía extra: sube el azúcar en sangre y te mantiene en alerta. Muy útil si te persigue un perro. Menos útil si es un mail de tu jefe.", "pausas": [{"antes": "menos útil", "segundos": 0.15}]},
+    {"id": "estres-sin-pausa", "componente": "CortisolSirena", "texto": "El problema es cuando el estrés no para. Un cortisol alto durante mucho tiempo se asocia con cansancio, tensión y mal sueño. Tu cuerpo, en modo alerta las veinticuatro horas."},
+    {"id": "melatonina", "componente": "MelatoninaMegafono", "transicion": "borrar-cansado", "texto": "La melatonina es la otra mitad del equipo. Una glándula del cerebro la produce sobre todo cuando oscurece y le avisa al cuerpo: “che, es hora de dormir”."},
+    {"id": "luz-pantalla", "componente": "PantallaMelatonina", "texto": "Pero la luz la frena. Un estudio mostró que leer en una pantalla luminosa antes de dormir retrasó la melatonina y costó más despertar al día siguiente. Sí, ese “solo un video más” puede tener costo."},
+    {"id": "reloj-desordenado", "componente": "RelojMareado", "texto": "O sea: de noche, el cortisol debería estar bajo y la melatonina alta. Si el estrés o el celular los cambian, tu reloj interno puede hacer un desastre."},
+    {"id": "habitos", "componente": "HabitosCulpable", "transicion": "borrar-giro", "texto": "Algunos hábitos ayudan: luz natural a la mañana, luces bajas a la noche, horarios regulares y menos pantallas antes de dormir. Sí, ya sabías todo esto. Yo también.", "pausas": [{"antes": "yo también", "segundos": 0.15}]},
+    {"id": "reloj-suizo", "componente": "RelojSuizoCelular", "texto": "Tu cuerpo es un reloj suizo. Lo único que no encaja es el celular, que te dice: “solo un video más”. Y vos mirando este."},
+    {"id": "ensenanza", "componente": "AbrazoReloj", "texto": "Y quedate con esto: dormir bien no es un lujo, es parte de cómo funciona tu cuerpo. Cuidá tu reloj y él te cuida a vos."},
+    {"id": "seguime", "componente": "PizarraSeguime", "texto": "Seguime para más datos que no sabías.", "props": {"companeros": true}}
   ]
 }

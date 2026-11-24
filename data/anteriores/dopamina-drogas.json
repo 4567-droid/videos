@@ -1,0 +1,28 @@
+{
+  "tema": "cómo actúa la dopamina con las drogas, por qué cuesta dejarlas y por qué aguantar en la abstinencia suele ser más fácil que después de volver a consumir",
+  "titulo": "Por qué cuesta tanto dejar una droga",
+  "estilo": "pizarra",
+  "voz": {
+    "velocidad": 1.08,
+    "estabilidad": 0.62,
+    "estilo": 0.12,
+    "ritmo": 1.08
+  },
+  "escenas": [
+    {"id": "gancho-pregunta", "componente": "PreguntaPalito", "texto": "¿Por qué cuesta tanto dejar una droga, aunque quieras?"},
+    {"id": "dopamina-querer", "componente": "DopaminaGanas", "texto": "Casi todo empieza con la dopamina: la molécula del querer. No tanto del placer, sino de las ganas de repetir algo."},
+    {"id": "caminos-distintos", "componente": "TresCaminos", "texto": "Las drogas llegan por caminos distintos: unas bloquean que la dopamina se recicle, otras fuerzan su liberación, otras activan las neuronas que la fabrican."},
+    {"id": "mismo-lugar", "componente": "GraficoSubida", "texto": "Pero casi todas terminan en el mismo lugar: el circuito de recompensa, con una subida que suele ser mucho mayor que la de una comida o un abrazo."},
+    {"id": "tolerancia", "componente": "LuzApagada", "texto": "Con el uso repetido, el cerebro se adapta: baja su sensibilidad y lo cotidiano puede empezar a sentirse apagado. Suele hacer falta más para sentir lo mismo."},
+    {"id": "senales", "componente": "SenalesCircuito", "texto": "Además, aprende las señales: un lugar, una hora, una persona. Y las ganas pueden aparecer solas, antes de consumir."},
+    {"id": "abstinencia", "componente": "BalanzaAbstinencia", "texto": "Cuando se deja, el cerebro tarda en reequilibrarse. Pueden aparecer ansiedad, malestar y ganas intensas. No se trata solo de voluntad: es un sistema que se acostumbró."},
+    {"id": "se-calma", "componente": "OlaCalendario", "texto": "Pero con los meses, ese circuito suele ir calmándose y las señales van perdiendo fuerza."},
+    {"id": "recuperacion", "componente": "DosCerebros", "texto": "Estudios con imágenes cerebrales sugieren que, tras muchos meses sin consumir, parte de este sistema puede recuperarse."},
+    {"id": "volver-a-consumir", "componente": "Chispazo", "texto": "Por eso, aguantar en ese período suele ser más fácil que después de volver a consumir. Un solo consumo puede encender de nuevo el circuito, y las ganas pueden volver con más fuerza."},
+    {"id": "culpa", "componente": "CulpaTachada", "texto": "Y encima puede aparecer la culpa: “ya fallé, qué más da”. Esa idea suele empujar a seguir."},
+    {"id": "llaves", "componente": "LlavesPerdidas", "texto": "Tu cerebro no se acuerda dónde dejó las llaves, pero se acuerda perfecto de ese lugar."},
+    {"id": "ensenanza", "componente": "TropiezoCamino", "texto": "Y quedate con esto: una recaída no borra tu progreso. Es información de qué señal te ganó. Volvé a empezar sin castigarte."},
+    {"id": "ayuda-141", "componente": "Linea141", "texto": "Si vos o alguien cercano lo necesita, en Argentina la línea 141 es gratuita, anónima y atiende todo el día."},
+    {"id": "seguime", "componente": "PizarraSeguime", "texto": "Seguime para más datos que no sabías."}
+  ]
+}

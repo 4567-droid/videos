@@ -1,6 +1,6 @@
 import {TransitionSeries} from '@remotion/transitions';
 import React, {Fragment, useMemo} from 'react';
-import {AbsoluteFill, Audio, Sequence, staticFile, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {Subtitulos} from './componentes/Subtitulos';
 import {tiempoTransicion, transicion} from './componentes/transiciones';
 import {ESCENAS} from './escenas';
@@ -15,6 +15,24 @@ export type PropsReel = {
 	voz: VozJSON;
 	/** Si se indica, el video contiene solo esa escena (para previsualizar). */
 	soloEscena: string | null;
+};
+
+/**
+ * Un tramo de la voz de una escena (si hay pausas cómicas, la voz se parte en tramos).
+ * Fundido muy corto en los bordes para que los cortes, que caen en silencios, no hagan "clic".
+ */
+const TramoVoz: React.FC<{src: string; recorte: number; velocidad: number; duracion: number; ultimo: boolean; primero: boolean}> = ({
+	src,
+	recorte,
+	velocidad,
+	duracion,
+	ultimo,
+	primero,
+}) => {
+	const f = useCurrentFrame();
+	const salida = Math.min(1, Math.max(0, (duracion - f) / (ultimo ? 5 : 2)));
+	const entrada = primero ? 1 : Math.min(1, (f + 1) / 2);
+	return <Audio src={src} trimBefore={recorte > 0 ? recorte : undefined} playbackRate={velocidad} volume={salida * entrada} />;
 };
 
 export const filtrarVideo = (video: VideoJSON, soloEscena: string | null): VideoJSON =>
@@ -37,7 +55,10 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 					return (
 						<Fragment key={escena.id}>
 							{i > 0 ? (
-								<TransitionSeries.Transition presentation={transicion(escena.transicion)} timing={tiempoTransicion()} />
+								<TransitionSeries.Transition
+									presentation={transicion(escena.transicion)}
+									timing={tiempoTransicion(escena.transicion, escena.duracionTransicion)}
+								/>
 							) : null}
 							<TransitionSeries.Sequence durationInFrames={escena.duracion} name={`${escena.id} (${escena.componente})`}>
 								<EscenaContext.Provider value={escena}>
@@ -60,23 +81,25 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 			)}
 			<Subtitulos grupos={grupos} posicion={pizarra ? 'abajo' : 'arriba'} />
 
-			{linea.escenas.map((escena) =>
-				escena.audio ? (
+			{linea.escenas.flatMap((escena) =>
+				(escena.audio?.tramos ?? []).map((tramo, k, tramos) => (
 					<Sequence
-						key={`voz-${escena.id}`}
-						from={escena.inicio + escena.audio.desde}
-						durationInFrames={escena.audio.duracion}
-						name={`voz ${escena.id}`}
+						key={`voz-${escena.id}-${k}`}
+						from={escena.inicio + tramo.desde}
+						durationInFrames={tramo.duracion}
+						name={`voz ${escena.id}${tramos.length > 1 ? ` (${k + 1}/${tramos.length})` : ''}`}
 						layout="none"
 					>
-						<Audio
-							src={staticFile(escena.audio.src)}
-							playbackRate={escena.audio.velocidad}
-							// fundido corto al final para cortar sin "clic"
-							volume={(f) => Math.min(1, Math.max(0, (escena.audio!.duracion - f) / 5))}
+						<TramoVoz
+							src={staticFile(escena.audio!.src)}
+							recorte={tramo.recorte}
+							velocidad={escena.audio!.velocidad}
+							duracion={tramo.duracion}
+							primero={k === 0}
+							ultimo={k === tramos.length - 1}
 						/>
 					</Sequence>
-				) : null,
+				)),
 			)}
 		</AbsoluteFill>
 	);

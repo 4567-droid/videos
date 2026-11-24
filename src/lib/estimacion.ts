@@ -80,3 +80,25 @@ export const estimarTiempos = (texto: string): PalabraVoz[] => {
 		return resultado;
 	});
 };
+
+/**
+ * Índice de la palabra donde empieza `busqueda` (una o varias palabras) dentro de `palabras`.
+ * Primero busca coincidencia exacta (sin tildes ni signos) y después por prefijo.
+ * `ocurrencia`: 1 = la primera vez que aparece.
+ */
+export const buscarPalabra = (palabras: string[], busqueda: string, ocurrencia = 1): {inicio: number; fin: number} | null => {
+	const objetivo = busqueda.split(/\s+/).map(normalizar).filter(Boolean);
+	const normales = palabras.map(normalizar);
+	const buscar = (coincide: (palabra: string, obj: string) => boolean) => {
+		let vistas = 0;
+		for (let i = 0; i + objetivo.length <= normales.length; i++) {
+			if (objetivo.every((o, j) => coincide(normales[i + j], o))) {
+				vistas++;
+				if (vistas === ocurrencia) return {inicio: i, fin: i + objetivo.length - 1};
+			}
+		}
+		return null;
+	};
+	if (objetivo.length === 0) return null;
+	return buscar((p, o) => p === o) ?? buscar((p, o) => p.startsWith(o));
+};

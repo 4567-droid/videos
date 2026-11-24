@@ -51,6 +51,18 @@ import {PreguntaGigante} from './PreguntaGigante';
 import {RelojLoco} from './RelojLoco';
 import {SateliteGPS} from './SateliteGPS';
 import {VidaEntera} from './VidaEntera';
+import {MaratonCama} from './MaratonCama';
+import {SolLunaEspaldas} from './SolLunaEspaldas';
+import {SuprarrenalesDespertador} from './SuprarrenalesDespertador';
+import {MontanaRusaCortisol} from './MontanaRusaCortisol';
+import {PerroMailJefe} from './PerroMailJefe';
+import {CortisolSirena} from './CortisolSirena';
+import {MelatoninaMegafono} from './MelatoninaMegafono';
+import {PantallaMelatonina} from './PantallaMelatonina';
+import {RelojMareado} from './RelojMareado';
+import {HabitosCulpable} from './HabitosCulpable';
+import {RelojSuizoCelular} from './RelojSuizoCelular';
+import {AbrazoReloj} from './AbrazoReloj';
 
 /**
  * Registro de escenas: el campo "componente" de data/video.json
@@ -116,6 +128,19 @@ export const ESCENAS: Record<string, React.FC<any>> = {
 	TropiezoCamino,
 	Linea141,
 	PizarraSeguime,
+	// reel (pizarra): cortisol y melatonina, el equipo que maneja tu reloj
+	MaratonCama,
+	SolLunaEspaldas,
+	SuprarrenalesDespertador,
+	MontanaRusaCortisol,
+	PerroMailJefe,
+	CortisolSirena,
+	MelatoninaMegafono,
+	PantallaMelatonina,
+	RelojMareado,
+	HabitosCulpable,
+	RelojSuizoCelular,
+	AbrazoReloj,
 	// cierre fijo de todos los reels ("Seguime para más datos que no sabías.")
 	CierreSeguime,
 };

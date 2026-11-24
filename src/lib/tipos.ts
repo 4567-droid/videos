@@ -1,4 +1,20 @@
 // ---------- Lo que vive en data/video.json ----------
+/**
+ * Transiciones: "zoom", "deslizar", "fundido" y, en la pizarra, "borrar" (un borrador pasa).
+ * Las variantes "borrar-saludo", "borrar-cansado" y "borrar-giro" duran un poco más
+ * porque el borrador hace un gesto gracioso (saluda, se cansa a mitad de camino, gira).
+ */
+export type TipoTransicion = 'zoom' | 'deslizar' | 'fundido' | 'borrar' | 'borrar-saludo' | 'borrar-cansado' | 'borrar-giro';
+
+/** Silencio extra (pausa cómica) antes de una palabra o frase del texto. */
+export type PausaJSON = {
+	/** palabra o frase ANTES de la cual se hace la pausa (se busca como en `momento`) */
+	antes: string;
+	segundos: number;
+	/** si la frase aparece varias veces, cuál (1 = la primera) */
+	ocurrencia?: number;
+};
+
 export type EscenaJSON = {
 	/** Identificador único (se usa para los archivos de voz). */
 	id: string;
@@ -8,8 +24,10 @@ export type EscenaJSON = {
 	texto: string;
 	/** Props opcionales que recibe el componente de la escena. */
 	props?: Record<string, unknown>;
-	/** Transición de ENTRADA a esta escena: "zoom" (por defecto), "deslizar" o "fundido". */
-	transicion?: 'zoom' | 'deslizar' | 'fundido' | 'borrar';
+	/** Transición de ENTRADA a esta escena (por defecto "zoom", o "borrar" en la pizarra). */
+	transicion?: TipoTransicion;
+	/** Pausas cómicas: se agrega silencio a la voz (sin regenerarla) y se corren los tiempos. */
+	pausas?: PausaJSON[];
 };
 
 export type VideoJSON = {
@@ -66,7 +84,9 @@ export type EscenaCalculada = {
 	componente: string;
 	texto: string;
 	props: Record<string, unknown>;
-	transicion: 'zoom' | 'deslizar' | 'fundido' | 'borrar';
+	transicion: TipoTransicion;
+	/** duración (frames) de la transición de entrada */
+	duracionTransicion: number;
 	/** frame global donde empieza la escena (incluye la transición de entrada) */
 	inicio: number;
 	/** duración total en frames */
@@ -74,8 +94,11 @@ export type EscenaCalculada = {
 	palabras: Palabra[];
 	/** true si los tiempos vienen de ElevenLabs y no de la estimación */
 	conVoz: boolean;
-	/** Audio de ElevenLabs: empieza `desde` frames después del inicio de la escena. */
-	audio: {src: string; desde: number; duracion: number; velocidad: number} | null;
+	/**
+	 * Audio de ElevenLabs, en tramos (más de uno si hay pausas cómicas). Cada tramo empieza
+	 * `desde` frames después del inicio de la escena y arranca `recorte` frames dentro del mp3.
+	 */
+	audio: {src: string; velocidad: number; tramos: {desde: number; duracion: number; recorte: number}[]} | null;
 };
 
 export type LineaDeTiempo = {

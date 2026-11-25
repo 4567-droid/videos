@@ -162,13 +162,13 @@ export const CajaMisterio: React.FC<{
 			<group position={[sx, salto, 0]} rotation={[0, 0, rz]}>
 				{/* cuerpo */}
 				<mesh geometry={geoCaja(ANCHO_CAJA, ALTO_CAJA, FONDO_CAJA, 0.05)} position={[0, ALTO_CAJA / 2, 0]} renderOrder={transparente ? 2 : 0}>
-					<meshStandardMaterial color="#9B6E4E" roughness={0.88} transparent={transparente} opacity={opacidad} depthWrite={!transparente} />
+					<meshStandardMaterial key={transparente ? 'translucido' : 'opaco'} color="#9B6E4E" roughness={0.88} transparent={transparente} opacity={opacidad} depthWrite={!transparente} />
 				</mesh>
 				{/* bordes más oscuros (pliegues del cartón) */}
 				{[-1, 1].map((lado) => (
 					<mesh key={lado} position={[lado * (ANCHO_CAJA / 2 - 0.02), ALTO_CAJA / 2, FONDO_CAJA / 2 + 0.002]}>
 						<boxGeometry args={[0.05, ALTO_CAJA - 0.08, 0.01]} />
-						<meshStandardMaterial color="#6E4A33" roughness={0.9} transparent={transparente} opacity={opacidad} />
+						<meshStandardMaterial key={transparente ? 'translucido' : 'opaco'} color="#6E4A33" roughness={0.9} transparent={transparente} opacity={opacidad} />
 					</mesh>
 				))}
 				{children ? <group>{children}</group> : null}
@@ -195,12 +195,12 @@ export const CajaMisterio: React.FC<{
 				{/* tapa con bisagra atrás */}
 				<group position={[0, ALTO_CAJA, -FONDO_CAJA / 2]} rotation={[-tapa * 0.75, 0, 0]}>
 					<mesh geometry={geoCaja(ANCHO_CAJA + 0.08, 0.09, FONDO_CAJA + 0.08, 0.035)} position={[0, 0.045, FONDO_CAJA / 2]}>
-						<meshStandardMaterial color="#B07D58" roughness={0.85} transparent={transparente} opacity={opacidad} depthWrite={!transparente} />
+						<meshStandardMaterial key={transparente ? 'translucido' : 'opaco'} color="#B07D58" roughness={0.85} transparent={transparente} opacity={opacidad} depthWrite={!transparente} />
 					</mesh>
 					{/* cinta */}
 					<mesh position={[0, 0.093, FONDO_CAJA / 2]}>
 						<boxGeometry args={[0.26, 0.01, FONDO_CAJA + 0.09]} />
-						<meshStandardMaterial color="#D9B98F" roughness={0.5} transparent={transparente} opacity={opacidad} />
+						<meshStandardMaterial key={transparente ? 'translucido' : 'opaco'} color="#D9B98F" roughness={0.5} transparent={transparente} opacity={opacidad} />
 					</mesh>
 				</group>
 				{/* el signo de pregunta brillante en el frente */}
@@ -631,7 +631,7 @@ export const Bolita: React.FC<{color: string; radio?: number; brillo?: number; o
 	<group position={position}>
 		<Resplandor color={color} escala={radio * 6} opacidad={0.5 * brillo * opacidad} />
 		<mesh geometry={GEO_ESFERA} scale={radio}>
-			<meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.5 + 0.7 * brillo} roughness={0.25} transparent={opacidad < 1} opacity={opacidad} />
+			<meshStandardMaterial key={opacidad < 1 ? 'translucido' : 'opaco'} color={color} emissive={color} emissiveIntensity={0.5 + 0.7 * brillo} roughness={0.25} transparent={opacidad < 1} opacity={opacidad} />
 		</mesh>
 		<mesh geometry={GEO_ESFERA_BAJA} position={[radio * 0.35, radio * 0.4, radio * 0.75]} scale={radio * 0.22}>
 			<meshBasicMaterial color="#FFFFFF" transparent opacity={0.8 * opacidad} toneMapped={false} />
@@ -984,11 +984,11 @@ export const Molecula: React.FC<{opacidad?: number; position?: V3; rotation?: V3
 		<group position={position} rotation={rotation} scale={scale}>
 			<instancedMesh ref={refA} args={[undefined, undefined, atomos.length]} frustumCulled={false}>
 				<sphereGeometry args={[1, 16, 12]} />
-				<meshStandardMaterial roughness={0.3} emissive="#2A1A55" emissiveIntensity={0.4} transparent={opacidad < 1} opacity={opacidad} />
+				<meshStandardMaterial key={opacidad < 1 ? 'translucido' : 'opaco'} roughness={0.3} emissive="#2A1A55" emissiveIntensity={0.4} transparent={opacidad < 1} opacity={opacidad} />
 			</instancedMesh>
 			<instancedMesh ref={refE} args={[undefined, undefined, enlaces.length]} frustumCulled={false}>
 				<cylinderGeometry args={[1, 1, 1, 8]} />
-				<meshStandardMaterial color="#D8D2F0" roughness={0.4} transparent={opacidad < 1} opacity={opacidad} />
+				<meshStandardMaterial key={opacidad < 1 ? 'translucido' : 'opaco'} color="#D8D2F0" roughness={0.4} transparent={opacidad < 1} opacity={opacidad} />
 			</instancedMesh>
 		</group>
 	);
@@ -1024,8 +1024,8 @@ const Anteojos: React.FC = () => (
 const Bata: React.FC = () => (
 	<group>
 		{/* faldón de la bata */}
-		<mesh material={MAT_BATA} position={[0, -0.2, 0]}>
-			<cylinderGeometry args={[0.2, 0.29, 0.5, 10, 1, true]} />
+		<mesh material={MAT_BATA} position={[0, -0.13, 0]}>
+			<cylinderGeometry args={[0.19, 0.24, 0.36, 10, 1, true]} />
 		</mesh>
 		{/* solapas */}
 		{[-1, 1].map((lado) => (

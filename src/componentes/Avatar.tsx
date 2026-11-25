@@ -228,6 +228,10 @@ type Props = {
 	manoObjeto?: 'izq' | 'der';
 	/** elementos extra dentro de la cabeza (pelo, bigote, anteojos...). Centro de la cabeza: [0, 0.17, 0], radio 0.2 */
 	cabeza?: React.ReactNode;
+	/** elementos extra pegados al torso (bata, moño...). El torso va de y=0.02 a 0.52, radio ~0.2 */
+	torso?: React.ReactNode;
+	/** 0..1: cierra el ojo derecho (guiño) */
+	guino?: number;
 	sombra?: boolean;
 	position?: V3;
 	rotation?: V3;
@@ -250,6 +254,8 @@ export const Avatar: React.FC<Props> = ({
 	enMano,
 	manoObjeto = 'der',
 	cabeza,
+	torso,
+	guino = 0,
 	sombra = true,
 	position,
 	rotation,
@@ -337,7 +343,7 @@ export const Avatar: React.FC<Props> = ({
 						<mesh material={m.ojos} position={[-0.07, 0.185, 0.178]} scale={serena ? [1.1, 0.5, 1] : 1}>
 							<sphereGeometry args={[0.027, 8, 6]} />
 						</mesh>
-						<mesh material={m.ojos} position={[0.07, 0.185, 0.178]} scale={serena ? [1.1, 0.5, 1] : 1}>
+						<mesh material={m.ojos} position={[0.07, 0.185 + 0.006 * guino, 0.178]} scale={serena ? [1.1, 0.5 * (1 - 0.8 * guino), 1] : [1 + 0.25 * guino, 1 - 0.85 * guino, 1]}>
 							<sphereGeometry args={[0.027, 8, 6]} />
 						</mesh>
 						<mesh material={m.mejillas} position={[-0.115, 0.125, 0.155]} scale={[1, 0.7, 0.4]}>
@@ -367,6 +373,7 @@ export const Avatar: React.FC<Props> = ({
 							: null}
 						{cabeza}
 					</group>
+					{torso}
 
 					{([-1, 1] as const).map((lado) => {
 						const fijo = lado < 0 ? brazos?.izq : brazos?.der;

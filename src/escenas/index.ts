@@ -63,6 +63,17 @@ import {RelojMareado} from './RelojMareado';
 import {HabitosCulpable} from './HabitosCulpable';
 import {RelojSuizoCelular} from './RelojSuizoCelular';
 import {AbrazoReloj} from './AbrazoReloj';
+import {CajaTiembla} from './CajaTiembla';
+import {RendijaVioleta} from './RendijaVioleta';
+import {SchrodingerPizarron} from './SchrodingerPizarron';
+import {RelojMoneda} from './RelojMoneda';
+import {BolitaDoble} from './BolitaDoble';
+import {HiloGatos} from './HiloGatos';
+import {CientificoEnSerio} from './CientificoEnSerio';
+import {LluviaChispas} from './LluviaChispas';
+import {MoleculaFrontera} from './MoleculaFrontera';
+import {GatoPlato} from './GatoPlato';
+import {LupaFrase} from './LupaFrase';
 
 /**
  * Registro de escenas: el campo "componente" de data/video.json
@@ -141,6 +152,18 @@ export const ESCENAS: Record<string, React.FC<any>> = {
 	HabitosCulpable,
 	RelojSuizoCelular,
 	AbrazoReloj,
+	// reel: el gato de Schrödinger (misterio 3D)
+	CajaTiembla,
+	RendijaVioleta,
+	SchrodingerPizarron,
+	RelojMoneda,
+	BolitaDoble,
+	HiloGatos,
+	CientificoEnSerio,
+	LluviaChispas,
+	MoleculaFrontera,
+	GatoPlato,
+	LupaFrase,
 	// cierre fijo de todos los reels ("Seguime para más datos que no sabías.")
 	CierreSeguime,
 };

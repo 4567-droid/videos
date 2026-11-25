@@ -1,0 +1,26 @@
+{
+  "tema": "cortisol y melatonina, las dos hormonas que regulan el estrés y el sueño",
+  "titulo": "Cortisol y melatonina: el equipo que maneja tu reloj",
+  "estilo": "pizarra",
+  "voz": {
+    "velocidad": 1.1,
+    "estabilidad": 0.42,
+    "estilo": 0.38,
+    "ritmo": 1.17
+  },
+  "escenas": [
+    {"id": "gancho-maraton", "componente": "MaratonCama", "texto": "¿Por qué hay días en que dormís ocho horas y te levantás como si hubieras corrido una maratón... en sueños?", "pausas": [{"antes": "en sueños", "segundos": 0.12}]},
+    {"id": "dos-hormonas", "componente": "SolLunaEspaldas", "texto": "Parte de la culpa puede ser de dos hormonas que trabajan en equipo. Un equipo con muy mala comunicación: el cortisol y la melatonina."},
+    {"id": "cortisol-despertador", "componente": "SuprarrenalesDespertador", "transicion": "borrar-saludo", "texto": "El cortisol lo producen las glándulas suprarrenales. Es la famosa hormona del estrés, pero también funciona como tu despertador natural. Sí, el que no tiene botón de posponer."},
+    {"id": "curva-cortisol", "componente": "MontanaRusaCortisol", "texto": "Su nivel sube a la mañana, suele llegar a su pico a los treinta o cuarenta minutos de despertar, y baja de a poco durante el día."},
+    {"id": "peligro-energia", "componente": "PerroMailJefe", "texto": "Ante un peligro, te da energía extra: sube el azúcar en sangre y te mantiene en alerta. Muy útil si te persigue un perro. Menos útil si es un mail de tu jefe.", "pausas": [{"antes": "menos útil", "segundos": 0.15}]},
+    {"id": "estres-sin-pausa", "componente": "CortisolSirena", "texto": "El problema es cuando el estrés no para. Un cortisol alto durante mucho tiempo se asocia con cansancio, tensión y mal sueño. Tu cuerpo, en modo alerta las veinticuatro horas."},
+    {"id": "melatonina", "componente": "MelatoninaMegafono", "transicion": "borrar-cansado", "texto": "La melatonina es la otra mitad del equipo. Una glándula del cerebro la produce sobre todo cuando oscurece y le avisa al cuerpo: “che, es hora de dormir”."},
+    {"id": "luz-pantalla", "componente": "PantallaMelatonina", "texto": "Pero la luz la frena. Un estudio mostró que leer en una pantalla luminosa antes de dormir retrasó la melatonina y costó más despertar al día siguiente. Sí, ese “solo un video más” puede tener costo."},
+    {"id": "reloj-desordenado", "componente": "RelojMareado", "texto": "O sea: de noche, el cortisol debería estar bajo y la melatonina alta. Si el estrés o el celular los cambian, tu reloj interno puede hacer un desastre."},
+    {"id": "habitos", "componente": "HabitosCulpable", "transicion": "borrar-giro", "texto": "Algunos hábitos ayudan: luz natural a la mañana, luces bajas a la noche, horarios regulares y menos pantallas antes de dormir. Sí, ya sabías todo esto. Yo también.", "pausas": [{"antes": "yo también", "segundos": 0.15}]},
+    {"id": "reloj-suizo", "componente": "RelojSuizoCelular", "texto": "Tu cuerpo es un reloj suizo. Lo único que no encaja es el celular, que te dice: “solo un video más”. Y vos mirando este."},
+    {"id": "ensenanza", "componente": "AbrazoReloj", "texto": "Y quedate con esto: dormir bien no es un lujo, es parte de cómo funciona tu cuerpo. Cuidá tu reloj y él te cuida a vos."},
+    {"id": "seguime", "componente": "PizarraSeguime", "texto": "Seguime para más datos que no sabías.", "props": {"companeros": true}}
+  ]
+}

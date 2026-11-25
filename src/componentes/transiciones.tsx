@@ -255,6 +255,15 @@ const Presentacion: React.FC<TransitionPresentationComponentProps<PropsPresentac
 			: {transform: `translateY(${-p * 10}%) scale(${1 - 0.05 * p})`};
 	} else if (passedProps.tipo === 'fundido') {
 		style = entrando ? {opacity: p} : {};
+	} else if (passedProps.tipo === 'destello') {
+		// fogonazo: la escena vieja se quema en luz y la nueva aparece detrás del brillo
+		if (!entrando) return <AbsoluteFill style={{filter: `brightness(${1 + 2.2 * p})`}}>{children}</AbsoluteFill>;
+		return (
+			<AbsoluteFill style={{opacity: Math.min(1, p * 2.2), transform: `scale(${1.08 - 0.08 * p})`}}>
+				{children}
+				<AbsoluteFill style={{background: 'radial-gradient(circle at 50% 50%, #FFFFFF 0%, #C8FFF6 45%, #9C7BFF 100%)', opacity: (1 - p) ** 1.5 * 0.95}} />
+			</AbsoluteFill>
+		);
 	} else {
 		// zoom: la escena nueva llega desde un acercamiento mientras la vieja se aleja
 		style = entrando

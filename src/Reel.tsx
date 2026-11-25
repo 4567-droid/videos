@@ -1,6 +1,7 @@
 import {TransitionSeries} from '@remotion/transitions';
 import React, {Fragment, useMemo} from 'react';
 import {AbsoluteFill, Audio, Sequence, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {calcularClaves, golpeDeClaves, PalabrasClave} from './componentes/PalabrasClave';
 import {Subtitulos} from './componentes/Subtitulos';
 import {tiempoTransicion, transicion} from './componentes/transiciones';
 import {ESCENAS} from './escenas';
@@ -45,10 +46,15 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 		[video, voz, soloEscena, fps],
 	);
 	const grupos = useMemo(() => calcularGrupos(linea), [linea]);
+	const claves = useMemo(() => calcularClaves(linea), [linea]);
 	const pizarra = video.estilo === 'pizarra';
+	const frame = useCurrentFrame();
+	// cada palabra clave da un pequeño "golpe" de zoom a toda la imagen (no a los subtítulos)
+	const golpe = claves.length > 0 ? golpeDeClaves(claves, frame) : 0;
 
 	return (
 		<AbsoluteFill style={{backgroundColor: pizarra ? '#FBFBF7' : '#0b0614'}}>
+			<AbsoluteFill style={golpe > 0 ? {transform: `scale(${1 + 0.035 * golpe})`} : undefined}>
 			<TransitionSeries>
 				{linea.escenas.map((escena, i) => {
 					const Componente = ESCENAS[escena.componente] ?? EscenaGenerica;
@@ -69,6 +75,7 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 					);
 				})}
 			</TransitionSeries>
+			</AbsoluteFill>
 
 			{/* oscurece apenas la parte de arriba para que los subtítulos se lean siempre (no en la pizarra: van abajo) */}
 			{pizarra ? null : (
@@ -79,6 +86,7 @@ export const Reel: React.FC<PropsReel> = ({video, voz, soloEscena}) => {
 					}}
 				/>
 			)}
+			{claves.length > 0 ? <PalabrasClave claves={claves} /> : null}
 			<Subtitulos grupos={grupos} posicion={pizarra ? 'abajo' : 'arriba'} />
 
 			{linea.escenas.flatMap((escena) =>

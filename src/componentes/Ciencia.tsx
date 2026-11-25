@@ -16,7 +16,7 @@ const GEO_ESFERA = new THREE.SphereGeometry(1, 24, 16);
 // ---------------------------------------------------------------------------
 // Pizarrón
 
-const dibujarPizarron = (ctx: CanvasRenderingContext2D, lineas: {texto: string; x: number; y: number; tam: number; circulo?: boolean}[]) => {
+export const dibujarPizarron = (ctx: CanvasRenderingContext2D, lineas: {texto: string; x: number; y: number; tam: number; circulo?: boolean}[]) => {
 	const W = ctx.canvas.width;
 	const H = ctx.canvas.height;
 	ctx.fillStyle = '#23533F';
@@ -55,23 +55,32 @@ const dibujarPizarron = (ctx: CanvasRenderingContext2D, lineas: {texto: string; 
 	ctx.stroke();
 };
 
-/** Pizarrón con texto en tiza. `revelar` (0..1) lo va "escribiendo" de izquierda a derecha. */
-export const Pizarron: React.FC<{revelar?: number; position?: V3; rotation?: V3; scale?: number}> = ({
-	revelar = 1,
-	position,
-	rotation,
-	scale = 1,
-}) => {
+/**
+ * Pizarrón con texto en tiza. `revelar` (0..1) lo va "escribiendo" de izquierda a derecha.
+ * Por defecto tiene lo de Einstein; con `clave` + `dibujar` se le pone otro contenido.
+ * `patas={false}` lo deja flotando.
+ */
+export const Pizarron: React.FC<{
+	revelar?: number;
+	clave?: string;
+	dibujar?: (ctx: CanvasRenderingContext2D) => void;
+	patas?: boolean;
+	position?: V3;
+	rotation?: V3;
+	scale?: number;
+}> = ({revelar = 1, clave = 'pizarron', dibujar, patas = true, position, rotation, scale = 1}) => {
 	const textura = useTexturaCanvas(
-		'pizarron',
+		clave,
 		1024,
 		614,
 		(ctx) =>
-			dibujarPizarron(ctx, [
-				{texto: '1905', x: 0.22, y: 0.25, tam: 110, circulo: true},
-				{texto: 'E = mc²', x: 0.47, y: 0.58, tam: 190},
-				{texto: "t' ≠ t", x: 0.8, y: 0.8, tam: 96},
-			]),
+			dibujar
+				? dibujar(ctx)
+				: dibujarPizarron(ctx, [
+						{texto: '1905', x: 0.22, y: 0.25, tam: 110, circulo: true},
+						{texto: 'E = mc²', x: 0.47, y: 0.58, tam: 190},
+						{texto: "t' ≠ t", x: 0.8, y: 0.8, tam: 96},
+					]),
 		true,
 	);
 	const k = Math.max(0, Math.min(1, revelar));
@@ -97,7 +106,7 @@ export const Pizarron: React.FC<{revelar?: number; position?: V3; rotation?: V3;
 				<boxGeometry args={[2.9, 0.08, 0.18]} />
 				<meshStandardMaterial color="#6F4518" roughness={0.7} />
 			</mesh>
-			{[-1, 1].map((lado) => (
+			{(patas ? [-1, 1] : []).map((lado) => (
 				<mesh key={lado} position={[lado * 1.35, -1.6, -0.1]} rotation={[0.08, 0, lado * 0.06]}>
 					<cylinderGeometry args={[0.05, 0.06, 1.2, 8]} />
 					<meshStandardMaterial color="#6F4518" roughness={0.7} />
@@ -413,14 +422,17 @@ const curvaPregunta = new THREE.CatmullRomCurve3(
 );
 
 /** Signo de pregunta 3D. `luz` (0..1) lo enciende con brillo y rayos. */
-export const SignoPregunta: React.FC<{t: number; luz?: number; color?: string; position?: V3; rotation?: V3; scale?: number}> = ({
-	t,
-	luz = 0,
-	color = '#FFD23F',
-	position,
-	rotation,
-	scale = 1,
-}) => (
+export const SignoPregunta: React.FC<{
+	t: number;
+	luz?: number;
+	color?: string;
+	/** color de la luz propia (emissive) y del halo */
+	emisivo?: string;
+	halo?: string;
+	position?: V3;
+	rotation?: V3;
+	scale?: number;
+}> = ({t, luz = 0, color = '#FFD23F', emisivo = '#FFB703', halo = '#FFD23F', position, rotation, scale = 1}) => (
 	<group position={position} rotation={rotation} scale={scale}>
 		{luz > 0.01 ? (
 			<group rotation={[0, 0, t * 0.4]}>
@@ -432,18 +444,18 @@ export const SignoPregunta: React.FC<{t: number; luz?: number; color?: string; p
 				))}
 			</group>
 		) : null}
-		<Resplandor color="#FFD23F" escala={1.2 + 3.2 * luz} opacidad={0.25 + 0.6 * luz} position={[0, 0.25, -0.2]} />
+		<Resplandor color={halo} escala={1.2 + 3.2 * luz} opacidad={0.25 + 0.6 * luz} position={[0, 0.25, -0.2]} />
 		<mesh>
 			<tubeGeometry args={[curvaPregunta, 80, 0.13, 16, false]} />
-			<meshStandardMaterial color={color} emissive="#FFB703" emissiveIntensity={0.15 + 1.4 * luz} roughness={0.3} />
+			<meshStandardMaterial color={color} emissive={emisivo} emissiveIntensity={0.15 + 1.4 * luz} roughness={0.3} />
 		</mesh>
 		{[curvaPregunta.getPoint(0), curvaPregunta.getPoint(1)].map((p, i) => (
 			<mesh key={i} geometry={GEO_ESFERA} position={p} scale={0.13}>
-				<meshStandardMaterial color={color} emissive="#FFB703" emissiveIntensity={0.15 + 1.4 * luz} roughness={0.3} />
+				<meshStandardMaterial color={color} emissive={emisivo} emissiveIntensity={0.15 + 1.4 * luz} roughness={0.3} />
 			</mesh>
 		))}
 		<mesh geometry={GEO_ESFERA} position={[0, -0.66, 0]} scale={0.15}>
-			<meshStandardMaterial color={color} emissive="#FFB703" emissiveIntensity={0.15 + 1.4 * luz} roughness={0.3} />
+			<meshStandardMaterial color={color} emissive={emisivo} emissiveIntensity={0.15 + 1.4 * luz} roughness={0.3} />
 		</mesh>
 	</group>
 );

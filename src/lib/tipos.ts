@@ -1,10 +1,11 @@
 // ---------- Lo que vive en data/video.json ----------
 /**
- * Transiciones: "zoom", "deslizar", "fundido" y, en la pizarra, "borrar" (un borrador pasa).
+ * Transiciones: "zoom", "deslizar", "fundido", "destello" (un fogonazo de luz, para los giros) y,
+ * en la pizarra, "borrar" (un borrador pasa).
  * Las variantes "borrar-saludo", "borrar-cansado" y "borrar-giro" duran un poco más
  * porque el borrador hace un gesto gracioso (saluda, se cansa a mitad de camino, gira).
  */
-export type TipoTransicion = 'zoom' | 'deslizar' | 'fundido' | 'borrar' | 'borrar-saludo' | 'borrar-cansado' | 'borrar-giro';
+export type TipoTransicion = 'zoom' | 'deslizar' | 'fundido' | 'destello' | 'borrar' | 'borrar-saludo' | 'borrar-cansado' | 'borrar-giro';
 
 /** Silencio extra (pausa cómica) antes de una palabra o frase del texto. */
 export type PausaJSON = {
@@ -13,6 +14,19 @@ export type PausaJSON = {
 	segundos: number;
 	/** si la frase aparece varias veces, cuál (1 = la primera) */
 	ocurrencia?: number;
+};
+
+/** Palabra clave que aparece grande en pantalla, con un golpe, cuando la voz la dice. */
+export type ClaveJSON = {
+	/** palabra o frase del texto que la dispara (se busca como en `momento`) */
+	palabra: string;
+	/** lo que se muestra (por defecto, la palabra en mayúsculas) */
+	texto?: string;
+	ocurrencia?: number;
+	/** color del texto (por defecto, turquesa) */
+	color?: string;
+	/** altura del centro en píxeles (por defecto 1480, en la zona de etiquetas) */
+	y?: number;
 };
 
 export type EscenaJSON = {
@@ -26,8 +40,12 @@ export type EscenaJSON = {
 	props?: Record<string, unknown>;
 	/** Transición de ENTRADA a esta escena (por defecto "zoom", o "borrar" en la pizarra). */
 	transicion?: TipoTransicion;
-	/** Pausas cómicas: se agrega silencio a la voz (sin regenerarla) y se corren los tiempos. */
+	/** Pausas cómicas o dramáticas: se agrega silencio a la voz (sin regenerarla) y se corren los tiempos. */
 	pausas?: PausaJSON[];
+	/** Multiplica el `ritmo` general en esta escena (1.05 = 5 % más rápido): sirve para acelerar hacia el final. */
+	ritmo?: number;
+	/** Palabras clave que aparecen grandes con un golpe de animación (y un pequeño zoom de toda la imagen). */
+	claves?: ClaveJSON[];
 };
 
 export type VideoJSON = {
@@ -99,6 +117,8 @@ export type EscenaCalculada = {
 	 * `desde` frames después del inicio de la escena y arranca `recorte` frames dentro del mp3.
 	 */
 	audio: {src: string; velocidad: number; tramos: {desde: number; duracion: number; recorte: number}[]} | null;
+	/** palabras clave ya ubicadas (frame relativo a la escena) */
+	claves: {texto: string; inicio: number; color?: string; y?: number}[];
 };
 
 export type LineaDeTiempo = {

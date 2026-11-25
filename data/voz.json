@@ -1,1858 +1,1591 @@
 {
   "escenas": {
     "ensenanza": {
-      "texto": "Y quedate con esto: dormir bien no es un lujo, es parte de cómo funciona tu cuerpo. Cuidá tu reloj y él te cuida a vos.",
+      "texto": "Y quedate con esto: a veces una idea se inventa para señalar un problema, no para defenderla. Antes de repetir una frase famosa, fijate quién la dijo y por qué.",
       "audio": "voz/ensenanza.mp3",
-      "duracion": 8.388,
+      "duracion": 11.915,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
       "normalizado": true,
       "palabras": [
         {
           "texto": "Y",
           "inicio": 0,
-          "fin": 0.104
+          "fin": 0.139
         },
         {
           "texto": "quedate",
-          "inicio": 0.163,
-          "fin": 0.464
+          "inicio": 0.279,
+          "fin": 0.627
         },
         {
           "texto": "con",
-          "inicio": 0.511,
-          "fin": 0.615
+          "inicio": 0.662,
+          "fin": 0.778
         },
         {
           "texto": "esto:",
-          "inicio": 0.673,
-          "fin": 0.964
-        },
-        {
-          "texto": "dormir",
-          "inicio": 1.324,
-          "fin": 1.66
-        },
-        {
-          "texto": "bien",
-          "inicio": 1.718,
-          "fin": 1.927
-        },
-        {
-          "texto": "no",
-          "inicio": 2.032,
-          "fin": 2.125
-        },
-        {
-          "texto": "es",
-          "inicio": 2.159,
-          "fin": 2.206
-        },
-        {
-          "texto": "un",
-          "inicio": 2.276,
-          "fin": 2.322
-        },
-        {
-          "texto": "lujo,",
-          "inicio": 2.38,
-          "fin": 2.659
-        },
-        {
-          "texto": "es",
-          "inicio": 2.984,
-          "fin": 3.123
-        },
-        {
-          "texto": "parte",
-          "inicio": 3.181,
-          "fin": 3.437
-        },
-        {
-          "texto": "de",
-          "inicio": 3.483,
-          "fin": 3.564
-        },
-        {
-          "texto": "cómo",
-          "inicio": 3.669,
-          "fin": 3.889
-        },
-        {
-          "texto": "funciona",
-          "inicio": 3.924,
-          "fin": 4.307
-        },
-        {
-          "texto": "tu",
-          "inicio": 4.354,
-          "fin": 4.423
-        },
-        {
-          "texto": "cuerpo.",
-          "inicio": 4.47,
-          "fin": 4.853
-        },
-        {
-          "texto": "Cuidá",
-          "inicio": 5.422,
-          "fin": 5.735
-        },
-        {
-          "texto": "tu",
-          "inicio": 5.782,
-          "fin": 5.863
-        },
-        {
-          "texto": "reloj",
-          "inicio": 5.921,
-          "fin": 6.304
-        },
-        {
-          "texto": "y",
-          "inicio": 6.525,
-          "fin": 6.629
-        },
-        {
-          "texto": "él",
-          "inicio": 6.687,
-          "fin": 6.78
-        },
-        {
-          "texto": "te",
-          "inicio": 6.838,
-          "fin": 6.92
-        },
-        {
-          "texto": "cuida",
-          "inicio": 6.966,
-          "fin": 7.256
+          "inicio": 0.836,
+          "fin": 1.149
         },
         {
           "texto": "a",
-          "inicio": 7.291,
-          "fin": 7.314
+          "inicio": 1.533,
+          "fin": 1.591
         },
         {
-          "texto": "vos.",
-          "inicio": 7.349,
-          "fin": 7.605
+          "texto": "veces",
+          "inicio": 1.649,
+          "fin": 2.055
+        },
+        {
+          "texto": "una",
+          "inicio": 2.287,
+          "fin": 2.508
+        },
+        {
+          "texto": "idea",
+          "inicio": 2.566,
+          "fin": 2.891
+        },
+        {
+          "texto": "se",
+          "inicio": 2.949,
+          "fin": 3.053
+        },
+        {
+          "texto": "inventa",
+          "inicio": 3.1,
+          "fin": 3.564
+        },
+        {
+          "texto": "para",
+          "inicio": 3.622,
+          "fin": 3.796
+        },
+        {
+          "texto": "señalar",
+          "inicio": 3.843,
+          "fin": 4.238
+        },
+        {
+          "texto": "un",
+          "inicio": 4.307,
+          "fin": 4.354
+        },
+        {
+          "texto": "problema,",
+          "inicio": 4.4,
+          "fin": 4.876
+        },
+        {
+          "texto": "no",
+          "inicio": 5.306,
+          "fin": 5.503
+        },
+        {
+          "texto": "para",
+          "inicio": 5.573,
+          "fin": 5.747
+        },
+        {
+          "texto": "defenderla.",
+          "inicio": 5.793,
+          "fin": 6.385
+        },
+        {
+          "texto": "Antes",
+          "inicio": 7.059,
+          "fin": 7.454
+        },
+        {
+          "texto": "de",
+          "inicio": 7.5,
+          "fin": 7.546
+        },
+        {
+          "texto": "repetir",
+          "inicio": 7.616,
+          "fin": 8.011
+        },
+        {
+          "texto": "una",
+          "inicio": 8.057,
+          "fin": 8.185
+        },
+        {
+          "texto": "frase",
+          "inicio": 8.243,
+          "fin": 8.51
+        },
+        {
+          "texto": "famosa,",
+          "inicio": 8.557,
+          "fin": 9.021
+        },
+        {
+          "texto": "fijate",
+          "inicio": 9.451,
+          "fin": 9.892
+        },
+        {
+          "texto": "quién",
+          "inicio": 10.008,
+          "fin": 10.263
+        },
+        {
+          "texto": "la",
+          "inicio": 10.333,
+          "fin": 10.403
+        },
+        {
+          "texto": "dijo",
+          "inicio": 10.461,
+          "fin": 10.704
+        },
+        {
+          "texto": "y",
+          "inicio": 10.739,
+          "fin": 10.762
+        },
+        {
+          "texto": "por",
+          "inicio": 10.832,
+          "fin": 10.96
+        },
+        {
+          "texto": "qué.",
+          "inicio": 11.018,
+          "fin": 11.215
         }
       ]
     },
     "seguime": {
       "texto": "Seguime para más datos que no sabías.",
       "audio": "voz/seguime.mp3",
-      "duracion": 2.066,
+      "duracion": 2.145,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
       "normalizado": true,
       "palabras": [
         {
           "texto": "Seguime",
           "inicio": 0,
-          "fin": 0.348
+          "fin": 0.441
         },
         {
           "texto": "para",
-          "inicio": 0.383,
-          "fin": 0.534
+          "inicio": 0.476,
+          "fin": 0.639
         },
         {
           "texto": "más",
-          "inicio": 0.58,
-          "fin": 0.731
+          "inicio": 0.685,
+          "fin": 0.813
         },
         {
           "texto": "datos",
-          "inicio": 0.766,
-          "fin": 1.01
+          "inicio": 0.859,
+          "fin": 1.115
         },
         {
           "texto": "que",
-          "inicio": 1.057,
-          "fin": 1.126
+          "inicio": 1.149,
+          "fin": 1.219
         },
         {
           "texto": "no",
-          "inicio": 1.173,
-          "fin": 1.242
+          "inicio": 1.265,
+          "fin": 1.324
         },
         {
           "texto": "sabías.",
-          "inicio": 1.289,
-          "fin": 1.672
+          "inicio": 1.37,
+          "fin": 1.776
         }
       ]
     },
-    "gancho-maraton": {
-      "texto": "¿Por qué hay días en que dormís ocho horas y te levantás como si hubieras corrido una maratón... en sueños?",
-      "audio": "voz/gancho-maraton.mp3",
-      "duracion": 6.559,
+    "gancho-gato": {
+      "texto": "Un gato que está vivo y muerto al mismo tiempo. Y un genio lo inventó para demostrar que era absurdo.",
+      "audio": "voz/gancho-gato.mp3",
+      "duracion": 6.847,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
       "normalizado": true,
       "palabras": [
-        {
-          "texto": "¿Por",
-          "inicio": 0.058,
-          "fin": 0.244
-        },
-        {
-          "texto": "qué",
-          "inicio": 0.348,
-          "fin": 0.557
-        },
-        {
-          "texto": "hay",
-          "inicio": 0.615,
-          "fin": 0.755
-        },
-        {
-          "texto": "días",
-          "inicio": 0.813,
-          "fin": 1.103
-        },
-        {
-          "texto": "en",
-          "inicio": 1.161,
-          "fin": 1.231
-        },
-        {
-          "texto": "que",
-          "inicio": 1.289,
-          "fin": 1.37
-        },
-        {
-          "texto": "dormís",
-          "inicio": 1.416,
-          "fin": 1.707
-        },
-        {
-          "texto": "ocho",
-          "inicio": 1.765,
-          "fin": 1.974
-        },
-        {
-          "texto": "horas",
-          "inicio": 1.997,
-          "fin": 2.264
-        },
-        {
-          "texto": "y",
-          "inicio": 2.322,
-          "fin": 2.357
-        },
-        {
-          "texto": "te",
-          "inicio": 2.403,
-          "fin": 2.461
-        },
-        {
-          "texto": "levantás",
-          "inicio": 2.496,
-          "fin": 2.902
-        },
-        {
-          "texto": "como",
-          "inicio": 2.961,
-          "fin": 3.123
-        },
-        {
-          "texto": "si",
-          "inicio": 3.17,
-          "fin": 3.251
-        },
-        {
-          "texto": "hubieras",
-          "inicio": 3.274,
-          "fin": 3.541
-        },
-        {
-          "texto": "corrido",
-          "inicio": 3.599,
-          "fin": 3.924
-        },
-        {
-          "texto": "una",
-          "inicio": 3.982,
-          "fin": 4.098
-        },
-        {
-          "texto": "maratón...",
-          "inicio": 4.145,
-          "fin": 4.609
-        },
-        {
-          "texto": "en",
-          "inicio": 5.236,
-          "fin": 5.341
-        },
-        {
-          "texto": "sueños?",
-          "inicio": 5.399,
-          "fin": 5.84
-        }
-      ]
-    },
-    "dos-hormonas": {
-      "texto": "Parte de la culpa puede ser de dos hormonas que trabajan en equipo. Un equipo con muy mala comunicación: el cortisol y la melatonina.",
-      "audio": "voz/dos-hormonas.mp3",
-      "duracion": 8.884,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Parte",
-          "inicio": 0,
-          "fin": 0.313
-        },
-        {
-          "texto": "de",
-          "inicio": 0.36,
-          "fin": 0.406
-        },
-        {
-          "texto": "la",
-          "inicio": 0.453,
-          "fin": 0.522
-        },
-        {
-          "texto": "culpa",
-          "inicio": 0.58,
-          "fin": 0.987
-        },
-        {
-          "texto": "puede",
-          "inicio": 1.149,
-          "fin": 1.416
-        },
-        {
-          "texto": "ser",
-          "inicio": 1.463,
-          "fin": 1.602
-        },
-        {
-          "texto": "de",
-          "inicio": 1.66,
-          "fin": 1.73
-        },
-        {
-          "texto": "dos",
-          "inicio": 1.811,
-          "fin": 2.009
-        },
-        {
-          "texto": "hormonas",
-          "inicio": 2.067,
-          "fin": 2.438
-        },
-        {
-          "texto": "que",
-          "inicio": 2.496,
-          "fin": 2.577
-        },
-        {
-          "texto": "trabajan",
-          "inicio": 2.624,
-          "fin": 2.995
-        },
-        {
-          "texto": "en",
-          "inicio": 3.053,
-          "fin": 3.123
-        },
-        {
-          "texto": "equipo.",
-          "inicio": 3.181,
-          "fin": 3.587
-        },
         {
           "texto": "Un",
-          "inicio": 4.133,
-          "fin": 4.284
-        },
-        {
-          "texto": "equipo",
-          "inicio": 4.319,
-          "fin": 4.621
-        },
-        {
-          "texto": "con",
-          "inicio": 4.667,
-          "fin": 4.83
-        },
-        {
-          "texto": "muy",
-          "inicio": 4.899,
-          "fin": 5.108
-        },
-        {
-          "texto": "mala",
-          "inicio": 5.166,
-          "fin": 5.341
-        },
-        {
-          "texto": "comunicación:",
-          "inicio": 5.387,
-          "fin": 6.049
-        },
-        {
-          "texto": "el",
-          "inicio": 6.502,
-          "fin": 6.641
-        },
-        {
-          "texto": "cortisol",
-          "inicio": 6.699,
-          "fin": 7.21
-        },
-        {
-          "texto": "y",
-          "inicio": 7.396,
-          "fin": 7.477
-        },
-        {
-          "texto": "la",
-          "inicio": 7.558,
-          "fin": 7.616
-        },
-        {
-          "texto": "melatonina.",
-          "inicio": 7.663,
-          "fin": 8.29
-        }
-      ]
-    },
-    "cortisol-despertador": {
-      "texto": "El cortisol lo producen las glándulas suprarrenales. Es la famosa hormona del estrés, pero también funciona como tu despertador natural. Sí, el que no tiene botón de posponer.",
-      "audio": "voz/cortisol-despertador.mp3",
-      "duracion": 12.228,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "El",
           "inicio": 0,
           "fin": 0.151
         },
         {
-          "texto": "cortisol",
-          "inicio": 0.209,
-          "fin": 0.697
-        },
-        {
-          "texto": "lo",
-          "inicio": 0.882,
-          "fin": 1.022
-        },
-        {
-          "texto": "producen",
-          "inicio": 1.08,
-          "fin": 1.521
-        },
-        {
-          "texto": "las",
-          "inicio": 1.579,
-          "fin": 1.718
-        },
-        {
-          "texto": "glándulas",
-          "inicio": 1.788,
-          "fin": 2.287
-        },
-        {
-          "texto": "suprarrenales.",
-          "inicio": 2.357,
-          "fin": 3.239
-        },
-        {
-          "texto": "Es",
-          "inicio": 3.889,
-          "fin": 4.052
-        },
-        {
-          "texto": "la",
-          "inicio": 4.11,
-          "fin": 4.18
-        },
-        {
-          "texto": "famosa",
-          "inicio": 4.238,
-          "fin": 4.563
-        },
-        {
-          "texto": "hormona",
-          "inicio": 4.586,
-          "fin": 4.969
-        },
-        {
-          "texto": "del",
-          "inicio": 5.016,
-          "fin": 5.132
-        },
-        {
-          "texto": "estrés,",
-          "inicio": 5.178,
-          "fin": 5.526
-        },
-        {
-          "texto": "pero",
-          "inicio": 5.735,
-          "fin": 5.933
-        },
-        {
-          "texto": "también",
-          "inicio": 5.979,
-          "fin": 6.304
-        },
-        {
-          "texto": "funciona",
-          "inicio": 6.362,
-          "fin": 6.803
-        },
-        {
-          "texto": "como",
-          "inicio": 6.861,
-          "fin": 7.047
-        },
-        {
-          "texto": "tu",
-          "inicio": 7.105,
-          "fin": 7.21
-        },
-        {
-          "texto": "despertador",
-          "inicio": 7.268,
-          "fin": 7.895
-        },
-        {
-          "texto": "natural.",
-          "inicio": 7.953,
-          "fin": 8.371
-        },
-        {
-          "texto": "Sí,",
-          "inicio": 9.102,
-          "fin": 9.334
-        },
-        {
-          "texto": "el",
-          "inicio": 9.81,
-          "fin": 9.927
+          "texto": "gato",
+          "inicio": 0.221,
+          "fin": 0.511
         },
         {
           "texto": "que",
-          "inicio": 9.985,
-          "fin": 10.066
+          "inicio": 0.557,
+          "fin": 0.627
         },
         {
-          "texto": "no",
-          "inicio": 10.147,
-          "fin": 10.263
+          "texto": "está",
+          "inicio": 0.65,
+          "fin": 0.859
         },
         {
-          "texto": "tiene",
-          "inicio": 10.333,
-          "fin": 10.6
+          "texto": "vivo",
+          "inicio": 0.94,
+          "fin": 1.207
         },
         {
-          "texto": "botón",
-          "inicio": 10.646,
-          "fin": 10.913
+          "texto": "y",
+          "inicio": 1.242,
+          "fin": 1.265
         },
         {
-          "texto": "de",
-          "inicio": 10.971,
-          "fin": 11.041
+          "texto": "muerto",
+          "inicio": 1.324,
+          "fin": 1.649
         },
         {
-          "texto": "posponer.",
-          "inicio": 11.099,
-          "fin": 11.564
+          "texto": "al",
+          "inicio": 1.683,
+          "fin": 1.73
+        },
+        {
+          "texto": "mismo",
+          "inicio": 1.776,
+          "fin": 2.032
+        },
+        {
+          "texto": "tiempo.",
+          "inicio": 2.078,
+          "fin": 2.45
+        },
+        {
+          "texto": "Y",
+          "inicio": 3.053,
+          "fin": 3.111
+        },
+        {
+          "texto": "un",
+          "inicio": 3.193,
+          "fin": 3.251
+        },
+        {
+          "texto": "genio",
+          "inicio": 3.297,
+          "fin": 3.611
+        },
+        {
+          "texto": "lo",
+          "inicio": 3.657,
+          "fin": 3.727
+        },
+        {
+          "texto": "inventó",
+          "inicio": 3.785,
+          "fin": 4.307
+        },
+        {
+          "texto": "para",
+          "inicio": 4.377,
+          "fin": 4.551
+        },
+        {
+          "texto": "demostrar",
+          "inicio": 4.598,
+          "fin": 5.074
+        },
+        {
+          "texto": "que",
+          "inicio": 5.132,
+          "fin": 5.236
+        },
+        {
+          "texto": "era",
+          "inicio": 5.294,
+          "fin": 5.445
+        },
+        {
+          "texto": "absurdo.",
+          "inicio": 5.468,
+          "fin": 6.026
         }
       ]
     },
-    "curva-cortisol": {
-      "texto": "Su nivel sube a la mañana, suele llegar a su pico a los treinta o cuarenta minutos de despertar, y baja de a poco durante el día.",
-      "audio": "voz/curva-cortisol.mp3",
-      "duracion": 7.996,
+    "promesa": {
+      "texto": "Hoy te cuento por qué mucha gente no entendió lo que quiso decir. Y ojo con la última parte: ahí se pone raro de verdad.",
+      "audio": "voz/promesa.mp3",
+      "duracion": 8.623,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
       "normalizado": true,
       "palabras": [
         {
-          "texto": "Su",
+          "texto": "Hoy",
           "inicio": 0,
-          "fin": 0.186
+          "fin": 0.221
         },
         {
-          "texto": "nivel",
-          "inicio": 0.232,
-          "fin": 0.464
+          "texto": "te",
+          "inicio": 0.267,
+          "fin": 0.337
         },
         {
-          "texto": "sube",
-          "inicio": 0.522,
-          "fin": 0.731
+          "texto": "cuento",
+          "inicio": 0.383,
+          "fin": 0.65
         },
         {
-          "texto": "a",
-          "inicio": 0.778,
+          "texto": "por",
+          "inicio": 0.697,
           "fin": 0.801
         },
         {
-          "texto": "la",
+          "texto": "qué",
           "inicio": 0.848,
-          "fin": 0.906
+          "fin": 0.929
         },
         {
-          "texto": "mañana,",
-          "inicio": 0.952,
-          "fin": 1.324
+          "texto": "mucha",
+          "inicio": 0.964,
+          "fin": 1.196
         },
         {
-          "texto": "suele",
-          "inicio": 1.672,
-          "fin": 1.927
+          "texto": "gente",
+          "inicio": 1.231,
+          "fin": 1.498
         },
         {
-          "texto": "llegar",
-          "inicio": 1.95,
-          "fin": 2.183
+          "texto": "no",
+          "inicio": 1.544,
+          "fin": 1.602
         },
         {
-          "texto": "a",
-          "inicio": 2.218,
-          "fin": 2.241
+          "texto": "entendió",
+          "inicio": 1.649,
+          "fin": 2.043
         },
         {
-          "texto": "su",
-          "inicio": 2.287,
-          "fin": 2.392
+          "texto": "lo",
+          "inicio": 2.09,
+          "fin": 2.159
         },
         {
-          "texto": "pico",
-          "inicio": 2.45,
-          "fin": 2.67
+          "texto": "que",
+          "inicio": 2.194,
+          "fin": 2.264
         },
         {
-          "texto": "a",
-          "inicio": 2.694,
-          "fin": 2.717
+          "texto": "quiso",
+          "inicio": 2.322,
+          "fin": 2.577
         },
         {
-          "texto": "los",
-          "inicio": 2.74,
-          "fin": 2.868
+          "texto": "decir.",
+          "inicio": 2.624,
+          "fin": 2.961
         },
         {
-          "texto": "treinta",
-          "inicio": 2.949,
-          "fin": 3.425
+          "texto": "Y",
+          "inicio": 3.855,
+          "fin": 3.971
         },
         {
-          "texto": "o",
-          "inicio": 3.495,
-          "fin": 3.529
+          "texto": "ojo",
+          "inicio": 4.087,
+          "fin": 4.284
         },
         {
-          "texto": "cuarenta",
-          "inicio": 3.587,
-          "fin": 4.017
+          "texto": "con",
+          "inicio": 4.331,
+          "fin": 4.458
         },
         {
-          "texto": "minutos",
-          "inicio": 4.063,
-          "fin": 4.4
+          "texto": "la",
+          "inicio": 4.516,
+          "fin": 4.586
+        },
+        {
+          "texto": "última",
+          "inicio": 4.644,
+          "fin": 4.957
+        },
+        {
+          "texto": "parte:",
+          "inicio": 4.992,
+          "fin": 5.375
+        },
+        {
+          "texto": "ahí",
+          "inicio": 5.933,
+          "fin": 6.258
+        },
+        {
+          "texto": "se",
+          "inicio": 6.351,
+          "fin": 6.467
+        },
+        {
+          "texto": "pone",
+          "inicio": 6.536,
+          "fin": 6.838
+        },
+        {
+          "texto": "raro",
+          "inicio": 6.954,
+          "fin": 7.21
         },
         {
           "texto": "de",
-          "inicio": 4.447,
-          "fin": 4.505
+          "inicio": 7.268,
+          "fin": 7.326
         },
         {
-          "texto": "despertar,",
-          "inicio": 4.563,
-          "fin": 5.085
-        },
-        {
-          "texto": "y",
-          "inicio": 5.573,
-          "fin": 5.677
-        },
-        {
-          "texto": "baja",
-          "inicio": 5.759,
-          "fin": 6.014
-        },
-        {
-          "texto": "de",
-          "inicio": 6.06,
-          "fin": 6.118
-        },
-        {
-          "texto": "a",
-          "inicio": 6.165,
-          "fin": 6.188
-        },
-        {
-          "texto": "poco",
-          "inicio": 6.246,
-          "fin": 6.478
-        },
-        {
-          "texto": "durante",
-          "inicio": 6.525,
-          "fin": 6.873
-        },
-        {
-          "texto": "el",
-          "inicio": 6.896,
-          "fin": 6.954
-        },
-        {
-          "texto": "día.",
-          "inicio": 6.989,
-          "fin": 7.221
+          "texto": "verdad.",
+          "inicio": 7.372,
+          "fin": 7.744
         }
       ]
     },
-    "peligro-energia": {
-      "texto": "Ante un peligro, te da energía extra: sube el azúcar en sangre y te mantiene en alerta. Muy útil si te persigue un perro. Menos útil si es un mail de tu jefe.",
-      "audio": "voz/peligro-energia.mp3",
-      "duracion": 10.896,
+    "caja-1935": {
+      "texto": "Año 1935. El físico Erwin Schrödinger imagina una caja cerrada con un gato adentro, un átomo radiactivo y un mecanismo. Si el átomo se desintegra, algo malo le pasa al gato.",
+      "audio": "voz/caja-1935.mp3",
+      "duracion": 13.769,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
       "normalizado": true,
       "palabras": [
         {
-          "texto": "Ante",
+          "texto": "Año",
           "inicio": 0,
-          "fin": 0.279
+          "fin": 0.325
+        },
+        {
+          "texto": "1935.",
+          "inicio": 0.372,
+          "fin": 1.625
+        },
+        {
+          "texto": "El",
+          "inicio": 2.218,
+          "fin": 2.357
+        },
+        {
+          "texto": "físico",
+          "inicio": 2.426,
+          "fin": 2.926
+        },
+        {
+          "texto": "Erwin",
+          "inicio": 3.042,
+          "fin": 3.437
+        },
+        {
+          "texto": "Schrödinger",
+          "inicio": 3.495,
+          "fin": 4.098
+        },
+        {
+          "texto": "imagina",
+          "inicio": 4.331,
+          "fin": 4.818
+        },
+        {
+          "texto": "una",
+          "inicio": 4.888,
+          "fin": 5.05
+        },
+        {
+          "texto": "caja",
+          "inicio": 5.108,
+          "fin": 5.364
+        },
+        {
+          "texto": "cerrada",
+          "inicio": 5.41,
+          "fin": 5.77
+        },
+        {
+          "texto": "con",
+          "inicio": 5.817,
+          "fin": 5.933
         },
         {
           "texto": "un",
-          "inicio": 0.337,
-          "fin": 0.406
+          "inicio": 6.026,
+          "fin": 6.084
         },
         {
-          "texto": "peligro,",
-          "inicio": 0.453,
-          "fin": 0.894
+          "texto": "gato",
+          "inicio": 6.153,
+          "fin": 6.385
         },
         {
-          "texto": "te",
-          "inicio": 1.057,
-          "fin": 1.173
+          "texto": "adentro,",
+          "inicio": 6.432,
+          "fin": 6.873
         },
         {
-          "texto": "da",
-          "inicio": 1.231,
-          "fin": 1.335
+          "texto": "un",
+          "inicio": 7.233,
+          "fin": 7.349
         },
         {
-          "texto": "energía",
-          "inicio": 1.393,
-          "fin": 1.8
+          "texto": "átomo",
+          "inicio": 7.407,
+          "fin": 7.651
         },
         {
-          "texto": "extra:",
-          "inicio": 1.846,
-          "fin": 2.171
-        },
-        {
-          "texto": "sube",
-          "inicio": 2.566,
-          "fin": 2.902
-        },
-        {
-          "texto": "el",
-          "inicio": 2.926,
-          "fin": 2.995
-        },
-        {
-          "texto": "azúcar",
-          "inicio": 3.053,
-          "fin": 3.332
-        },
-        {
-          "texto": "en",
-          "inicio": 3.379,
-          "fin": 3.425
-        },
-        {
-          "texto": "sangre",
-          "inicio": 3.471,
-          "fin": 3.808
+          "texto": "radiactivo",
+          "inicio": 7.709,
+          "fin": 8.348
         },
         {
           "texto": "y",
-          "inicio": 3.913,
-          "fin": 4.017
-        },
-        {
-          "texto": "te",
-          "inicio": 4.075,
-          "fin": 4.145
-        },
-        {
-          "texto": "mantiene",
-          "inicio": 4.191,
-          "fin": 4.621
-        },
-        {
-          "texto": "en",
-          "inicio": 4.667,
-          "fin": 4.737
-        },
-        {
-          "texto": "alerta.",
-          "inicio": 4.795,
-          "fin": 5.213
-        },
-        {
-          "texto": "Muy",
-          "inicio": 5.863,
-          "fin": 6.095
-        },
-        {
-          "texto": "útil",
-          "inicio": 6.153,
-          "fin": 6.374
-        },
-        {
-          "texto": "si",
-          "inicio": 6.42,
-          "fin": 6.502
-        },
-        {
-          "texto": "te",
-          "inicio": 6.548,
-          "fin": 6.629
-        },
-        {
-          "texto": "persigue",
-          "inicio": 6.676,
-          "fin": 7.024
+          "inicio": 8.545,
+          "fin": 8.626
         },
         {
           "texto": "un",
-          "inicio": 7.105,
-          "fin": 7.163
+          "inicio": 8.742,
+          "fin": 8.8
         },
         {
-          "texto": "perro.",
-          "inicio": 7.221,
-          "fin": 7.546
+          "texto": "mecanismo.",
+          "inicio": 8.858,
+          "fin": 9.485
         },
         {
-          "texto": "Menos",
-          "inicio": 8.15,
-          "fin": 8.417
+          "texto": "Si",
+          "inicio": 10.066,
+          "fin": 10.24
         },
         {
-          "texto": "útil",
-          "inicio": 8.522,
-          "fin": 8.777
+          "texto": "el",
+          "inicio": 10.275,
+          "fin": 10.333
         },
         {
-          "texto": "si",
-          "inicio": 8.893,
-          "fin": 9.056
+          "texto": "átomo",
+          "inicio": 10.403,
+          "fin": 10.635
         },
         {
-          "texto": "es",
-          "inicio": 9.114,
-          "fin": 9.172
+          "texto": "se",
+          "inicio": 10.681,
+          "fin": 10.762
         },
         {
-          "texto": "un",
-          "inicio": 9.242,
-          "fin": 9.311
+          "texto": "desintegra,",
+          "inicio": 10.809,
+          "fin": 11.447
         },
         {
-          "texto": "mail",
-          "inicio": 9.369,
-          "fin": 9.52
+          "texto": "algo",
+          "inicio": 11.726,
+          "fin": 11.993
         },
         {
-          "texto": "de",
-          "inicio": 9.578,
-          "fin": 9.636
+          "texto": "malo",
+          "inicio": 12.04,
+          "fin": 12.249
         },
         {
-          "texto": "tu",
-          "inicio": 9.683,
-          "fin": 9.764
+          "texto": "le",
+          "inicio": 12.295,
+          "fin": 12.353
         },
         {
-          "texto": "jefe.",
-          "inicio": 9.822,
-          "fin": 10.136
+          "texto": "pasa",
+          "inicio": 12.399,
+          "fin": 12.585
+        },
+        {
+          "texto": "al",
+          "inicio": 12.608,
+          "fin": 12.666
+        },
+        {
+          "texto": "gato.",
+          "inicio": 12.725,
+          "fin": 13.05
         }
       ]
     },
-    "estres-sin-pausa": {
-      "texto": "El problema es cuando el estrés no para. Un cortisol alto durante mucho tiempo se asocia con cansancio, tensión y mal sueño. Tu cuerpo, en modo alerta las veinticuatro horas.",
-      "audio": "voz/estres-sin-pausa.mp3",
-      "duracion": 12.881,
+    "cincuenta": {
+      "texto": "El átomo tiene el cincuenta por ciento de probabilidades de desintegrarse en una hora. No sabés qué pasó… hasta abrir la caja.",
+      "audio": "voz/cincuenta.mp3",
+      "duracion": 8.284,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
       "normalizado": true,
       "palabras": [
         {
           "texto": "El",
           "inicio": 0,
-          "fin": 0.163
+          "fin": 0.221
         },
         {
-          "texto": "problema",
-          "inicio": 0.221,
-          "fin": 0.627
+          "texto": "átomo",
+          "inicio": 0.29,
+          "fin": 0.58
         },
         {
-          "texto": "es",
-          "inicio": 0.673,
-          "fin": 0.743
-        },
-        {
-          "texto": "cuando",
-          "inicio": 0.801,
-          "fin": 1.068
+          "texto": "tiene",
+          "inicio": 0.627,
+          "fin": 0.836
         },
         {
           "texto": "el",
-          "inicio": 1.091,
-          "fin": 1.138
+          "inicio": 0.859,
+          "fin": 0.929
         },
         {
-          "texto": "estrés",
-          "inicio": 1.196,
-          "fin": 1.567
+          "texto": "cincuenta",
+          "inicio": 0.987,
+          "fin": 1.474
         },
         {
-          "texto": "no",
-          "inicio": 1.707,
-          "fin": 1.869
+          "texto": "por",
+          "inicio": 1.509,
+          "fin": 1.625
         },
         {
-          "texto": "para.",
-          "inicio": 1.927,
-          "fin": 2.241
-        },
-        {
-          "texto": "Un",
-          "inicio": 2.926,
-          "fin": 3.077
-        },
-        {
-          "texto": "cortisol",
-          "inicio": 3.135,
-          "fin": 3.576
-        },
-        {
-          "texto": "alto",
-          "inicio": 3.634,
-          "fin": 3.843
-        },
-        {
-          "texto": "durante",
-          "inicio": 3.889,
-          "fin": 4.226
-        },
-        {
-          "texto": "mucho",
-          "inicio": 4.296,
-          "fin": 4.586
-        },
-        {
-          "texto": "tiempo",
-          "inicio": 4.632,
-          "fin": 4.992
-        },
-        {
-          "texto": "se",
-          "inicio": 5.213,
-          "fin": 5.341
-        },
-        {
-          "texto": "asocia",
-          "inicio": 5.399,
-          "fin": 5.759
-        },
-        {
-          "texto": "con",
-          "inicio": 5.805,
-          "fin": 5.944
-        },
-        {
-          "texto": "cansancio,",
-          "inicio": 6.002,
-          "fin": 6.583
-        },
-        {
-          "texto": "tensión",
-          "inicio": 6.873,
-          "fin": 7.384
-        },
-        {
-          "texto": "y",
-          "inicio": 7.523,
-          "fin": 7.628
-        },
-        {
-          "texto": "mal",
-          "inicio": 7.709,
-          "fin": 7.872
-        },
-        {
-          "texto": "sueño.",
-          "inicio": 7.93,
-          "fin": 8.301
-        },
-        {
-          "texto": "Tu",
-          "inicio": 9.044,
-          "fin": 9.172
-        },
-        {
-          "texto": "cuerpo,",
-          "inicio": 9.218,
-          "fin": 9.613
-        },
-        {
-          "texto": "en",
-          "inicio": 9.892,
-          "fin": 10.031
-        },
-        {
-          "texto": "modo",
-          "inicio": 10.101,
-          "fin": 10.356
-        },
-        {
-          "texto": "alerta",
-          "inicio": 10.414,
-          "fin": 10.728
-        },
-        {
-          "texto": "las",
-          "inicio": 10.774,
-          "fin": 10.902
-        },
-        {
-          "texto": "veinticuatro",
-          "inicio": 10.96,
-          "fin": 11.598
-        },
-        {
-          "texto": "horas.",
-          "inicio": 11.622,
-          "fin": 11.923
-        }
-      ]
-    },
-    "melatonina": {
-      "texto": "La melatonina es la otra mitad del equipo. Una glándula del cerebro la produce sobre todo cuando oscurece y le avisa al cuerpo: “che, es hora de dormir”.",
-      "audio": "voz/melatonina.mp3",
-      "duracion": 10.661,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "La",
-          "inicio": 0,
-          "fin": 0.163
-        },
-        {
-          "texto": "melatonina",
-          "inicio": 0.221,
-          "fin": 0.848
-        },
-        {
-          "texto": "es",
-          "inicio": 0.952,
-          "fin": 1.126
-        },
-        {
-          "texto": "la",
-          "inicio": 1.196,
-          "fin": 1.3
-        },
-        {
-          "texto": "otra",
-          "inicio": 1.382,
-          "fin": 1.579
-        },
-        {
-          "texto": "mitad",
-          "inicio": 1.625,
-          "fin": 1.881
-        },
-        {
-          "texto": "del",
-          "inicio": 1.904,
-          "fin": 2.02
-        },
-        {
-          "texto": "equipo.",
-          "inicio": 2.055,
-          "fin": 2.415
-        },
-        {
-          "texto": "Una",
-          "inicio": 2.902,
-          "fin": 3.111
-        },
-        {
-          "texto": "glándula",
-          "inicio": 3.158,
-          "fin": 3.564
-        },
-        {
-          "texto": "del",
-          "inicio": 3.611,
-          "fin": 3.715
-        },
-        {
-          "texto": "cerebro",
-          "inicio": 3.762,
-          "fin": 4.191
-        },
-        {
-          "texto": "la",
-          "inicio": 4.377,
-          "fin": 4.493
-        },
-        {
-          "texto": "produce",
-          "inicio": 4.551,
-          "fin": 4.923
-        },
-        {
-          "texto": "sobre",
-          "inicio": 4.969,
-          "fin": 5.213
-        },
-        {
-          "texto": "todo",
-          "inicio": 5.259,
-          "fin": 5.48
-        },
-        {
-          "texto": "cuando",
-          "inicio": 5.526,
-          "fin": 5.84
-        },
-        {
-          "texto": "oscurece",
-          "inicio": 5.898,
-          "fin": 6.478
-        },
-        {
-          "texto": "y",
-          "inicio": 6.641,
-          "fin": 6.722
-        },
-        {
-          "texto": "le",
-          "inicio": 6.792,
-          "fin": 6.861
-        },
-        {
-          "texto": "avisa",
-          "inicio": 6.896,
-          "fin": 7.14
-        },
-        {
-          "texto": "al",
-          "inicio": 7.163,
-          "fin": 7.221
-        },
-        {
-          "texto": "cuerpo:",
-          "inicio": 7.279,
-          "fin": 7.674
-        },
-        {
-          "texto": "“che,",
-          "inicio": 8.127,
-          "fin": 8.452
-        },
-        {
-          "texto": "es",
-          "inicio": 8.858,
-          "fin": 8.998
-        },
-        {
-          "texto": "hora",
-          "inicio": 9.044,
-          "fin": 9.183
+          "texto": "ciento",
+          "inicio": 1.672,
+          "fin": 1.962
         },
         {
           "texto": "de",
-          "inicio": 9.23,
-          "fin": 9.288
+          "inicio": 1.997,
+          "fin": 2.055
         },
         {
-          "texto": "dormir”.",
-          "inicio": 9.334,
-          "fin": 9.671
+          "texto": "probabilidades",
+          "inicio": 2.113,
+          "fin": 2.902
+        },
+        {
+          "texto": "de",
+          "inicio": 2.961,
+          "fin": 3.019
+        },
+        {
+          "texto": "desintegrarse",
+          "inicio": 3.077,
+          "fin": 3.796
+        },
+        {
+          "texto": "en",
+          "inicio": 3.843,
+          "fin": 3.901
+        },
+        {
+          "texto": "una",
+          "inicio": 3.982,
+          "fin": 4.145
+        },
+        {
+          "texto": "hora.",
+          "inicio": 4.18,
+          "fin": 4.447
+        },
+        {
+          "texto": "No",
+          "inicio": 5.05,
+          "fin": 5.178
+        },
+        {
+          "texto": "sabés",
+          "inicio": 5.213,
+          "fin": 5.457
+        },
+        {
+          "texto": "qué",
+          "inicio": 5.503,
+          "fin": 5.573
+        },
+        {
+          "texto": "pasó…",
+          "inicio": 5.608,
+          "fin": 5.898
+        },
+        {
+          "texto": "hasta",
+          "inicio": 6.432,
+          "fin": 6.803
+        },
+        {
+          "texto": "abrir",
+          "inicio": 6.85,
+          "fin": 7.117
+        },
+        {
+          "texto": "la",
+          "inicio": 7.175,
+          "fin": 7.256
+        },
+        {
+          "texto": "caja.",
+          "inicio": 7.303,
+          "fin": 7.686
         }
       ]
     },
-    "luz-pantalla": {
-      "texto": "Pero la luz la frena. Un estudio mostró que leer en una pantalla luminosa antes de dormir retrasó la melatonina y costó más despertar al día siguiente. Sí, ese “solo un video más” puede tener costo.",
-      "audio": "voz/luz-pantalla.mp3",
-      "duracion": 14.684,
+    "superposicion": {
+      "texto": "Y acá viene lo raro. En el mundo cuántico, un átomo puede estar en dos estados a la vez, hasta que se lo mide. Eso se llama superposición.",
+      "audio": "voz/superposicion.mp3",
+      "duracion": 10.008,
       "voz": "IKne3meq5aSn9XLyUdCD",
       "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Y",
+          "inicio": 0,
+          "fin": 0.093
+        },
+        {
+          "texto": "acá",
+          "inicio": 0.163,
+          "fin": 0.313
+        },
+        {
+          "texto": "viene",
+          "inicio": 0.36,
+          "fin": 0.569
+        },
+        {
+          "texto": "lo",
+          "inicio": 0.604,
+          "fin": 0.673
+        },
+        {
+          "texto": "raro.",
+          "inicio": 0.755,
+          "fin": 1.045
+        },
+        {
+          "texto": "En",
+          "inicio": 1.474,
+          "fin": 1.602
+        },
+        {
+          "texto": "el",
+          "inicio": 1.66,
+          "fin": 1.73
+        },
+        {
+          "texto": "mundo",
+          "inicio": 1.788,
+          "fin": 2.078
+        },
+        {
+          "texto": "cuántico,",
+          "inicio": 2.136,
+          "fin": 2.74
+        },
+        {
+          "texto": "un",
+          "inicio": 3.088,
+          "fin": 3.216
+        },
+        {
+          "texto": "átomo",
+          "inicio": 3.274,
+          "fin": 3.611
+        },
+        {
+          "texto": "puede",
+          "inicio": 3.704,
+          "fin": 3.994
+        },
+        {
+          "texto": "estar",
+          "inicio": 4.017,
+          "fin": 4.261
+        },
+        {
+          "texto": "en",
+          "inicio": 4.307,
+          "fin": 4.365
+        },
+        {
+          "texto": "dos",
+          "inicio": 4.435,
+          "fin": 4.609
+        },
+        {
+          "texto": "estados",
+          "inicio": 4.667,
+          "fin": 5.039
+        },
+        {
+          "texto": "a",
+          "inicio": 5.097,
+          "fin": 5.12
+        },
+        {
+          "texto": "la",
+          "inicio": 5.155,
+          "fin": 5.201
+        },
+        {
+          "texto": "vez,",
+          "inicio": 5.248,
+          "fin": 5.468
+        },
+        {
+          "texto": "hasta",
+          "inicio": 5.898,
+          "fin": 6.165
+        },
+        {
+          "texto": "que",
+          "inicio": 6.211,
+          "fin": 6.281
+        },
+        {
+          "texto": "se",
+          "inicio": 6.339,
+          "fin": 6.409
+        },
+        {
+          "texto": "lo",
+          "inicio": 6.444,
+          "fin": 6.525
+        },
+        {
+          "texto": "mide.",
+          "inicio": 6.571,
+          "fin": 6.861
+        },
+        {
+          "texto": "Eso",
+          "inicio": 7.465,
+          "fin": 7.697
+        },
+        {
+          "texto": "se",
+          "inicio": 7.744,
+          "fin": 7.825
+        },
+        {
+          "texto": "llama",
+          "inicio": 7.848,
+          "fin": 8.185
+        },
+        {
+          "texto": "superposición.",
+          "inicio": 8.452,
+          "fin": 9.474
+        }
+      ]
+    },
+    "gato-tambien": {
+      "texto": "Entonces, según esa idea, el átomo está desintegrado y no desintegrado. Y como el gato depende del átomo… ¿el gato también?",
+      "audio": "voz/gato-tambien.mp3",
+      "duracion": 9.119,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Entonces,",
+          "inicio": 0,
+          "fin": 0.604
+        },
+        {
+          "texto": "según",
+          "inicio": 0.708,
+          "fin": 1.103
+        },
+        {
+          "texto": "esa",
+          "inicio": 1.149,
+          "fin": 1.289
+        },
+        {
+          "texto": "idea,",
+          "inicio": 1.324,
+          "fin": 1.672
+        },
+        {
+          "texto": "el",
+          "inicio": 1.892,
+          "fin": 2.032
+        },
+        {
+          "texto": "átomo",
+          "inicio": 2.113,
+          "fin": 2.38
+        },
+        {
+          "texto": "está",
+          "inicio": 2.415,
+          "fin": 2.647
+        },
+        {
+          "texto": "desintegrado",
+          "inicio": 2.717,
+          "fin": 3.448
+        },
+        {
+          "texto": "y",
+          "inicio": 3.611,
+          "fin": 3.704
+        },
+        {
+          "texto": "no",
+          "inicio": 3.82,
+          "fin": 3.959
+        },
+        {
+          "texto": "desintegrado.",
+          "inicio": 4.017,
+          "fin": 4.748
+        },
+        {
+          "texto": "Y",
+          "inicio": 5.143,
+          "fin": 5.224
+        },
+        {
+          "texto": "como",
+          "inicio": 5.317,
+          "fin": 5.526
+        },
+        {
+          "texto": "el",
+          "inicio": 5.561,
+          "fin": 5.619
+        },
+        {
+          "texto": "gato",
+          "inicio": 5.689,
+          "fin": 5.944
+        },
+        {
+          "texto": "depende",
+          "inicio": 5.991,
+          "fin": 6.385
+        },
+        {
+          "texto": "del",
+          "inicio": 6.444,
+          "fin": 6.571
+        },
+        {
+          "texto": "átomo…",
+          "inicio": 6.629,
+          "fin": 7.036
+        },
+        {
+          "texto": "¿el",
+          "inicio": 7.732,
+          "fin": 7.848
+        },
+        {
+          "texto": "gato",
+          "inicio": 7.895,
+          "fin": 8.081
+        },
+        {
+          "texto": "también?",
+          "inicio": 8.127,
+          "fin": 8.498
+        }
+      ]
+    },
+    "giro-critica": {
+      "texto": "Pero acá está el giro: Schrödinger no creía eso. Lo propuso como una crítica, para mostrar lo ridículo que sonaba llevar esa idea hasta un gato.",
+      "audio": "voz/giro-critica.mp3",
+      "duracion": 10.504,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
       "normalizado": true,
       "palabras": [
         {
           "texto": "Pero",
           "inicio": 0,
-          "fin": 0.267
+          "fin": 0.279
         },
         {
-          "texto": "la",
-          "inicio": 0.313,
-          "fin": 0.383
+          "texto": "acá",
+          "inicio": 0.337,
+          "fin": 0.557
         },
         {
-          "texto": "luz",
-          "inicio": 0.441,
-          "fin": 0.627
-        },
-        {
-          "texto": "la",
-          "inicio": 0.685,
-          "fin": 0.755
-        },
-        {
-          "texto": "frena.",
-          "inicio": 0.813,
-          "fin": 1.173
-        },
-        {
-          "texto": "Un",
-          "inicio": 1.881,
-          "fin": 2.043
-        },
-        {
-          "texto": "estudio",
-          "inicio": 2.09,
-          "fin": 2.473
-        },
-        {
-          "texto": "mostró",
-          "inicio": 2.519,
-          "fin": 2.821
-        },
-        {
-          "texto": "que",
-          "inicio": 2.879,
-          "fin": 2.984
-        },
-        {
-          "texto": "leer",
-          "inicio": 3.065,
-          "fin": 3.39
-        },
-        {
-          "texto": "en",
-          "inicio": 3.448,
-          "fin": 3.495
-        },
-        {
-          "texto": "una",
-          "inicio": 3.599,
-          "fin": 3.738
-        },
-        {
-          "texto": "pantalla",
-          "inicio": 3.785,
-          "fin": 4.214
-        },
-        {
-          "texto": "luminosa",
-          "inicio": 4.261,
-          "fin": 4.807
-        },
-        {
-          "texto": "antes",
-          "inicio": 4.865,
-          "fin": 5.201
-        },
-        {
-          "texto": "de",
-          "inicio": 5.248,
-          "fin": 5.329
-        },
-        {
-          "texto": "dormir",
-          "inicio": 5.375,
-          "fin": 5.724
-        },
-        {
-          "texto": "retrasó",
-          "inicio": 6.014,
-          "fin": 6.444
-        },
-        {
-          "texto": "la",
-          "inicio": 6.502,
-          "fin": 6.583
-        },
-        {
-          "texto": "melatonina",
-          "inicio": 6.641,
-          "fin": 7.245
-        },
-        {
-          "texto": "y",
-          "inicio": 7.5,
-          "fin": 7.581
-        },
-        {
-          "texto": "costó",
-          "inicio": 7.651,
-          "fin": 7.988
-        },
-        {
-          "texto": "más",
-          "inicio": 8.092,
-          "fin": 8.313
-        },
-        {
-          "texto": "despertar",
-          "inicio": 8.348,
-          "fin": 8.812
-        },
-        {
-          "texto": "al",
-          "inicio": 8.858,
-          "fin": 8.928
-        },
-        {
-          "texto": "día",
-          "inicio": 8.986,
-          "fin": 9.125
-        },
-        {
-          "texto": "siguiente.",
-          "inicio": 9.172,
-          "fin": 9.659
-        },
-        {
-          "texto": "Sí,",
-          "inicio": 10.368,
-          "fin": 10.693
-        },
-        {
-          "texto": "ese",
-          "inicio": 11.111,
-          "fin": 11.54
-        },
-        {
-          "texto": "“solo",
-          "inicio": 11.784,
-          "fin": 12.098
-        },
-        {
-          "texto": "un",
-          "inicio": 12.144,
-          "fin": 12.202
-        },
-        {
-          "texto": "video",
-          "inicio": 12.249,
-          "fin": 12.527
-        },
-        {
-          "texto": "más”",
-          "inicio": 12.574,
-          "fin": 12.841
-        },
-        {
-          "texto": "puede",
-          "inicio": 13.05,
-          "fin": 13.317
-        },
-        {
-          "texto": "tener",
-          "inicio": 13.375,
-          "fin": 13.595
-        },
-        {
-          "texto": "costo.",
-          "inicio": 13.653,
-          "fin": 14.025
-        }
-      ]
-    },
-    "reloj-desordenado": {
-      "texto": "O sea: de noche, el cortisol debería estar bajo y la melatonina alta. Si el estrés o el celular los cambian, tu reloj interno puede hacer un desastre.",
-      "audio": "voz/reloj-desordenado.mp3",
-      "duracion": 10.06,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "O",
-          "inicio": 0,
-          "fin": 0.104
-        },
-        {
-          "texto": "sea:",
-          "inicio": 0.174,
-          "fin": 0.418
-        },
-        {
-          "texto": "de",
-          "inicio": 0.778,
-          "fin": 0.882
-        },
-        {
-          "texto": "noche,",
-          "inicio": 0.94,
-          "fin": 1.312
+          "texto": "está",
+          "inicio": 0.604,
+          "fin": 0.766
         },
         {
           "texto": "el",
-          "inicio": 1.579,
-          "fin": 1.695
+          "inicio": 0.801,
+          "fin": 0.859
         },
         {
-          "texto": "cortisol",
-          "inicio": 1.753,
-          "fin": 2.183
+          "texto": "giro:",
+          "inicio": 0.929,
+          "fin": 1.265
         },
         {
-          "texto": "debería",
-          "inicio": 2.229,
-          "fin": 2.543
-        },
-        {
-          "texto": "estar",
-          "inicio": 2.566,
-          "fin": 2.775
-        },
-        {
-          "texto": "bajo",
-          "inicio": 2.833,
-          "fin": 3.1
-        },
-        {
-          "texto": "y",
-          "inicio": 3.123,
-          "fin": 3.158
-        },
-        {
-          "texto": "la",
-          "inicio": 3.216,
-          "fin": 3.286
-        },
-        {
-          "texto": "melatonina",
-          "inicio": 3.344,
-          "fin": 3.855
-        },
-        {
-          "texto": "alta.",
-          "inicio": 3.878,
-          "fin": 4.168
-        },
-        {
-          "texto": "Si",
-          "inicio": 4.853,
-          "fin": 5.027
-        },
-        {
-          "texto": "el",
-          "inicio": 5.062,
-          "fin": 5.108
-        },
-        {
-          "texto": "estrés",
-          "inicio": 5.166,
-          "fin": 5.492
-        },
-        {
-          "texto": "o",
-          "inicio": 5.55,
-          "fin": 5.573
-        },
-        {
-          "texto": "el",
-          "inicio": 5.619,
-          "fin": 5.689
-        },
-        {
-          "texto": "celular",
-          "inicio": 5.735,
-          "fin": 6.095
-        },
-        {
-          "texto": "los",
-          "inicio": 6.142,
-          "fin": 6.258
-        },
-        {
-          "texto": "cambian,",
-          "inicio": 6.304,
-          "fin": 6.711
-        },
-        {
-          "texto": "tu",
-          "inicio": 7.105,
-          "fin": 7.21
-        },
-        {
-          "texto": "reloj",
-          "inicio": 7.279,
-          "fin": 7.535
-        },
-        {
-          "texto": "interno",
-          "inicio": 7.581,
-          "fin": 7.953
-        },
-        {
-          "texto": "puede",
-          "inicio": 8.011,
-          "fin": 8.266
-        },
-        {
-          "texto": "hacer",
-          "inicio": 8.301,
-          "fin": 8.51
-        },
-        {
-          "texto": "un",
-          "inicio": 8.557,
-          "fin": 8.603
-        },
-        {
-          "texto": "desastre.",
-          "inicio": 8.649,
-          "fin": 9.137
-        }
-      ]
-    },
-    "habitos": {
-      "texto": "Algunos hábitos ayudan: luz natural a la mañana, luces bajas a la noche, horarios regulares y menos pantallas antes de dormir. Sí, ya sabías todo esto. Yo también.",
-      "audio": "voz/habitos.mp3",
-      "duracion": 12.28,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Algunos",
-          "inicio": 0,
-          "fin": 0.453
-        },
-        {
-          "texto": "hábitos",
-          "inicio": 0.511,
-          "fin": 0.836
-        },
-        {
-          "texto": "ayudan:",
-          "inicio": 0.894,
-          "fin": 1.312
-        },
-        {
-          "texto": "luz",
-          "inicio": 1.695,
-          "fin": 1.881
-        },
-        {
-          "texto": "natural",
+          "texto": "Schrödinger",
           "inicio": 1.939,
-          "fin": 2.287
-        },
-        {
-          "texto": "a",
-          "inicio": 2.334,
-          "fin": 2.357
-        },
-        {
-          "texto": "la",
-          "inicio": 2.392,
-          "fin": 2.45
-        },
-        {
-          "texto": "mañana,",
-          "inicio": 2.496,
-          "fin": 2.995
-        },
-        {
-          "texto": "luces",
-          "inicio": 3.344,
-          "fin": 3.611
-        },
-        {
-          "texto": "bajas",
-          "inicio": 3.669,
-          "fin": 3.913
-        },
-        {
-          "texto": "a",
-          "inicio": 3.971,
-          "fin": 3.994
-        },
-        {
-          "texto": "la",
-          "inicio": 4.04,
-          "fin": 4.098
-        },
-        {
-          "texto": "noche,",
-          "inicio": 4.156,
-          "fin": 4.551
-        },
-        {
-          "texto": "horarios",
-          "inicio": 4.853,
-          "fin": 5.271
-        },
-        {
-          "texto": "regulares",
-          "inicio": 5.329,
-          "fin": 5.851
-        },
-        {
-          "texto": "y",
-          "inicio": 5.991,
-          "fin": 6.049
-        },
-        {
-          "texto": "menos",
-          "inicio": 6.153,
-          "fin": 6.42
-        },
-        {
-          "texto": "pantallas",
-          "inicio": 6.478,
-          "fin": 6.954
-        },
-        {
-          "texto": "antes",
-          "inicio": 7.094,
-          "fin": 7.396
-        },
-        {
-          "texto": "de",
-          "inicio": 7.442,
-          "fin": 7.5
-        },
-        {
-          "texto": "dormir.",
-          "inicio": 7.546,
-          "fin": 7.895
-        },
-        {
-          "texto": "Sí,",
-          "inicio": 8.464,
-          "fin": 8.789
-        },
-        {
-          "texto": "ya",
-          "inicio": 9.195,
-          "fin": 9.323
-        },
-        {
-          "texto": "sabías",
-          "inicio": 9.369,
-          "fin": 9.694
-        },
-        {
-          "texto": "todo",
-          "inicio": 9.752,
-          "fin": 9.961
-        },
-        {
-          "texto": "esto.",
-          "inicio": 10.031,
-          "fin": 10.344
-        },
-        {
-          "texto": "Yo",
-          "inicio": 10.797,
-          "fin": 10.925
-        },
-        {
-          "texto": "también.",
-          "inicio": 10.983,
-          "fin": 11.378
-        }
-      ]
-    },
-    "reloj-suizo": {
-      "texto": "Tu cuerpo es un reloj suizo. Lo único que no encaja es el celular, que te dice: “solo un video más”. Y vos mirando este.",
-      "audio": "voz/reloj-suizo.mp3",
-      "duracion": 8.884,
-      "voz": "IKne3meq5aSn9XLyUdCD",
-      "modelo": "eleven_multilingual_v2",
-      "velocidad": 1.1,
-      "ajustes": "0.42/0.38",
-      "normalizado": true,
-      "palabras": [
-        {
-          "texto": "Tu",
-          "inicio": 0,
-          "fin": 0.163
-        },
-        {
-          "texto": "cuerpo",
-          "inicio": 0.209,
-          "fin": 0.534
-        },
-        {
-          "texto": "es",
-          "inicio": 0.557,
-          "fin": 0.615
-        },
-        {
-          "texto": "un",
-          "inicio": 0.697,
-          "fin": 0.755
-        },
-        {
-          "texto": "reloj",
-          "inicio": 0.836,
-          "fin": 1.149
-        },
-        {
-          "texto": "suizo.",
-          "inicio": 1.173,
-          "fin": 1.625
-        },
-        {
-          "texto": "Lo",
-          "inicio": 2.252,
-          "fin": 2.38
-        },
-        {
-          "texto": "único",
-          "inicio": 2.438,
-          "fin": 2.705
-        },
-        {
-          "texto": "que",
-          "inicio": 2.752,
-          "fin": 2.821
+          "fin": 2.612
         },
         {
           "texto": "no",
-          "inicio": 2.879,
-          "fin": 2.961
+          "inicio": 2.775,
+          "fin": 2.949
         },
         {
-          "texto": "encaja",
-          "inicio": 3.007,
-          "fin": 3.379
+          "texto": "creía",
+          "inicio": 2.984,
+          "fin": 3.355
         },
         {
-          "texto": "es",
+          "texto": "eso.",
           "inicio": 3.402,
-          "fin": 3.471
+          "fin": 3.75
         },
         {
-          "texto": "el",
-          "inicio": 3.529,
-          "fin": 3.599
+          "texto": "Lo",
+          "inicio": 4.528,
+          "fin": 4.656
         },
         {
-          "texto": "celular,",
-          "inicio": 3.657,
-          "fin": 4.087
+          "texto": "propuso",
+          "inicio": 4.69,
+          "fin": 5.062
+        },
+        {
+          "texto": "como",
+          "inicio": 5.097,
+          "fin": 5.259
+        },
+        {
+          "texto": "una",
+          "inicio": 5.317,
+          "fin": 5.48
+        },
+        {
+          "texto": "crítica,",
+          "inicio": 5.526,
+          "fin": 6.072
+        },
+        {
+          "texto": "para",
+          "inicio": 6.235,
+          "fin": 6.455
+        },
+        {
+          "texto": "mostrar",
+          "inicio": 6.513,
+          "fin": 6.931
+        },
+        {
+          "texto": "lo",
+          "inicio": 7.001,
+          "fin": 7.094
+        },
+        {
+          "texto": "ridículo",
+          "inicio": 7.175,
+          "fin": 7.721
         },
         {
           "texto": "que",
-          "inicio": 4.214,
-          "fin": 4.331
+          "inicio": 7.755,
+          "fin": 7.837
         },
         {
-          "texto": "te",
-          "inicio": 4.389,
-          "fin": 4.47
+          "texto": "sonaba",
+          "inicio": 7.872,
+          "fin": 8.324
         },
         {
-          "texto": "dice:",
-          "inicio": 4.516,
-          "fin": 4.876
+          "texto": "llevar",
+          "inicio": 8.464,
+          "fin": 8.835
         },
         {
-          "texto": "“solo",
-          "inicio": 5.387,
-          "fin": 5.631
+          "texto": "esa",
+          "inicio": 8.882,
+          "fin": 9.021
+        },
+        {
+          "texto": "idea",
+          "inicio": 9.067,
+          "fin": 9.334
+        },
+        {
+          "texto": "hasta",
+          "inicio": 9.358,
+          "fin": 9.567
         },
         {
           "texto": "un",
-          "inicio": 5.666,
-          "fin": 5.712
+          "inicio": 9.601,
+          "fin": 9.648
         },
         {
-          "texto": "video",
-          "inicio": 5.759,
-          "fin": 6.037
+          "texto": "gato.",
+          "inicio": 9.694,
+          "fin": 10.008
+        }
+      ]
+    },
+    "decoherencia": {
+      "texto": "Entonces… ¿por qué no vemos gatos así de raros? Hoy se explica en gran parte con la decoherencia: los objetos grandes interactúan tanto con su entorno que pierden esa rareza cuántica en un instante.",
+      "audio": "voz/decoherencia.mp3",
+      "duracion": 14.135,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Entonces…",
+          "inicio": 0,
+          "fin": 0.743
         },
         {
-          "texto": "más”.",
-          "inicio": 6.084,
-          "fin": 6.316
+          "texto": "¿por",
+          "inicio": 1.358,
+          "fin": 1.509
         },
+        {
+          "texto": "qué",
+          "inicio": 1.556,
+          "fin": 1.625
+        },
+        {
+          "texto": "no",
+          "inicio": 1.66,
+          "fin": 1.73
+        },
+        {
+          "texto": "vemos",
+          "inicio": 1.765,
+          "fin": 2.009
+        },
+        {
+          "texto": "gatos",
+          "inicio": 2.09,
+          "fin": 2.438
+        },
+        {
+          "texto": "así",
+          "inicio": 2.508,
+          "fin": 2.67
+        },
+        {
+          "texto": "de",
+          "inicio": 2.728,
+          "fin": 2.81
+        },
+        {
+          "texto": "raros?",
+          "inicio": 2.891,
+          "fin": 3.274
+        },
+        {
+          "texto": "Hoy",
+          "inicio": 4.214,
+          "fin": 4.447
+        },
+        {
+          "texto": "se",
+          "inicio": 4.505,
+          "fin": 4.574
+        },
+        {
+          "texto": "explica",
+          "inicio": 4.598,
+          "fin": 5.074
+        },
+        {
+          "texto": "en",
+          "inicio": 5.108,
+          "fin": 5.166
+        },
+        {
+          "texto": "gran",
+          "inicio": 5.236,
+          "fin": 5.445
+        },
+        {
+          "texto": "parte",
+          "inicio": 5.538,
+          "fin": 5.828
+        },
+        {
+          "texto": "con",
+          "inicio": 5.875,
+          "fin": 5.991
+        },
+        {
+          "texto": "la",
+          "inicio": 6.049,
+          "fin": 6.118
+        },
+        {
+          "texto": "decoherencia:",
+          "inicio": 6.177,
+          "fin": 7.001
+        },
+        {
+          "texto": "los",
+          "inicio": 7.5,
+          "fin": 7.639
+        },
+        {
+          "texto": "objetos",
+          "inicio": 7.709,
+          "fin": 8.104
+        },
+        {
+          "texto": "grandes",
+          "inicio": 8.162,
+          "fin": 8.522
+        },
+        {
+          "texto": "interactúan",
+          "inicio": 8.591,
+          "fin": 9.242
+        },
+        {
+          "texto": "tanto",
+          "inicio": 9.358,
+          "fin": 9.729
+        },
+        {
+          "texto": "con",
+          "inicio": 9.776,
+          "fin": 9.892
+        },
+        {
+          "texto": "su",
+          "inicio": 9.938,
+          "fin": 10.008
+        },
+        {
+          "texto": "entorno",
+          "inicio": 10.054,
+          "fin": 10.53
+        },
+        {
+          "texto": "que",
+          "inicio": 10.728,
+          "fin": 10.844
+        },
+        {
+          "texto": "pierden",
+          "inicio": 10.902,
+          "fin": 11.285
+        },
+        {
+          "texto": "esa",
+          "inicio": 11.343,
+          "fin": 11.505
+        },
+        {
+          "texto": "rareza",
+          "inicio": 11.587,
+          "fin": 11.981
+        },
+        {
+          "texto": "cuántica",
+          "inicio": 12.051,
+          "fin": 12.643
+        },
+        {
+          "texto": "en",
+          "inicio": 12.701,
+          "fin": 12.841
+        },
+        {
+          "texto": "un",
+          "inicio": 12.934,
+          "fin": 13.003
+        },
+        {
+          "texto": "instante.",
+          "inicio": 13.061,
+          "fin": 13.63
+        }
+      ]
+    },
+    "frontera": {
+      "texto": "Y lo más loco: en laboratorios sí se lograron superposiciones con moléculas y partículas de miles de átomos. La frontera entre lo cuántico y lo cotidiano se sigue empujando.",
+      "audio": "voz/frontera.mp3",
+      "duracion": 11.81,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
+      "normalizado": true,
+      "palabras": [
         {
           "texto": "Y",
+          "inicio": 0,
+          "fin": 0.116
+        },
+        {
+          "texto": "lo",
+          "inicio": 0.197,
+          "fin": 0.255
+        },
+        {
+          "texto": "más",
+          "inicio": 0.302,
+          "fin": 0.418
+        },
+        {
+          "texto": "loco:",
+          "inicio": 0.488,
+          "fin": 0.778
+        },
+        {
+          "texto": "en",
+          "inicio": 1.161,
+          "fin": 1.277
+        },
+        {
+          "texto": "laboratorios",
+          "inicio": 1.347,
+          "fin": 2.101
+        },
+        {
+          "texto": "sí",
+          "inicio": 2.299,
+          "fin": 2.508
+        },
+        {
+          "texto": "se",
+          "inicio": 2.577,
+          "fin": 2.67
+        },
+        {
+          "texto": "lograron",
+          "inicio": 2.717,
+          "fin": 3.123
+        },
+        {
+          "texto": "superposiciones",
+          "inicio": 3.17,
+          "fin": 3.971
+        },
+        {
+          "texto": "con",
+          "inicio": 4.017,
+          "fin": 4.122
+        },
+        {
+          "texto": "moléculas",
+          "inicio": 4.168,
+          "fin": 4.69
+        },
+        {
+          "texto": "y",
+          "inicio": 4.807,
+          "fin": 4.888
+        },
+        {
+          "texto": "partículas",
+          "inicio": 4.981,
+          "fin": 5.584
+        },
+        {
+          "texto": "de",
+          "inicio": 5.7,
+          "fin": 5.828
+        },
+        {
+          "texto": "miles",
+          "inicio": 5.909,
+          "fin": 6.246
+        },
+        {
+          "texto": "de",
+          "inicio": 6.304,
+          "fin": 6.374
+        },
+        {
+          "texto": "átomos.",
+          "inicio": 6.432,
+          "fin": 6.885
+        },
+        {
+          "texto": "La",
+          "inicio": 7.581,
+          "fin": 7.709
+        },
+        {
+          "texto": "frontera",
+          "inicio": 7.755,
+          "fin": 8.15
+        },
+        {
+          "texto": "entre",
+          "inicio": 8.173,
+          "fin": 8.382
+        },
+        {
+          "texto": "lo",
+          "inicio": 8.417,
+          "fin": 8.498
+        },
+        {
+          "texto": "cuántico",
+          "inicio": 8.533,
+          "fin": 8.951
+        },
+        {
+          "texto": "y",
+          "inicio": 8.986,
+          "fin": 9.009
+        },
+        {
+          "texto": "lo",
+          "inicio": 9.056,
+          "fin": 9.125
+        },
+        {
+          "texto": "cotidiano",
+          "inicio": 9.172,
+          "fin": 9.741
+        },
+        {
+          "texto": "se",
+          "inicio": 9.903,
+          "fin": 10.066
+        },
+        {
+          "texto": "sigue",
+          "inicio": 10.124,
+          "fin": 10.391
+        },
+        {
+          "texto": "empujando.",
+          "inicio": 10.437,
+          "fin": 11.029
+        }
+      ]
+    },
+    "gato-real": {
+      "texto": "Mientras tanto, el gato de verdad está vivo, despierto y pidiendo comida. Ninguna superposición lo detiene.",
+      "audio": "voz/gato-real.mp3",
+      "duracion": 8.414,
+      "voz": "IKne3meq5aSn9XLyUdCD",
+      "modelo": "eleven_multilingual_v2",
+      "velocidad": 1.05,
+      "ajustes": "0.42/0.4",
+      "normalizado": true,
+      "palabras": [
+        {
+          "texto": "Mientras",
+          "inicio": 0,
+          "fin": 0.418
+        },
+        {
+          "texto": "tanto,",
+          "inicio": 0.464,
+          "fin": 0.824
+        },
+        {
+          "texto": "el",
+          "inicio": 1.126,
+          "fin": 1.289
+        },
+        {
+          "texto": "gato",
+          "inicio": 1.382,
+          "fin": 1.66
+        },
+        {
+          "texto": "de",
+          "inicio": 1.707,
+          "fin": 1.776
+        },
+        {
+          "texto": "verdad",
+          "inicio": 1.811,
+          "fin": 2.183
+        },
+        {
+          "texto": "está",
+          "inicio": 2.264,
+          "fin": 2.566
+        },
+        {
+          "texto": "vivo,",
+          "inicio": 2.624,
+          "fin": 2.926
+        },
+        {
+          "texto": "despierto",
+          "inicio": 3.274,
+          "fin": 3.947
+        },
+        {
+          "texto": "y",
+          "inicio": 4.087,
+          "fin": 4.18
+        },
+        {
+          "texto": "pidiendo",
+          "inicio": 4.261,
+          "fin": 4.69
+        },
+        {
+          "texto": "comida.",
+          "inicio": 4.737,
+          "fin": 5.143
+        },
+        {
+          "texto": "Ninguna",
+          "inicio": 5.7,
+          "fin": 6.188
+        },
+        {
+          "texto": "superposición",
+          "inicio": 6.235,
+          "fin": 6.978
+        },
+        {
+          "texto": "lo",
+          "inicio": 7.036,
+          "fin": 7.117
+        },
+        {
+          "texto": "detiene.",
           "inicio": 7.163,
-          "fin": 7.245
-        },
-        {
-          "texto": "vos",
-          "inicio": 7.314,
-          "fin": 7.465
-        },
-        {
-          "texto": "mirando",
-          "inicio": 7.523,
-          "fin": 7.86
-        },
-        {
-          "texto": "este.",
-          "inicio": 7.918,
-          "fin": 8.197
+          "fin": 7.639
         }
       ]
     }

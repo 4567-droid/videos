@@ -70,7 +70,8 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 		}
 
 		// ritmo: reproduce la voz más rápido o más lento (con el mismo tono) sin regenerarla
-		const ritmo = conVoz ? Math.min(2, Math.max(0.5, video.voz?.ritmo ?? 1)) : 1;
+		// (cada escena puede multiplicarlo con su propio "ritmo": así el video acelera hacia el final)
+		const ritmo = conVoz ? Math.min(2, Math.max(0.5, (video.voz?.ritmo ?? 1) * (escena.ritmo ?? 1))) : 1;
 		const originales = conVoz
 			? vozEscena!.palabras.map((p) => ({...p, inicio: p.inicio / ritmo, fin: p.fin / ritmo}))
 			: estimarTiempos(escena.texto);
@@ -110,6 +111,24 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 			});
 		}
 
+		const palabras = palabrasSeg.map((p) => ({
+			texto: p.texto,
+			inicio: Math.round((entrada + p.inicio) * fps),
+			fin: Math.max(Math.round((entrada + p.inicio) * fps) + 1, Math.round((entrada + p.fin) * fps)),
+		}));
+		const claves = (escena.claves ?? []).flatMap((clave) => {
+			const encontrada = buscarPalabra(
+				palabras.map((p) => p.texto),
+				clave.palabra,
+				clave.ocurrencia ?? 1,
+			);
+			if (!encontrada) {
+				console.warn(`[claves] "${clave.palabra}" no está en "${escena.id}": la salteo.`);
+				return [];
+			}
+			return [{texto: clave.texto ?? clave.palabra.toUpperCase(), inicio: palabras[encontrada.inicio].inicio, color: clave.color, y: clave.y}];
+		});
+
 		escenas.push({
 			id: escena.id,
 			indice,
@@ -122,11 +141,8 @@ export const calcularLineaDeTiempo = (video: VideoJSON, voz: VozJSON, fps = FPS)
 			inicio,
 			duracion,
 			conVoz,
-			palabras: palabrasSeg.map((p) => ({
-				texto: p.texto,
-				inicio: Math.round((entrada + p.inicio) * fps),
-				fin: Math.max(Math.round((entrada + p.inicio) * fps) + 1, Math.round((entrada + p.fin) * fps)),
-			})),
+			palabras,
+			claves,
 			// el audio se corta (con fundido) un poco después de la última palabra:
 			// así una respiración final no se pisa con la voz de la escena siguiente
 			audio: conVoz ? {src: vozEscena!.audio, velocidad: ritmo, tramos} : null,

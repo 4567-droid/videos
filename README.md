@@ -50,8 +50,10 @@ Después podés pedir ajustes puntuales: "cambiá el gancho", "la escena 3 más 
 
 - `id`: único; también nombra el audio de la escena.
 - `componente`: la escena de `src/escenas/index.ts` que la ilustra.
-- `transicion` (opcional): `zoom` (por defecto), `deslizar`, `fundido` o `borrar` (pizarra). En la pizarra también `borrar-saludo`, `borrar-cansado` y `borrar-giro`: el borrador tiene carita y hace un gesto (saluda, se cansa a mitad de camino, hace una pirueta); duran un poco más.
+- `transicion` (opcional): `zoom` (por defecto), `deslizar`, `fundido`, `destello` (fogonazo de luz, para los giros de la historia) o `borrar` (pizarra). En la pizarra también `borrar-saludo`, `borrar-cansado` y `borrar-giro`: el borrador tiene carita y hace un gesto (saluda, se cansa a mitad de camino, hace una pirueta); duran un poco más.
 - `pausas` (opcional): `[{"antes": "menos útil", "segundos": 0.15}]` agrega silencio a la voz antes de esa palabra o frase (pausa cómica), sin regenerarla; los subtítulos y la animación se corren solos.
+- `ritmo` (opcional, por escena): multiplica el `ritmo` general (`1.05` = 5 % más rápido). Sirve para que el video acelere hacia el final.
+- `claves` (opcional): `[{"palabra": "superposición", "texto": "SUPERPOSICIÓN", "color": "#FFD23F"}]` muestra esa palabra grande en pantalla, con un golpe de animación y un pequeño zoom, justo cuando la voz la dice (zona de etiquetas, ~1480 px; `y` la mueve).
 - `"estilo": "pizarra"` (opcional, para todo el video): fondo blanco con dibujos a marcador que se trazan solos, subtítulos abajo y transición de borrado.
 
 Sin voz, el tiempo de cada palabra se **estima según su largo** (y pausas en comas y puntos). Subtítulos y animaciones se sincronizan con esos tiempos.
